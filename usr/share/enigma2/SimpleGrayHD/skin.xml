@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<skin>
+	<output id="0">
+		<resolution xres="1280" yres="720" bpp="32"/>
+	</output>
+
+	<colors>
+		<color name="back" value="#001b1b1b"/>
+		<color name="black" value="#00000000"/>
+		<color name="blue" value="#000070eb"/>
+		<color name="green" value="#00389416"/>
+		<color name="grey" value="#008f8f8f"/>
+		<color name="red" value="#00ff2525"/>
+		<color name="selection" value="#00494949"/>
+		<color name="transparent" value="#ffffffff"/>
+		<color name="transpBack" value="#411b1b1b"/>
+		<color name="white" value="#00ffffff"/>
+		<color name="yellow" value="#00bab329"/>
+	</colors>
+
+	<fonts>
+		<font filename="lcd.ttf" name="LCD" scale="100"/>
+		<font filename="SGOpenSansRegular.ttf" name="Replacement" scale="100" replacement="1"/>
+		<font filename="SGDroidSans.ttf" name="Regular" scale="100"/>
+		<alias name="Body" font="Regular" size="20" height="25" />
+		<alias name="ChoiceList" font="Regular" size="20" height="25" />
+		<alias name="TextNormal" font="Regular" size="20" height="25" />
+	</fonts>
+
+	<parameters>
+		<parameter name="AboutHddSplit" value="1"/>
+	</parameters>
+
+	<windowstyle type="skinned" id="0">
+		<title offset="30,20" font="Replacement;26"/>
+		<color name="Background" color="back"/>
+		<color name="LabelForeground" color="white"/>
+		<color name="ListboxBackground" color="back"/>
+		<color name="ListboxForeground" color="white"/>
+		<color name="ListboxSelectedBackground" color="selection"/>
+		<color name="ListboxSelectedForeground" color="white"/>
+		<color name="ListboxMarkedBackground" color="black"/>
+		<color name="ListboxMarkedForeground" color="red"/>
+		<color name="ListboxMarkedAndSelectedBackground" color="selection"/>
+		<color name="ListboxMarkedAndSelectedForeground" color="red"/>
+		<color name="WindowTitleForeground" color="white"/>
+		<color name="WindowTitleBackground" color="back"/>
+		<borderset name="bsWindow">
+			<pixmap pos="bpTop" filename="SimpleGrayHD/window/bs_back.png"/>
+			<pixmap pos="bpLeft" filename="SimpleGrayHD/window/bs_back.png"/>
+			<pixmap pos="bpRight" filename="SimpleGrayHD/window/bs_back.png"/>
+			<pixmap pos="bpBottom" filename="SimpleGrayHD/window/bs_bottom.png"/>
+		</borderset>
+	</windowstyle>
+
+	<include filename="skin_templates.xml"/>
+
+	<screen name="About" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="AboutScrollLabel" position="20,25" size="700,460" font="Regular;22" split="1" dividechar=":" colposition="240"/>
+	</screen>
+
+	<screen name="AdapterSetup" position="center,center" size="600,520">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="Adaptertext" render="Label" position="20,15" size="100,25" font="Regular;22"/>
+		<widget source="Adapter" render="Label" position="110,15" size="470,25" font="Regular;22"/>
+		<widget name="config" position="20,45" size="560,150"/>
+		<widget source="introduction" render="Label" position="20,215" size="560,25" font="Regular;20"/>
+		<widget source="IPtext" render="Label" position="25,245" size="270,22" font="Regular;20"/>
+		<widget source="IP" render="Label" position="300,245" size="280,22" font="Regular;15" halign="right"/>
+		<widget source="Netmasktext" render="Label" position="25,270" size="270,22" font="Regular;20"/>
+		<widget source="Mask" render="Label" position="300,270" size="280,22" font="Regular;15" halign="right"/>
+		<widget source="Gatewaytext" render="Label" position="25,295" size="285,22" font="Regular;20"/>
+		<widget source="Gateway" render="Label" position="300,295" size="280,22" font="Regular;15" halign="right"/>
+		<widget source="DNS1text" render="Label" position="25,320" size="285,22" font="Regular;20"/>
+		<widget source="DNS1" render="Label" position="300,320" size="280,22" font="Regular;15" halign="right"/>
+		<widget source="DNS2text" render="Label" position="25,345" size="285,22" font="Regular;20"/>
+		<widget source="DNS2" render="Label" position="300,345" size="280,22" font="Regular;15" halign="right"/>
+		<widget source="introduction2" render="Label" position="20,400" size="520,25" font="Regular;22"/>
+
+		<widget source="VKeyIcon" render="Pixmap" pixmap="SimpleGrayHD/skin_default/buttons/key_text.png" position="center,425" size="35,25" zPosition="2" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="HelpWindow" position="center,425" size="1,1"/>
+	</screen>
+
+	<screen name="AdapterSetupConfiguration" position="center,center" size="600,460">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="IFtext" render="Label" position="20,15" size="100,25" font="Regular;22"/>
+		<widget source="IF" render="Label" position="110,15" size="470,25" font="Regular;22"/>
+		<widget name="menulist" position="20,45" size="560,200" scrollbarMode="showOnDemand"/>
+		<widget name="statuspic" position="20,265" size="15,16" pixmaps="SimpleGrayHD/skin_default/buttons/button_green.png,SimpleGrayHD/skin_default/buttons/button_green_off.png" alphatest="on"/>
+		<widget source="Statustext" render="Label" position="50,260" size="530,25" font="Regular;22"/>
+		<widget source="description" render="Label" position="20,305" size="560,75" font="Regular;22"/>
+	</screen>
+
+	<screen name="AltCamManager" position="center,center" size="640,410">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="list" render="Listbox" position="15,10" size="320,300" enableWrapAround="1" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+			{
+				"template": [MultiContentEntryText(pos=(65,10), size=(275,40), font=0, flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryPixmapAlphaTest(pos=(5,5), size=(51,40), png=1),
+					MultiContentEntryText(pos=(5,25), size=(51,16), font=1, flags=RT_HALIGN_CENTER, text=2),],
+				"fonts": [gFont("Regular",26), gFont("Regular",12)],
+				"itemHeight": 50
+			}
+			</convert>
+		</widget>
+		<eLabel text="Ecm info" position="345,0" size="270,35" font="Regular;26"/>
+		<widget name="status" position="345,40" size="270,280" font="Regular;18"/>
+	</screen>
+
+	<screen name="AudioSelection" position="center,center" size="450,280">
+		<widget source="key_red" render="FixedLabel" position="15,15" size="15,15" backgroundColor="red">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<eLabel position="17,17" size="11,11"/>
+		<widget source="key_green" render="FixedLabel" position="15,40" size="15,15" backgroundColor="green">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<eLabel position="17,42" size="11,11"/>
+		<widget source="key_yellow" render="FixedLabel" position="15,65" size="15,15" backgroundColor="yellow">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<eLabel position="17,67" size="11,11"/>
+		<widget source="key_blue" render="FixedLabel" position="15,90" size="15,15" backgroundColor="blue">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<eLabel position="17,92" size="11,11"/>
+		<widget name="config" position="40,10" size="400,110" scrollbarMode="showOnDemand"/>
+		<widget source="streams" render="Listbox" position="15,140" size="425,125"  scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+{"templates":
+{"default": (25, [
+MultiContentEntryText(pos=(30,0), size=(20,25), font=0, flags=RT_HALIGN_RIGHT, text=1), # key,
+MultiContentEntryText(pos=(55,0), size=(40,25), font=0, flags=RT_HALIGN_LEFT, text=2), # number,
+MultiContentEntryText(pos=(100,0), size=(100,25), font=0, flags=RT_HALIGN_LEFT, text=3), # description,
+MultiContentEntryText(pos=(205,0), size=(220,25), font=0, flags=RT_HALIGN_LEFT, text=4), # language,
+MultiContentEntryText(pos=(5,0), size=(20,25), font=0, flags=RT_HALIGN_LEFT, text=5), # selection,
+], True),
+"notselected": (25, [
+MultiContentEntryText(pos=(30,0), size=(20,25), font=0, flags=RT_HALIGN_RIGHT, text=1), # key,
+MultiContentEntryText(pos=(55,0), size=(40,25), font=0, flags=RT_HALIGN_LEFT, text=2), # number,
+MultiContentEntryText(pos=(100,0), size=(100,25), font=0, flags=RT_HALIGN_LEFT, text=3), # description,
+MultiContentEntryText(pos=(205,0), size=(220,25), font=0, flags=RT_HALIGN_LEFT, text=4), # language,
+MultiContentEntryText(pos=(5,0), size=(20,25), font=0, flags=RT_HALIGN_LEFT, text=5), # selection,
+], False)
+},
+"fonts": [gFont("Regular",20)],
+"itemHeight": 25
+}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="AutoMountEdit" position="center,center" size="600,450">
+		<panel name="DynamicButtonsTemplate"/>
+		<panel name="MountConfigTemplate"/>
+	</screen>
+
+	<screen name="AutoMountManager" position="center,center" size="600,450">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="config" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryText(pos=(50,5), size=(510,28), font=0, flags=RT_HALIGN_LEFT, text=0), # index 2 is the Menu Titel
+						MultiContentEntryText(pos=(60,35), size=(500,20), font=1, flags=RT_HALIGN_LEFT, text=2), # index 3 is the Description
+						MultiContentEntryPixmapAlphaTest(pos=(0,6), size=(48,48), png=3), # index 4 is the pixmap
+					],
+				"fonts": [gFont("Regular",22),gFont("Regular",17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+	</screen>
+
+	<screen name="AutoMountView" position="center,center" size="600,450">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="legend1" render="Label" position="20,15" size="130,25" font="Regular;20"/>
+		<widget source="legend2" render="Label" position="150,15" size="340,25" font="Regular;20"/>
+		<widget source="legend3" render="Label" position="495,13" size="70,25" font="Regular;20"/>
+		<widget source="config" render="Listbox" position="20,40" size="560,300" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos=(10,6), size=(48,48), png=0), # index 0 is the isMounted pixmap
+						MultiContentEntryText(pos=(130,5), size=(120,28), font=0, flags=RT_HALIGN_LEFT, text=1), # index 1 is the sharename
+						MultiContentEntryText(pos=(250,8), size=(220,20), font=0, flags=RT_HALIGN_LEFT, text=2), # index 2 is the IPdescription
+						MultiContentEntryText(pos=(130,35), size=(340,20), font=1, flags=RT_HALIGN_LEFT, text=3), # index 3 is the DIRdescription
+						MultiContentEntryPixmapAlphaTest(pos=(475,15), size=(48,48), png=4), # index 4 is the activepng pixmap
+						MultiContentEntryPixmapAlphaTest(pos=(505,6), size=(48,48), png=5), # index 4 is the mounttype pixmap
+					],
+				"fonts": [gFont("Regular",22), gFont("Regular",17)],
+				"itemHeight": 60
+				}
+			</convert>
+		</widget>
+		<widget source="introduction" position="20,325" size="560,50" font="Regular;22"/>
+	</screen>
+
+	<screen name="BackupScreen" position="center,center" size="800,445">
+		<widget name="config" position="10,10" size="780,425" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="BackupSelection" position="center,center" size="700,490">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="checkList" position="10,10" size="680,400" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="BouquetSelector" position="center,center" size="370,420">
+		<widget name="menu" position="10,10" size="350,400" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="BufferIndicator" position="center,15" size="200,34" backgroundColor="transparent" flags="wfNoBorder" zPosition="100">
+		<widget name="status" position="0,0" size="200,34" backgroundColor="transparent" transparent="1" font="Replacement;26" borderColor="grey" borderWidth="2" valign="center" halign="center"/>
+	</screen>
+
+	<screen name="CIselectMainMenu" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="CiList" position="center,45" size="631,300" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="ChannelContextMenu" position="center,center" size="600,290" backgroundColor="back">
+		<widget name="menu" position="20,20" size="560,250" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="ChannelSelection" position="center,100" size="1080,580">
+		<panel name="LeftButtonsTemplate"/>
+		<widget name="list" position="10,10" size="692,498" scrollbarMode="showOnDemand" serviceItemHeight="31" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;18" foregroundColorServiceNotAvail="grey" colorEventProgressbar="grey" colorServiceDescription="grey" colorEventProgressbarBorder="grey" colorServiceDescriptionSelected="white" colorEventProgressbarSelected="white"/>
+		<widget source="ServiceEvent" render="Label" position="730,10" size="340,30" font="Replacement;26" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="730,45" size="340,20" font="Regular;16" foregroundColor="grey" noWrap="1">
+			<convert type="TransponderInfo"/>
+		</widget>
+		<widget source="ServiceEvent" render="Picon" position="780,75" size="100,60" transparent="1" alphatest="blend">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="ServiceEvent" render="SGPiconProv" position="920,75" size="100,60" transparent="1" alphatest="blend">
+			<convert type="SGProvider"/>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="730,140" size="340,25" halign="center" valign="center" font="Regular;20">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="730,170" size="70,25" halign="right" font="Replacement;20" foregroundColor="grey">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"/>
+		</widget>
+		<widget source="ServiceEvent" render="Progress" position="810,180" size="180,10" borderWidth="1" foregroundColor="grey">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="1000,170" size="70,25" font="Replacement;20" foregroundColor="grey">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Label" position="730,205" size="340,229" font="Regular;20">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="ServiceEvent" render="NextEpgInfo" position="730,440" size="340,73" font="Regular;20" foregroundColor="grey" NumberOfItems="2"/>
+		<widget source="global.CurrentTime" render="Label" position="830,542" size="104,25" font="Regular;20" foregroundColor="grey">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="940,530" size="140,40" font="Replacement;30">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+	</screen>
+
+	<screen name="ChannelSelectionRadio" position="10,60" size="1260,470">
+		<panel name="LeftButtonsTemplate"/>
+		<widget name="list" position="10,10" size="690,372" scrollbarMode="showOnDemand" serviceItemHeight="31" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;18" foregroundColorServiceNotAvail="grey" colorEventProgressbar="grey" colorServiceDescription="grey" colorEventProgressbarBorder="grey" colorServiceDescriptionSelected="white" colorEventProgressbarSelected="white"/>
+	</screen>
+
+	<screen name="ChapterZap" position="center,center" size="280,60">
+		<widget name="chapter" position="35,15" size="110,25" font="Regular;23"/>
+		<widget name="number" position="145,15" size="80,25" halign="right" font="Regular;23"/>
+	</screen>
+
+	<screen name="ChoiceBox" position="center,center" size="670,90">
+		<widget name="text" position="15,10" size="640,48" font="Regular;20"/>
+		<widget name="list" position="10,50" size="650,25" scrollbarMode="showOnDemand"/>
+		<applet type="onLayoutFinish">
+from enigma import eSize, ePoint
+textsize = self["text"].getSize()
+textsize = (int(textsize[0] * 1.1), int(textsize[1] * 1.1))
+wsizex = textsize[0] + 30
+wsizey = textsize[1] + 50
+if 420 > wsizex:
+	wsizex = 420
+listlen = len(self.list) * 25
+if listlen > 250:
+	listlen = 250
+wsizey += listlen
+self.instance.resize(eSize(*(wsizex, wsizey)))
+self["text"].instance.resize(eSize(*textsize))
+self["list"].instance.move(ePoint(10, wsizey-listlen-15))
+self["list"].instance.resize(eSize(*(wsizex-20, listlen)))
+self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
+		</applet>
+	</screen>
+
+	<screen name="CiSelection" position="center,center" size="740,565">
+		<widget name="text" position="center,45" size="631,30" font="Regular;24" halign="center" valign="center"/>
+		<widget name="entries" position="center,95" size="631,300" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="CommitInfo" position="center,center" size="700,560">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="AboutScrollLabel" position="10,10" size="680,470" font="Regular;20"/>
+	</screen>
+
+	<screen name="ConfigEdit" position="center,center" size="640,410">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="610,150" scrollbarMode="showOnDemand"/>
+		<widget name="HelpWindow" position="400,370" size="1,1" zPosition="5" pixmap="skin_default/vkey_icon.png" transparent="1" alphatest="on"/>
+	</screen>
+
+	<screen name="Console" position="center,center" size="740,565">
+		<widget name="text" position="center,10" size="700,526" font="Regular;20"/>
+	</screen>
+
+	<screen name="CutListEditor" position="center,680" size="700,24" flags="wfNoBorder" backgroundColor="transparent">
+		<!--eLabel position="center,center" size="1229,592" zPosition="-3" backgroundColor="back"/>
+		<eLabel position="80,125" size="310,420" zPosition="1" backgroundColor="grey"/>
+		<eLabel position="81,126" size="308,418" zPosition="2" backgroundColor="black"/>
+		<widget source="cutlist" render="Listbox" position="90,135" size="290,400" zPosition="3" scrollbarMode="showOnDemand" enableWrapAround="1">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(size=(145,20), text=1, backcolor=MultiContentTemplateColor(3)),
+MultiContentEntryText(pos=(145,0), size=(145,20), text=2, flags=RT_HALIGN_RIGHT, backcolor=MultiContentTemplateColor(3))
+],
+"fonts": [gFont("Regular",18)],
+"itemHeight": 20
+}
+			</convert>
+		</widget>
+		<eLabel position="479,124" zPosition="3" size="696,367" backgroundColor="transparent"/>
+		<widget name="Video" position="479,124" zPosition="-10" size="696,367"/>
+		<widget source="session.CurrentService" render="Label" position="450,510" size="790,30" zPosition="3" font="Regular;24" halign="center" valign="center" backgroundColor="back">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="450,550" size="790,25" zPosition="3" font="Regular;20" halign="center" valign="center" backgroundColor="back">
+			<convert type="ServicePosition">Position,Detailed</convert>
+		</widget-->
+		<widget name="Timeline" position="2,2" size="696,20" zPosition="3" pointer="skin_default/position_arrow.png:3,5" foregroundColor="black"/>
+		<!--eLabel text="OK=Menu" position="1059,615" size="140,22" zPosition="1" font="Regular;20" backgroundColor="back" /-->
+	</screen>
+
+	<screen name="DVDPlayer" flags="wfNoBorder" position="0,610" size="1280,110">
+		<panel name="PlayerTemplate"/>
+		<eLabel text="Audio" position="0,e-75" size="85,25" font="Regular;20" halign="right" foregroundColor="grey"/>
+		<widget name="audioLabel" position="90,e-75" size="105,25" font="Regular;20" noWrap="1" foregroundColor="grey"/>
+		<eLabel text="Subtitles" position="0,e-50" size="85,25" font="Regular;20" halign="right" foregroundColor="grey"/>
+		<widget name="subtitleLabel" position="90,e-50" size="105,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="anglePix" position="59,e-22" size="26,16" pixmap="skin_default/icons/icon_view.png" alphatest="on"/>
+		<widget name="angleLabel" position="90,e-25" size="105,22" font="Regular;20" foregroundColor="grey"/>
+		<widget name="chapterLabel" position="300,e-60" size="330,25" font="Replacement;20" foregroundColor="grey" halign="right"/>
+	</screen>
+
+	<screen name="DVDToolbox" position="90,100" size="1100,560">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="info" render="Label" position="20,60" size="1060,100" font="Regular;22"/>
+		<widget name="details" position="20,200" size="1060,200" font="Regular;20"/>
+		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" borderWidth="1" backgroundColor="grey"/>
+		<widget source="space_label" render="Label" position="20,484" size="1060,22" font="Regular;18" halign="center" foregroundColor="black"/>
+	</screen>
+
+	<screen name="DefaultWizard" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="DefaultWizardTemplate"/>
+	</screen>
+
+	<screen name="Dish" flags="wfNoBorder" position="1100,100" size="65,80" zPosition="-1" backgroundColor="transparent">
+		<widget name="Dishpixmap" pixmap="SimpleGrayHD/skin_default/icons/dish.png" position="0,0" size="65,80" alphatest="off"/>
+		<widget name="turnTime" position="0,80" size="120,20" font="Regular;20" halign="right" shadowColor="black" shadowOffset="-2,-2"/>
+		<widget name="tunerName" position="0,100" size="120,20" font="Regular;20" halign="right" shadowColor="black" shadowOffset="-2,-2"/>
+		<widget name="turnSpeed" position="0,120" size="120,20" font="Regular;20" halign="right" shadowColor="black" shadowOffset="-2,-2"/>
+		<widget name="From" position="0,140" size="50,20" font="Regular;17" shadowColor="black" shadowOffset="-2,-1"/>
+		<widget name="posFrom" position="52,140" size="70,20" font="Regular;20" shadowColor="black" shadowOffset="-2,-2"/>
+		<widget name="Goto" position="0,160" size="50,20" font="Regular;17" shadowColor="black" shadowOffset="-2,-1"/>
+		<widget name="posGoto" position="52,160" size="70,20" font="Regular;20" shadowColor="black" shadowOffset="-2,-2"/>
+	</screen>
+
+	<screen name="EPGSearchSetup" position="320,180" size="640,410">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="center,10" size="580,240" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget source="help" render="Label" position="center,260" size="580,60" font="Regular;22"/>
+	</screen>
+
+	<screen name="EPGSelection" position="center,100" size="770,580">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="Event" render="Label" position="10,10" size="750,30" font="Replacement;26">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget name="list" position="10,50" size="750,327" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget source="Event" render="Label" position="10,400" size="750,70" font="Regular;20">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="Event" render="Label" position="10,480" size="65,25" font="Regular;20">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">ShortDate</convert>
+		</widget>
+		<widget source="Event" render="Label" position="80,480" size="80,25" font="Regular;20" halign="right">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="160,480" size="60,25" font="Regular;20">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:-%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="250,480" size="110,25" font="Regular;20">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="520,480" size="104,25" font="Regular;20">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="630,468" size="140,40" font="Replacement;30">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+	</screen>
+
+	<screen name="EPGSelectionMulti" position="center,100" size="1080,580">
+		<panel name="LeftBigButtonsTemplate"/>
+		<widget name="now_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="10,10" size="140,40" alphatest="on"/>
+		<widget name="now_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="10,10" size="140,40" alphatest="on"/>
+		<widget name="next_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="154,10" size="140,40" alphatest="on"/>
+		<widget name="next_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="154,10" size="140,40" alphatest="on"/>
+		<widget name="more_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="298,10" size="140,40" alphatest="on"/>
+		<widget name="more_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="298,10" size="140,40" alphatest="on"/>
+		<widget name="now_text" position="12,12" size="136,36" text="NOW" font="Regular;20" halign="center" valign="center"/>
+		<widget name="next_text" position="156,12" size="136,36" text="NEXT" font="Regular;20" halign="center" valign="center"/>
+		<widget name="more_text" position="300,12" size="136,36" text="MORE" font="Regular;20" halign="center" valign="center"/>
+
+		<widget name="list" position="10,60" size="812,450" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="date" position="840,60" size="230,28" font="Regular;24"/>
+		<widget source="Event" render="Label" position="840,110" size="230,400" font="Regular;18">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="840,542" size="104,25" font="Regular;20" foregroundColor="grey">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="950,530" size="140,40" font="Replacement;30">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+	</screen>
+
+	<screen name="EventView" position="center,100" size="770,580">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="channel" position="10,10" size="750,30" font="Replacement;26"/>
+		<widget name="datetime" position="10,50" size="750,25" font="Regular;20"/>
+		<widget name="duration" position="10,80" size="750,25" font="Regular;20"/>
+		<widget name="epg_description" position="10,110" size="750,290" font="Regular;20"/>
+		<widget source="session.Event_Now" render="Label" position="10,410" size="750,25" font="Regular;20">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="10,440" size="450,25" font="Regular;20">
+			<convert type="EventName">Rating</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="10,470" size="450,25" font="Regular;20">
+			<convert type="EventName">NameNext</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="520,470" size="104,25" font="Regular;20">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="630,458" size="140,40" font="Replacement;30">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+	</screen>
+
+	<screen name="FancontrolConfiguration" position="center,center" size="570,300">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,15" size="550,200" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="FastScanScreen" position="270,95" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="720,356" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+	</screen>
+
+	<screen name="FileBrowser" position="center,center" size="640,410">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="filelist" position="10,10" size="620,300" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="GraphMultiEPG" position="center,100" size="1180,580">
+		<panel name="LeftBigButtonsTemplate"/>
+		<widget name="timeline_text" position="10,10" size="1160,26" foregroundColor="white"/>
+		<widget name="list" position="10,36" size="1160,300" scrollbarMode="showOnDemand" backgroundColor="black"/>
+		<widget name="timeline0" position="60,36" zPosition="1" size="1,300" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline1" position="60,36" zPosition="1" size="1,300" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline2" position="60,36" zPosition="1" size="1,300" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline3" position="60,36" zPosition="1" size="1,300" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline4" position="60,36" zPosition="1" size="1,300" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline5" position="60,36" zPosition="1" size="1,300" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline_now" position="60,36" zPosition="2" size="1,300" pixmap="SimpleGrayHD/window/timeline-now.png" alphatest="on"/>
+		<widget source="Event" render="Label" position="10,360" size="400,60" font="Regular;24">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="Event" render="Label" position="10,420" size="400,25" font="Regular;20">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%A</convert>
+		</widget>
+		<widget source="Event" render="Label" position="10,450" size="60,22" font="Regular;20" halign="right">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"/>
+		</widget>
+		<widget source="Event" render="Progress" position="80,455" size="260,15" borderWidth="1" borderColor="grey">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="Event" render="Label" position="350,450" size="70,22" font="Regular;20">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="Event" render="Label" position="420,360" size="740,160" font="Regular;18">
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="910,542" size="104,25" font="Regular;20" foregroundColor="grey">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1020,530" size="140,40" font="Replacement;30">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+	</screen>
+
+	<screen name="GraphMultiEPGList" position="center,center" size="780,526">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="timeline_text" position="10,10" size="740,26" foregroundColor="white"/>
+		<widget name="list" position="10,36" size="740,420" scrollbarMode="showOnDemand" backgroundColor="black"/>
+		<widget name="timeline0" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline1" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline2" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline3" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline4" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline5" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
+		<widget name="timeline_now" position="0,36" zPosition="2" size="1,420" pixmap="SimpleGrayHD/window/timeline-now.png" alphatest="on"/>
+	</screen>
+
+	<screen name="GraphMultiEpgSetup" position="center,center" size="680,500">
+		<panel name="CancelOKTemplate"/>
+		<widget name="config" position="10,15" size="660,400" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="HarddiskSelection" position="center,center" size="600,250">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="hddlist" position="20,10" size="560,150" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="HarddiskSetup" position="center,center" size="600,250">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="model" position="20,10" size="560,28" font="Regular;22"/>
+		<widget name="capacity" position="20,50" size="560,28" font="Regular;22"/>
+		<widget name="bus" position="20,90" size="560,28" font="Regular;22"/>
+	</screen>
+
+	<screen name="HarddiskWait" position="center,center" size="600,250">
+		<widget name="wait" position="10,10" size="580,120" font="Regular;22"/>
+	</screen>
+
+	<screen name="HdmiCECSetupScreen" position="center,center" size="640,465">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="620,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget source="current_address" render="Label" position="10,330" size="620,25" font="Regular;22"/>
+		<widget source="fixed_address" render="Label" position="10,360" size="620,25" font="Regular;20"/>
+	</screen>
+
+	<screen name="HelpMenu" position="center,center" size="740,565">
+		<widget name="rc" position="30,15" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="on"/>
+		<widget name="long_key" position="0,510" size="300,30" font="Regular;24" halign="center" foregroundColor="yellow"/>
+		<widget name="list" position="170,15" size="550,495" scrollbarMode="showOnDemand"/>
+		<widget name="arrowdown" position="0,0" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
+		<widget name="arrowdown2" position="0,0" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on"/>
+		<widget name="arrowup" position="0,0" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on"/>
+		<widget name="arrowup2" position="0,0" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on"/>
+	</screen>
+
+	<screen name="HotkeySetup" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="list" position="10,10" size="330,484" scrollbarMode="showOnDemand" itemHeight="30"/>
+		<widget name="choosen" position="350,10" size="380,450" scrollbarMode="showOnDemand" itemHeight="30"/>
+	</screen>
+
+	<screen name="HotkeySetupSelect" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="list" position="10,10" size="330,484" scrollbarMode="showOnDemand" itemHeight="30"/>
+		<widget name="choosen" position="350,10" size="390,450" scrollbarMode="showOnDemand" itemHeight="30"/>
+		<widget name="h_prev" pixmap="skin_default/buttons/key_prev.png" alphatest="on" position="646,470" size="35,25"/>
+		<widget name="h_next" pixmap="skin_default/buttons/key_next.png" alphatest="on" position="685,470" size="35,25"/>
+	</screen>
+
+	<screen name="IPKGMenu" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="filelist" position="center,45" size="629,400" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="IPKGSource" position="center,center" size="780,170">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="text" position="40,20" size="700,25" font="Regular;22"/>
+	</screen>
+
+	<screen name="ImageWizard" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="DefaultWizardTemplate"/>
+	</screen>
+
+	<screen name="InfoBar" flags="wfNoBorder" position="0,570" size="1280,150">
+		<panel name="InfoBarTemplate"/>
+		<panel name="InfoBarVideoInfoTemplate"/>
+	</screen>
+
+	<screen name="InputBox" position="center,center" size="550,90">
+		<widget name="text" position="10,20" size="550,25" font="Regular;23"/>
+		<widget name="input" position="10,55" size="550,25" font="Regular;20"/>
+	</screen>
+
+	<screen name="InputDeviceSelection" position="center,center" size="570,380">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="list" render="Listbox" position="10,10" size="550,240" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+			<!--  device, description, devicepng, divpng  -->
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(0, 6), size=(54, 54), png=2), # index 3 is the interface pixmap
+					MultiContentEntryText(pos=(65, 6), size=(615, 54), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=1), # index 1 is the interfacename
+					],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 60}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="10,270" size="550,25" font="Regular;20"/>
+
+	</screen>
+
+	<screen name="InputDeviceSetup" position="center,center" size="520,230">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="500,100" scrollbarMode="showOnDemand"/>
+		<widget source="introduction" render="Label" position="10,120" size="500,25" font="Regular;20"/>
+	</screen>
+
+	<screen name="Ipkg" position="center,center" size="620,200">
+		<panel name="IpkDownloadTemplate"/>
+	</screen>
+
+	<screen name="IpkgInstaller" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="list" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+	</screen>
+
+	<screen name="JobView" position="center,center" size="523,250">
+		<widget source="job_name" render="Label" position="10,15" size="503,30" font="Regular;22"/>
+		<widget source="job_task" render="Label" position="10,55" size="503,25" font="Regular;20"/>
+		<widget source="job_progress" render="Label" position="10,85" size="110,25" font="Regular;20">
+			<convert type="ProgressToText"/>
+		</widget>
+		<widget source="job_progress" render="Progress" position="120,90" size="403,10" borderWidth="1" borderColor="grey"/>
+		<widget source="job_status" render="Label" position="10,115" size="503,25" font="Regular;20"/>
+		<widget name="config" position="10,145" size="500,25"/>
+
+		<widget source="cancelable" render="FixedLabel" position="10,200" size="165,40" backgroundColor="red">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="finished" render="FixedLabel" position="179,200" size="165,40" backgroundColor="green">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="backgroundable" render="FixedLabel" position="348,200" size="165,40" backgroundColor="blue">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="cancelable" render="FixedLabel" text="Cancel" position="12,202" size="161,36" font="Regular;22" halign="center" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="finished" render="FixedLabel" text="OK" position="181,202" size="161,36" font="Regular;22" halign="center" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="350,202" size="161,36" font="Regular;22" halign="center" valign="center">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="LanguageSelection" position="center,center" size="450,530">
+		<widget source="languages" render="Listbox" position="20,15" size="410,500" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos=(100,10), size=(310,30), flags=RT_HALIGN_LEFT, text=1),
+					MultiContentEntryPixmap(pos=(10,5), size=(60,40), png=2),],
+				"fonts": [gFont("Regular",25)],
+				"itemHeight": 50}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="LanguageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="back" title="Welcome...">
+		<panel name="RemoteControlTemplate"/>
+		<widget name="wizard" pixmap="SimpleGrayHD/window/wizard.png" position="200,100" size="110,174" transparent="1" alphatest="on"/>
+		<widget name="text" position="380,50" size="550,170" font="Regular;23" valign="center"/>
+		<widget source="languages" render="Listbox" position="380,220" size="550,400" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos=(250,10), size=(420,30), flags=RT_HALIGN_LEFT, text=1),
+					MultiContentEntryPixmap(pos=(150,5), size=(60,40), png=2),],
+				"fonts": [gFont("Regular",25)],
+				"itemHeight": 50 }
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="LocationBox" position="center,center" size="720,515">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="text" position="10,10" size="700,25" font="Regular;20"/>
+		<widget name="target" position="10,40" size="700,25" font="Regular;20"/>
+		<widget name="filelist" position="10,75" size="700,187" scrollbarMode="showOnDemand"/>
+		<widget name="textbook" position="10,280" size="700,25" font="Regular;20"/>
+		<widget name="booklist" position="10,310" size="700,125" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="MediaPlayer" position="center,100" size="1080,580">
+		<widget name="filelist" position="10,10" size="530,370" scrollbarMode="showOnDemand"/>
+		<widget name="playlist" position="540,10" size="530,370" selectionDisabled="1" scrollbarMode="showOnDemand"/>
+		<widget name="coverArt" pixmap="skin_default/no_coverArt.png" position="20,400" size="116,116" transparent="1" alphatest="on"/>
+		<widget name="title" position="160,390" size="680,35" font="Regular;22"/>
+		<widget name="titletext" position="160,430" size="100,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="currenttext" position="260,430" size="650,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="artisttext" position="160,460" size="100,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="artist" position="260,460" size="580,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="albumtext" position="160,490" size="100,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="album" position="260,490" size="580,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="yeartext" position="160,520" size="100,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="year" position="260,520" size="250,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="genretext" position="510,520" size="100,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="genre" position="610,520" size="300,25" font="Regular;20" foregroundColor="grey"/>
+		<widget name="repeat" position="20,545" size="50,30" pixmaps="SimpleGrayHD/skin_default/icons/repeat_off.png,SimpleGrayHD/skin_default/icons/repeat_on.png" transparent="1" alphatest="on"/>
+		<widget source="session.CurrentService" render="Label" position="95,550" size="100,25" font="Regular;20" halign="right">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel position="205,561" size="300,3" backgroundColor="grey"/>
+		<widget name="PositionGauge" position="205,555" size="300,16" zPosition="2" transparent="1" pointer="SimpleGrayHD/window/pointer.png:16,3"/>
+		<widget source="session.CurrentService" render="Label" position="515,550" size="100,25" font="Regular;20">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+	</screen>
+
+	<screen name="MediaPlayerSettings" position="center,center" size="740,555">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="720,480" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="MemoryInfo" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="pused" position="80,15" size="150,25" font="Regular;20" halign="right"/>
+		<widget name="slide" position="center,17" size="250,20" foregroundColor="grey" borderWidth="1"/>
+		<widget name="pfree" position="510,15" size="150,25" font="Regular;20"/>
+		<widget name="lmemtext" position="10,45" size="230,450" font="Regular;16"/>
+		<widget name="lmemvalue" position="245,45" size="115,450" font="Regular;16" halign="right"/>
+		<widget name="rmemtext" position="380,45" size="230,360" font="Regular;16"/>
+		<widget name="rmemvalue" position="615,45" size="115,360" font="Regular;16" halign="right"/>
+		<widget name="info" position="380,410" size="370,80" font="Regular;16"/>
+		<widget name="params" rowsincolumn="23"/>
+	</screen>
+
+	<screen name="Menu" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="MenuSort" position="10,60" size="550,650">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="0,30" size="616,550" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">
+				{"template": [MultiContentEntryText(pos=(15,13), size=(400,32), flags=RT_HALIGN_LEFT, text=0)],
+				"fonts": [gFont("Replacement",24)],
+				"itemHeight":55 }
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="MessageBox" position="center,center" size="600,183">
+		<panel name="MessageBoxTemplate"/>
+	</screen>
+
+	<screen name="MessageBoxSimple" position="center,center" size="600,183">
+		<panel name="MessageBoxTemplate"/>
+	</screen>
+
+	<screen name="MinuteInput" position="center,center" size="220,45" title="Seek">
+		<widget name="minutes" position="10,10" size="200,25" halign="right" font="Regular;20"/>
+	</screen>
+
+	<screen name="MovieBrowserConfiguration" position="center,center" size="640,390">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="620,300" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="MovieContextMenu" position="center,center" size="500,290" flags="wfNoBorder">
+		<widget name="menu" position="20,20" size="460,250" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="MoviePlayer" flags="wfNoBorder" position="0,610" size="1280,110">
+		<panel name="PlayerTemplate"/>
+	</screen>
+
+	<screen name="MovieSelection" position="center,100" size="1080,580">
+		<panel name="LeftButtonsTemplate"/>
+		<widget name="waitingtext" position="10,10" size="692,500" zPosition="4" font="Regular;24"/>
+		<widget name="chosenletter" position="10,10" size="692,500" zPosition="4" font="Regular;24"/>
+		<widget name="list" position="10,10" size="692,453" scrollbarMode="showOnDemand"/>
+		<widget name="movie_sort" position="10,476" size="35,20" pixmaps="skin_default/icons/az.png,skin_default/icons/newtop.png,skin_default/icons/shuffle.png,skin_default/icons/za.png,skin_default/icons/oldtop.png,skin_default/icons/faz.png,skin_default/icons/fza.png,skin_default/icons/default.png" transparent="1" alphatest="on"/>
+		<widget name="movie_off" position="50,476" size="35,20" pixmaps="skin_default/icons/ask.png,skin_default/icons/movielist.png,skin_default/icons/quit.png,skin_default/icons/pause.png,skin_default/icons/playlist.png,skin_default/icons/playlistquit.png,skin_default/icons/loop.png,skin_default/icons/rep.png" transparent="1" alphatest="on"/>
+		<widget name="freeDiskSpace" position="100,475" size="602,25" font="Regular;20"/>
+		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
+
+		<widget source="Service" render="Label" position="730,10" size="340,30" font="Replacement;26" noWrap="1">
+			<convert type="MovieInfo">ShortDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="730,45" size="340,360"  font="Regular;20">
+			<convert type="MovieInfo">MetaDescription</convert>
+		</widget>
+		<widget source="Service" render="Label" position="835,415" size="100,24" font="Regular;20" foregroundColor="grey">
+			<convert type="ServiceTime">Duration</convert>
+			<convert type="ClockToText">AsLength</convert>
+		</widget>
+		<widget source="Service" render="Label" position="730,415" size="100,25" font="Regular;20" foregroundColor="grey">
+			<convert type="ServiceTime">StartTime</convert>
+			<convert type="ClockToText">ShortDate</convert>
+		</widget>
+		<widget source="Service" render="Label" position="730,445" size="340,25" font="Regular;20">
+			<convert type="MovieInfo">FileSize</convert>
+		</widget>
+		<widget source="Service" render="Label" position="730,475" size="340,25" font="Regular;20" foregroundColor="grey">
+			<convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="830,542" size="104,25" font="Regular;20" foregroundColor="grey">
+			<convert type="ClockToText">Format:%d.%m.%Y</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="940,530" size="140,40" font="Replacement;30">
+			<convert type="ClockToText">Format:%H:%M:%S</convert>
+		</widget>
+	</screen>
+
+	<screen name="Mute" position="15,15" size="64,64" backgroundColor="transparent" zPosition="10" flags="wfNoBorder">
+		<ePixmap pixmap="SimpleGrayHD/window/mute.png" position="0,0" size="64,64" alphatest="on"/>
+	</screen>
+
+	<screen name="NameserverSetup" position="center,center" size="500,250">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="20,15" size="460,100"/>
+		<widget source="introduction" render="Label" position="20,115" size="460,50" font="Regular;22"/>
+	</screen>
+
+	<screen name="NetworkAdapterSelection" position="center,center" size="600,450">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="list" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos=(85,6), size=(470,28), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_TOP, text=1), # index 1 is the interfacename
+MultiContentEntryText(pos=(85,43), size=(470,20), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text=2), # index 2 is the description
+MultiContentEntryPixmapAlphaTest(pos=(0,8), size=(54,54), png=3), # index 3 is the interface pixmap
+MultiContentEntryPixmapAlphaTest(pos=(63,46), size=(15,16), png=4), # index 4 is the default pixmap
+],
+"fonts": [gFont("Regular",22),gFont("Regular",20)],
+"itemHeight": 60
+}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+	</screen>
+
+	<screen name="NetworkAdapterTest" position="center,center" size="740,380">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="Adaptertext" position="20,25" size="200,25" font="Regular;20"/>
+		<widget name="Adapter" position="200,25" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
+		<widget name="AdapterInfo_OK" position="530,22" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
+		<widget name="AdapterInfo" position="580,17" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="AdapterInfo_Text" position="582,19" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+
+		<widget name="Networktext" position="20,75" size="200,25" font="Regular;20"/>
+		<widget name="Network" position="200,75" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
+		<widget name="NetworkInfo_Check" position="530,72" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
+		<widget name="NetworkInfo" position="580,67" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="NetworkInfo_Text" position="582,69" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+
+		<widget name="Dhcptext" position="20,125" size="200,25" font="Regular;20"/>
+		<widget name="Dhcp" position="200,125" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
+		<widget name="DhcpInfo_Check" position="530,122" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
+		<widget name="DhcpInfo" position="580,127" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="DhcpInfo_Text" position="582,129" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+
+		<widget name="IPtext" position="20,175" size="200,25" font="Regular;20"/>
+		<widget name="IP" position="200,175" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
+		<widget name="IPInfo_Check" position="530,172" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
+		<widget name="IPInfo" position="580,177" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="IPInfo_Text" position="582,179" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+
+		<widget name="DNStext" position="20,225" size="200,25" font="Regular;20"/>
+		<widget name="DNS" position="200,225" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
+		<widget name="DNSInfo_Check" position="530,222" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
+		<widget name="DNSInfo" position="580,227" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="DNSInfo_Text" position="582,229" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+
+		<widget name="EditSettingsButton" position="580,277" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="EditSettings_Text" position="582,279" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+
+		<widget name="InfoText" position="10,17" size="720,370" font="Regular;22" zPosition="3"/>
+	</screen>
+
+	<screen name="NetworkBrowser" position="center,center" size="600,450">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="list" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryPixmapAlphaTest(pos=(0,6), size=(48,48), png=1), # index 1 is the expandable/expanded/verticalline icon
+MultiContentEntryText(pos=(60,4), size=(400,26), font=2, flags=RT_HALIGN_LEFT, text=2), # index 2 is the Hostname
+MultiContentEntryText(pos=(150,5), size=(300,25), font=0, flags=RT_HALIGN_LEFT, text=3), # index 3 is the sharename
+MultiContentEntryText(pos=(150,26), size=(300,17), font=1, flags=RT_HALIGN_LEFT, text=4), # index 4 is the sharedescription
+MultiContentEntryPixmapAlphaTest(pos=(55,6), size=(48,48), png=5), # index 5 is the nfs/cifs icon
+MultiContentEntryPixmapAlphaTest(pos=(100,6), size=(48,48), png=6), # index 6 is the isMounted icon
+],
+"fonts": [gFont("Regular",20), gFont("Regular",15), gFont("Regular",22)],
+"itemHeight": 60
+}
+			</convert>
+		</widget>
+		<widget source="infotext" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+	</screen>
+
+	<screen name="NetworkWizard" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="DefaultWizardTemplate"/>
+	</screen>
+
+	<screen name="NimSelection" position="center,center" size="500,350">
+		<widget source="nimlist" render="Listbox" position="10,15" size="480,320" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryText(pos=(5, 5), size=(470, 30), flags=RT_HALIGN_LEFT, text=1), # index 1 is the nim name,
+					MultiContentEntryText(pos=(50, 30), size=(430, 50), font=1, flags=RT_HALIGN_LEFT, text=2), # index 2 is a description of the nim settings,
+					],
+				"fonts": [gFont("Regular", 20), gFont("Regular", 15)],
+				"itemHeight": 80}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="NimSetup" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="center,9" size="720,490"/>
+	</screen>
+
+	<screen name="NumberZap" position="center,center" size="350,85" flags="wfNoBorder">;
+		<widget name="channel" position="10,10" size="100,30" font="Regular;25"/>
+		<widget name="number" position="110,10" size="100,30" font="Regular;25"/>
+		<widget name="servicename" position="10,45" size="330,30" font="Regular;25"/>
+	</screen>
+
+	<screen name="NumericalTextInputHelpDialog" position="center,470" size="480,88" zPosition="2" flags="wfNoBorder">
+		<widget name="key1" position="0,0" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key2" position="160,0" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key3" position="320,0" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key4" position="0,22" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key5" position="160,22" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key6" position="320,22" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key7" position="0,44" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key8" position="160,44" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key9" position="322,44" size="160,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="help1" position="0,66" size="130,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="key0" position="130,66" size="220,22" font="Regular;18" valign="center" halign="center"/>
+		<widget name="help2" position="350,66" size="130,22" font="Regular;18" valign="center" halign="center"/>
+	</screen>
+
+	<screen name="OverscanTestScreen" position="0,0" size="1280,720">
+		<ePixmap pixmap="skin_default/overscan.png" position="0,0" size="1280,720" zPosition="1" alphatest="off"/>
+	</screen>
+
+	<screen name="PVRState" position="128,115" size="150,30" backgroundColor="transparent" zPosition="2" flags="wfNoBorder">
+		<widget name="state" position="0,0" size="150,30" backgroundColor="transparent" borderWidth="2" font="Regular;22" borderColor="black" halign="left"/>
+	</screen>
+
+	<screen name="PacketManager" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="list" render="Listbox" position="center,25" size="700,450" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos=(5,1), size=(610,24), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
+				MultiContentEntryText(pos=(5,26), size=(610,24), font=1, flags=RT_HALIGN_LEFT, text=2), # index 2 is the description
+				MultiContentEntryPixmapAlphaTest(pos=(620,0), size=(48,48), png=4), # index 4 is the status pixmap
+				MultiContentEntryPixmapAlphaTest(pos=(0,48), size=(700,2), png=5), # index 4 is the div pixmap
+				],
+				"fonts": [gFont("Regular",22),gFont("Regular",16)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="ParentalControlSetup" position="center,center" size="640,410">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="620,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="PiPSetup" position="center,center" size="800,200" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="text" position="0,0" size="800,200" font="Regular;22" backgroundColor="transparent" transparent="1" borderColor="black" borderWidth="3" valign="center" halign="center"/>
+	</screen>
+
+	<screen name="Pic_Exif" position="center,center" size="650,440">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="menu" render="Listbox" position="20,10" size="610,350" scrollbarMode="showOnDemand" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+{"template": [ MultiContentEntryText(pos=(0,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0),
+MultiContentEntryText(pos=(305,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0)],
+"fonts": [gFont("Regular",20)],
+"itemHeight": 25 }
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="PinInput" position="center,center" size="500,170">
+		<panel name="PinInputTemplate"/>
+	</screen>
+
+	<screen name="PinInputPopup" position="center,center" size="500,170">
+		<panel name="PinInputTemplate"/>
+	</screen>
+
+	<screen name="PluginBrowser" position="center,center" size="640,555">
+		<widget name="list" position="10,10" size="620,453" scrollbarMode="showOnDemand" itemHeight="50"/>
+		<eLabel position="10,500" size="247,40" zPosition="-5" backgroundColor="red"/>
+		<eLabel position="261,500" size="247,40" zPosition="-5" backgroundColor="green"/>
+		<widget name="key_red" render="Label" position="12,502" size="243,36" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" render="Label" position="263,502" size="243,36" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="PluginDownloadBrowser" position="center,center" size="620,380">
+		<widget name="text" position="10,10" size="600,50" zPosition="2" font="Regular;24"/>
+		<widget name="list" position="10,10" size="600,350" zPosition="3" scrollbarMode="showOnDemand" itemHeight="50"/>
+	</screen>
+
+	<screen name="PluginManager" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="list" render="Listbox" position="center,34" size="700,350" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"templates":
+				{"default": (50,[
+				MultiContentEntryText(pos=(5,1), size=(610,24), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
+				MultiContentEntryText(pos=(5,26), size=(610,24), font=1, flags=RT_HALIGN_LEFT, text=2), # index 2 is the description
+				MultiContentEntryPixmapAlphaTest(pos=(620,0), size=(48,48), png=5), # index 5 is the status pixmap
+				MultiContentEntryPixmapAlphaTest(pos=(0,48), size=(700,2), png=6), # index 6 is the div pixmap
+				]),
+				"category": (50,[
+				MultiContentEntryText(pos=(5,1), size=(695,22), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
+				MultiContentEntryText(pos=(5,26), size=(695,16), font=1, flags=RT_HALIGN_LEFT, text=1), # index 1 is the description
+				MultiContentEntryPixmapAlphaTest(pos=(0,48), size=(700,2), png=3), # index 3 is the div pixmap
+				])
+				},
+				"fonts": [gFont("Regular",22),gFont("Regular",16)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget source="status" render="Label" position="center,415" size="700,30" halign="center" valign="center" font="Regular;22"/>
+	</screen>
+
+	<screen name="PluginManagerInfo" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="list" render="Listbox" position="center,44" size="648,350" scrollbarMode="showOnDemand" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+				{"templates": [
+				MultiContentEntryText(pos=(5,1), size=(610,24), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
+				MultiContentEntryText(pos=(5,26), size=(610,24), font=1, flags=RT_HALIGN_LEFT, text=1), # index 1 is the state
+				MultiContentEntryPixmapAlphaTest(pos=(620,0), size=(48,48), png=2), # index 2 is the status pixmap
+				MultiContentEntryPixmapAlphaTest(pos=(0,48), size=(700,2), png=3), # index 3 is the div pixmap
+				],
+				"fonts": [gFont("Regular",22),gFont("Regular",16)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget source="status" render="Label" position="center,415" size="700,30" halign="center" valign="center" font="Regular;22"/>
+	</screen>
+
+	<screen name="PositionerSetup" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="list" position="29,27" size="683,183" transparent="1"/>
+		<widget name="snr_db" position="80,215" size="200,24" halign="center" valign="center" font="Regular;22"/>
+		<eLabel text="SNR:" position="27,245" size="80,24" font="Regular;22"/>
+		<widget name="snr_bar" position="120,center" size="200,20" borderWidth="1" transparent="1"/>
+		<widget name="snr_percentage" position="center,245" size="80,24" font="Regular;22"/>
+		<eLabel text="BER:" position="27,275" size="80,24" font="Regular;22"/>
+		<widget name="ber_bar" position="120,275" size="200,20" borderWidth="1" transparent="1"/>
+		<widget name="ber_value" position="center,275" size="80,24" font="Regular;22"/>
+		<eLabel text="Lock:" position="27,305" size="80,24" font="Regular;22"/>
+		<widget name="lock_state" position="120,305" size="200,24" font="Regular;22"/>
+		<eLabel text="Frequency:" position="27,335" size="150,24" font="Regular;22"/>
+		<widget name="frequency_value" position="190,335" size="150,24" font="Regular;22"/>
+		<eLabel text="Symbolrate:" position="27,365" size="150,24" font="Regular;22"/>
+		<widget name="symbolrate_value" position="190,365" size="150,24" font="Regular;22"/>
+		<eLabel text="FEC:" position="27,395" size="150,24" font="Regular;22"/>
+		<widget name="fec_value" position="190,395" size="150,24" font="Regular;22"/>
+	</screen>
+
+	<screen name="ProjectSettings" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="720,350" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget source="info" render="Label" position="10,380" size="720,100" font="Regular;20"/>
+	</screen>
+
+	<screen name="RadioInfoBar" flags="wfNoBorder" position="0,530" size="1280,190">
+		<panel name="InfoBarTemplate"/>
+		<widget source="RdsDecoder" render="Label" position="center,e-192" size="1260,45" font="LCD;30" foregroundColor="grey" noWrap="1">
+			<convert type="RdsInfo">RadioText</convert>
+		</widget>
+		<widget source="RdsDecoder" render="FixedLabel" text="RASS" position="860,e-130" size="40,25" font="Regular;20">
+				<convert type="RdsInfo">RasInteractiveAvailable</convert>
+				<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<screen name="RdsInfoDisplay" position="0,0" size="1280,720" zPosition="-2" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="RassLogo" pixmap="skin_default/icons/rass_logo.png" position="100,585" size="50,21"/>
+		<widget name="RadioText" position="100,620" size="1080,30" font="Regular;24" noWrap="1"/>
+		<widget name="RtpText" position="100,650" size="1080,30" font="Regular;24" halign="right" noWrap="1"/>
+	</screen>
+
+	<screen name="RecordPathsSettings" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="center,58" size="701,187" transparent="1"/>
+	</screen>
+
+	<screen name="RemoteControlType" position="center,center" size="500,200">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="480,100" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="RestoreMenu" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="filelist" position="center,45" size="640,400" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="RestoreScreen" position="center,center" size="600,502">
+		<widget name="config" position="10,10" size="580,425" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="Satfinder" position="center,center" size="570,550">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="Frontend" render="Label" position="center,10" size="260,25" font="Regular;20" halign="center">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<eLabel text="SNR:" position="90,40" size="60,25" font="Regular;20" halign="right"/>
+		<widget source="Frontend" render="Progress" position="155,43" size="260,20" pixmap="SimpleGrayHD/window/bar_snr.png" borderWidth="2" borderColor="grey">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="420,40" size="60,22" font="Regular;20">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel text="AGC:" position="90,70" size="60,25" font="Regular;20" halign="right"/>
+		<widget source="Frontend" render="Progress" position="155,73" size="260,20" pixmap="SimpleGrayHD/window/bar_snr.png" borderWidth="2" borderColor="grey">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="420,70" size="60,22" font="Regular;20">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<eLabel text="BER:" position="90,100" size="60,25" font="Regular;20" halign="right"/>
+		<widget source="Frontend" render="Progress" position="155,103" size="260,20" pixmap="SimpleGrayHD/window/bar_ber.png" borderWidth="2" borderColor="grey">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<widget source="Frontend" render="Label" position="420,100" size="60,22" font="Regular;20">
+			<convert type="FrontendInfo">BER</convert>
+		</widget>
+		<eLabel text="Lock:" position="70,130" size="80,25" font="Regular;21" halign="right"/>
+		<widget source="Frontend" render="Pixmap" pixmap="skin_default/icons/lock_on.png" position="155,130" size="38,31" alphatest="on">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="Frontend" render="Pixmap" pixmap="skin_default/icons/lock_off.png" position="155,130" size="38,31" alphatest="on">
+			<convert type="FrontendInfo">LOCK</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget name="config" position="10,160" size="550,275" scrollbarMode="showOnDemand"/>
+		<widget name="introduction" position="10,445" size="620,25" font="Regular;20"/>
+	</screen>
+
+	<screen name="ScanIP" position="center,center" size="600,400">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="20,15" size="560,300" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="ScanSetup" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+	</screen>
+
+	<screen name="ScanSimple" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="footer" position="10,395" size="720,100" font="Regular;22"/>
+	</screen>
+
+	<screen name="SecondInfoBar" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transpBack">
+		<panel name="InfoBarTemplate"/>
+		<panel name="InfoBarVideoInfoTemplate"/>
+		<eLabel position="0,570" size="1280,150" zPosition="-5" backgroundColor="back"/>
+		<widget source="session.CurrentService" render="Label" position="65,45" size="1100,70" font="Regular;20" backgroundColor="transpBack">
+			<convert type="PliExtraInfo">All</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="65,135" size="560,25" noWrap="1" font="Regular;22" backgroundColor="transpBack">
+			<convert type="EventName">NameNow</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="65,170" size="450,22" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="65,200" size="200,22" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="65,230" size="560,310" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="65,545" size="560,25" font="Regular;20" backgroundColor="transpBack">
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="660,135" size="560,26" noWrap="1" font="Regular;22" backgroundColor="transpBack">
+			<convert type="EventName">NameNext</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="660,170" size="450,22" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="660,200" size="200,22" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="660,230" size="560,320" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+	</screen>
+
+	<screen name="SecondInfoBarSimple" position="0,0" size="1280,720" backgroundColor="transpBack" flags="wfNoBorder">
+		<panel name="InfoBarTemplate"/>
+		<panel name="InfoBarVideoInfoTemplate"/>
+		<eLabel position="0,570" size="1280,150" zPosition="-5" backgroundColor="back"/>
+		<widget source="session.Event_Now" render="Label" position="65,45" size="560,25" noWrap="1" font="Regular;22" backgroundColor="transpBack">
+			<convert type="EventName">NameNow</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="65,80" size="450,22" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="65,110" size="200,22" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="65,140" size="560,420" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="660,45" size="560,26" noWrap="1" font="Regular;22" backgroundColor="transpBack">
+			<convert type="EventName">NameNext</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="660,80" size="450,22" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">Genre</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="660,110" size="200,22" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">SmallRating</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="660,140" size="560,420" font="Regular;20" backgroundColor="transpBack">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+	</screen>
+
+	<screen name="SelectImage" position="center,center" size="600,250">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="list" position="20,10" size="560,150" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="ServiceInfo" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="infolist" position="10,10" size="720,491" selectionDisabled="1" itemHeight="31"/>
+	</screen>
+
+	<screen name="ServiceInfoSimple" position="center,center" size="740,511">
+		<widget name="infolist" position="10,10" size="720,491" selectionDisabled="1" itemHeight="31"/>
+	</screen>
+
+	<screen name="ServiceScan" position="center,center" size="620,440">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="10,8" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-c.png" position="10,8" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-t.png" position="10,8" size="64,64" transparent="1" alphatest="on">
+			<convert type="FrontendInfo">TYPE</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="network" position="90,10" size="580,25" font="Regular;20"/>
+		<widget name="transponder" position="90,40" size="580,25" font="Regular;20"/>
+		<widget name="scan_progress" position="10,80" size="600,20" foregroundColor="grey" borderWidth="1" borderColor="white"/>
+		<widget name="scan_state" position="10,110" size="600,25" zPosition="2" font="Regular;20"/>
+		<widget name="pass" position="10,140" size="600,25" font="Regular;20"/>
+		<widget name="servicelist" position="10,170" size="600,200" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="Setup" position="center,center" size="680,520">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="660,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="10,330" size="600,125" font="Regular;20"/>
+	</screen>
+
+	<screen name="SimpleChannelSelection" position="center,100" size="712,580">
+		<panel name="LeftButtonsTemplate"/>
+		<widget name="list" position="10,10" size="692,498" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="SkinSelector" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="SkinList" position="16,25" size="424,430" scrollbarMode="showOnDemand"/>
+		<widget name="Preview" position="451,25" size="280,210" alphatest="off"/>
+		<widget source="introduction" render="Label" position="center,465" size="680,25" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="Standby" position="0,0" size="1280,720" flags="wfNoBorder"/>
+
+	<screen name="StandbySummary" position="0,0" size="132,64">
+		<widget source="global.CurrentTime" render="Label" position="0,0" size="132,64" font="Regular;30" halign="center" valign="center">
+			<convert type="ClockToText">Format:%H:%M-%h.%d</convert>
+		</widget>
+	</screen>
+
+	<screen name="StartWizard" position="0,0" size="1280,720" flags="wfNoBorder">
+		<panel name="DefaultWizardTemplate"/>
+	</screen>
+
+	<screen name="StreamingClientsInfo" position="center,center" size="640,410">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="menu" position="center,10" size="580,290" font="Regular;20" scrollbarMode="showOnDemand" itemHeight="29"/>
+	</screen>
+
+	<screen name="SubservicesQuickzap" position="center,center" size="560,100" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel text="Subservices" position="0,0" size="560,28" font="Regular;20" halign="center" valign="center"/>
+		<widget source="session.RecordState" render="Pixmap" pixmap="skin_default/icons/record.png" position="450,0" zPosition="2" size="14,14" alphatest="on">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<widget name="CurrentSubserviceNumber" position="0,28" size="70,48" font="Regular;22" halign="center" valign="center"/>
+		<widget source="session.CurrentService" render="Label" position="70,28" size="490,48" font="Regular;22" valign="center">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+
+	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>
+
+	<screen name="TimerEdit" position="center,center" size="1100,560">
+		<widget name="description" position="10,10" size="1080,40" font="Regular;25"/>
+		<widget name="lbegin" position="605,102" size="103,30" font="Regular;25" foregroundColor="red"/>
+		<widget name="lend" position="605,158" size="103,30" font="Regular;25" foregroundColor="green"/>
+		<widget name="begin" position="708,105" size="72,35" font="Regular;25"/>
+		<widget name="end" position="708,150" size="72,35" font="Regular;25"/>
+		<widget name="apply" position="210,240" size="250,35"/>
+	</screen>
+
+	<screen name="TextBox" position="center,center" size="750,500">
+		<widget name="text" position="center,center" size="680,480" font="Regular;20"/>
+	</screen>
+
+	<screen name="TimeDateInput" position="center,center" size="324,190">
+		<panel name="CancelOKTemplate"/>
+		<widget name="config" position="10,15" size="304,100" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="TimerEditList" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="timerlist" position="10,10" size="720,321" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="10,350" size="720,105" font="Regular;22"/>
+	</screen>
+
+	<screen name="TimerEntry" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="720,440" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="TimerLog" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="loglist" position="10,10" size="720,321" scrollbarMode="showOnDemand"/>
+		<widget name="logentry" position="10,350" size="720,105" font="Regular;20"/>
+	</screen>
+
+	<screen name="TimerSelection" position="center,center" size="1100,560">
+		<widget name="timerlist" position="10,20" size="1080,350" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="TimeshiftLive" position="15,15" size="300,40" zPosition="2" backgroundColor="transparent" flags="wfNoBorder">
+		<eLabel position="0,0" size="300,40" text="Timeshift Live" backgroundColor="transparent" borderWidth="2" font="Regular;30" borderColor="black"/>
+	</screen>
+
+	<screen name="TimeshiftState" position="150,666" size="900,54" flags="wfNoBorder">
+		<widget source="session.CurrentService" render="Label" position="0,2" size="100,25" font="Replacement;20" foregroundColor="grey">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel position="180,2" size="230,25" text="Timeshift" font="Regular;20" halign="right"/>
+		<widget name="state" position="410,2" size="40,25" font="Replacement;20" halign="center"/>
+		<widget source="session.CurrentService" render="Label" position="455,2" size="100,25" font="Replacement;20" foregroundColor="grey">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="800,e-60" size="100,25" font="Replacement;20" halign="right" foregroundColor="grey">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Progress" position="0,30" size="900,5" borderWidth="1" borderColor="grey">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+	</screen>
+
+	<screen name="TitleCutter" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="cutlist" position="10,10" size="720,350" render="Listbox" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos=(10,2), size=(170,20), text=1, backcolor=MultiContentTemplateColor(3)),
+MultiContentEntryText(pos=(190,2), size=(80,20), text=2, flags=RT_HALIGN_CENTER, backcolor=MultiContentTemplateColor(3))
+],
+"fonts": [gFont("Regular",20)],
+"itemHeight": 25
+}
+			</convert>
+		</widget>
+		<widget name="Video" position="20,370" size="696,80"/>
+
+		<widget source="session.CurrentService" render="Label" position="95,460" size="100,25" font="Regular;20" halign="right">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel position="205,471" size="300,3" backgroundColor="grey"/>
+		<widget name="Timeline" position="205,465" size="300,16" zPosition="2" transparent="1" pointer="SimpleGrayHD/window/pointer.png:16,3"/>
+		<widget source="session.CurrentService" render="Label" position="515,460" size="100,25" font="Regular;20">
+			<convert type="ServicePosition">Remaining</convert>
+		</widget>
+	</screen>
+
+	<screen name="TitleList" position="center,center" size="560,470">
+		<panel name="DynamicButtonsTemplate"/>
+		<eLabel position="10,396" size="75,22" text="MENU" font="Replacement;20" halign="center" foregroundColor="white" valign="center"/>
+		<widget source="title_label" render="Label" position="10,48" size="540,38" font="Regular;20"/>
+		<widget source="error_label" render="Label" position="10,48" size="540,296" zPosition="3" font="Regular;20"/>
+		<widget source="titles" render="Listbox" scrollbarMode="showOnDemand" position="10,86" size="546,296">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos=(0,0), size=(360,20), font=0, flags=RT_HALIGN_LEFT, text=1), # index 1 Title,
+MultiContentEntryText(pos=(0,20), size=(360,17), font=1, flags=RT_HALIGN_LEFT, text=2), # index 2 description,
+MultiContentEntryText(pos=(366,6), size=(152,20), font=1, flags=RT_HALIGN_RIGHT, text=3), # index 3 channel,
+MultiContentEntryText(pos=(366,20), size=(102,17), font=1, flags=RT_HALIGN_RIGHT, text=4), # index 4 begin time,
+MultiContentEntryText(pos=(470,20), size=(48,20), font=1, flags=RT_HALIGN_RIGHT, text=5), # index 5 duration,
+],
+"fonts": [gFont("Regular",20), gFont("Regular",14)],
+"itemHeight": 37
+}
+			</convert>
+		</widget>
+		<widget source="hint" render="Label" position="85,396" size="505,22" font="Regular;20"/>
+		<widget name="medium_label" position="10,420" size="540,22" font="Regular;20" foregroundColors="#FFFFFF,#FFFF00,#FF0000"/>
+		<widget source="space_bar_single" render="Progress" position="10,446" size="270,24" borderWidth="1" zPosition="2"/>
+		<widget source="space_label_single" render="Label" position="10,449" size="270,22" zPosition="3" font="Regular;20" halign="center" foregroundColor="black"/>
+		<widget source="space_bar_dual" render="Progress" position="10,446" size="540,24" borderWidth="1"/>
+		<widget source="space_label_dual" render="Label" position="10,449" size="540,22" zPosition="2" font="Regular;20" halign="center" foregroundColor="black"/>
+	</screen>
+
+	<screen name="TitleProperties" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="thumbnail" position="10,10" size="260,160" alphatest="on"/>
+		<widget source="serviceinfo" render="Label" position="180,10" size="560,160" font="Regular;20"/>
+		<widget name="config" position="10,180" size="720,300" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<screen name="TranslationInfo" position="center,center" size="640,410">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="TranslatorName" render="Label" position="center,10" size="580,40" font="Regular;26" foregroundColor="yellow" halign="center"/>
+		<widget source="TranslationInfo" render="Label" position="center,60" size="580,270" font="Regular;22" halign="center"/>
+	</screen>
+
+	<screen name="Troubleshoot" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="AboutScrollLabel" position="20,25" size="700,470" font="Regular;16"/>
+	</screen>
+
+	<screen name="UnhandledKey" position="center,center" size="55,55" zPosition="100" flags="wfNoBorder">
+		<widget name="UnhandledKeyPixmap" pixmap="SimpleGrayHD/window/unhandled_key.png" position="0,0" size="55,55" alphatest="off"/>
+	</screen>
+
+	<screen name="UpdatePlugin" position="center,center" size="620,200">
+		<panel name="IpkDownloadTemplate"/>
+	</screen>
+
+	<screen name="UpdatePluginMenu" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="menu" render="Listbox" position="center,9" size="631,325" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos=(70,9), size=(631,30), flags=RT_HALIGN_LEFT, text=1), # index 0 is the MenuText,
+],
+"fonts": [gFont("Regular",22)],
+"itemHeight": 45
+}
+			</convert>
+		</widget>
+		<widget source="menu" render="Listbox" position="center,345" size="650,160" scrollbarMode="showNever" selectionDisabled="1">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos=(0,0), size=(650,160), flags=RT_HALIGN_CENTER|RT_WRAP, text=2), # index 2 is the Description,
+],
+"fonts": [gFont("Regular",22)],
+"itemHeight": 160
+}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="UserDialog" position="center,center" size="600,450">
+		<panel name="DynamicButtonsTemplate"/>
+		<panel name="MountConfigTemplate"/>
+	</screen>
+
+	<screen name="UserManager" position="center,center" size="600,450">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget source="config" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+{"template": [
+MultiContentEntryText(pos=(80,7), size=(650,50), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
+MultiContentEntryPixmapAlphaTest(pos=(10,6), size=(48,48), png=3), # index 4 is the status pixmap
+],
+"fonts": [gFont("Regular",22)],
+"itemHeight": 60
+}
+			</convert>
+		</widget>
+		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+	</screen>
+
+	<screen name="VideoEnhancementPreview" position="center,center" size="570,210">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="550,80" scrollbarMode="showOnDemand"/>
+		<widget source="introduction" render="Label" position="10,100" size="550,30" font="Regular;22"/>
+	</screen>
+
+	<screen name="VideoEnhancementSetup" position="center,center" size="740,565">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="config" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+	</screen>
+
+	<screen name="VideoFinetune" position="0,0" size="1280,720">
+		<widget source="Canvas" render="Canvas" position="0,0" size="1280,720"/>
+	</screen>
+
+	<screen name="VideoMode" position="85,45" size="400,50" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="videomode" position="0,0" size="400,50" backgroundColor="transparent" transparent="1" font="Regular;22" borderColor="black" borderWidth="2" valign="center"/>
+	</screen>
+
+	<screen name="VirtualKeyBoard" position="center,center" size="560,405">
+		<widget name="header" position="10,10" size="540,20" font="Regular;20" noWrap="1"/>
+		<widget name="text" position="10,55" size="540,30" font="Regular;30" noWrap="1"/>		
+		<widget name="list" position="10,105" size="540,225" selectionDisabled="1" transparent="1"/>
+		<eLabel position="10,355" size="177,40" zPosition="-5" backgroundColor="red"/>
+		<eLabel position="191,355" size="177,40" zPosition="-5" backgroundColor="green"/>
+		<eLabel position="372,355" size="177,40" zPosition="-5" backgroundColor="yellow"/>
+		<widget source="key_red" render="Label" position="12,357" size="173,36" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="193,357" size="173,36" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_yellow" render="Label" position="374,357" size="173,36" font="Regular;22" halign="center" valign="center"/>
+	</screen>
+
+	<screen name="Volume" position="center,15" size="320,34" zPosition="10" flags="wfNoBorder">
+		<ePixmap pixmap="SimpleGrayHD/window/volume.png" position="5,5" size="35,24" alphatest="on"/>
+		<widget name="Volume" position="45,12" size="200,10" borderWidth="1" borderColor="grey"/>
+		<widget source="global.CurrentTime" render="SDVolume" position="250,2" size="70,30" font="Replacement;26" halign="center"/>
+	</screen>
+
+	<screen name="clockDisplay" position="420,200" size="320,170">
+		<widget name="okbutton" position="10,10" size="300,40"/>
+		<widget name="theClock" position="10,60" size="300,50"/>
+		<widget name="title" position="10,110" size="300,50"/>
+	</screen>
+
+	<screen name="menu_expert" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_harddisk" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_information" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_mainmenu" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_scan" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_setup" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_shutdown" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_system" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="menu_video" position="10,60" size="400,650">
+		<panel name="MenuTemplate"/>
+	</screen>
+
+	<screen name="picshow" position="center,center" size="740,390">
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="thn" position="20,10" size="260,300" alphatest="on"/>
+		<widget name="filelist" position="300,10" size="420,300" scrollbarMode="showOnDemand"/>
+	</screen>
+</skin>
+
