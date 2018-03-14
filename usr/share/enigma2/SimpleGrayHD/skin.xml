@@ -1306,11 +1306,11 @@ MultiContentEntryText(pos=(305,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0)]
 		<widget name="list" position="10,10" size="692,498" scrollbarMode="showOnDemand"/>
 	</screen>
 
-	<screen name="SkinSelector" position="center,center" size="740,565">
+	<screen name="SkinSelector" position="center,center" size="600,375">
 		<panel name="DynamicButtonsTemplate"/>
-		<widget name="SkinList" position="16,25" size="424,430" scrollbarMode="showOnDemand"/>
-		<widget name="Preview" position="451,25" size="280,210" alphatest="off"/>
-		<widget source="introduction" render="Label" position="center,465" size="680,25" font="Regular;22" halign="center"/>
+		<widget name="SkinList" position="10,10" size="280,250" scrollbarMode="showOnDemand"/>
+		<widget name="Preview" position="310,10" size="280,210" alphatest="on"/>
+		<widget source="introduction" render="Label" position="10,270" size="580,25" font="Regular;20"/>
 	</screen>
 
 	<screen name="Standby" position="0,0" size="1280,720" flags="wfNoBorder"/>
