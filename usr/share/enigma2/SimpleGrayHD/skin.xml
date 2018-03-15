@@ -324,13 +324,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<eLabel position="81,126" size="308,418" zPosition="2" backgroundColor="black"/>
 		<widget source="cutlist" render="Listbox" position="90,135" size="290,400" zPosition="3" scrollbarMode="showOnDemand" enableWrapAround="1">
 			<convert type="TemplatedMultiContent">
-{"template": [
-MultiContentEntryText(size=(145,20), text=1, backcolor=MultiContentTemplateColor(3)),
-MultiContentEntryText(pos=(145,0), size=(145,20), text=2, flags=RT_HALIGN_RIGHT, backcolor=MultiContentTemplateColor(3))
-],
-"fonts": [gFont("Regular",18)],
-"itemHeight": 20
-}
+				{"template": [
+					MultiContentEntryText(size=(145,20), text=1, backcolor=MultiContentTemplateColor(3)),
+					MultiContentEntryText(pos=(145,0), size=(145,20), text=2, flags=RT_HALIGN_RIGHT, backcolor=MultiContentTemplateColor(3)),],
+				"fonts": [gFont("Regular",18)],
+				"itemHeight": 20}
 			</convert>
 		</widget>
 		<eLabel position="479,124" zPosition="3" size="696,367" backgroundColor="transparent"/>
@@ -846,15 +844,14 @@ MultiContentEntryText(pos=(145,0), size=(145,20), text=2, flags=RT_HALIGN_RIGHT,
 		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
-{"template": [
-MultiContentEntryText(pos=(85,6), size=(470,28), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_TOP, text=1), # index 1 is the interfacename
-MultiContentEntryText(pos=(85,43), size=(470,20), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text=2), # index 2 is the description
-MultiContentEntryPixmapAlphaTest(pos=(0,8), size=(54,54), png=3), # index 3 is the interface pixmap
-MultiContentEntryPixmapAlphaTest(pos=(63,46), size=(15,16), png=4), # index 4 is the default pixmap
-],
-"fonts": [gFont("Regular",22),gFont("Regular",20)],
-"itemHeight": 60
-}
+				{"template": [
+					MultiContentEntryText(pos=(85,6), size=(470,28), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_TOP, text=1), # index 1 is the interfacename
+					MultiContentEntryText(pos=(85,43), size=(470,20), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text=2), # index 2 is the description
+					MultiContentEntryPixmapAlphaTest(pos=(0,8), size=(54,54), png=3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaTest(pos=(63,46), size=(15,16), png=4), # index 4 is the default pixmap
+				],
+				"fonts": [gFont("Regular",22),gFont("Regular",20)],
+				"itemHeight": 60}
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
@@ -902,17 +899,16 @@ MultiContentEntryPixmapAlphaTest(pos=(63,46), size=(15,16), png=4), # index 4 is
 		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
-{"template": [
-MultiContentEntryPixmapAlphaTest(pos=(0,6), size=(48,48), png=1), # index 1 is the expandable/expanded/verticalline icon
-MultiContentEntryText(pos=(60,4), size=(400,26), font=2, flags=RT_HALIGN_LEFT, text=2), # index 2 is the Hostname
-MultiContentEntryText(pos=(150,5), size=(300,25), font=0, flags=RT_HALIGN_LEFT, text=3), # index 3 is the sharename
-MultiContentEntryText(pos=(150,26), size=(300,17), font=1, flags=RT_HALIGN_LEFT, text=4), # index 4 is the sharedescription
-MultiContentEntryPixmapAlphaTest(pos=(55,6), size=(48,48), png=5), # index 5 is the nfs/cifs icon
-MultiContentEntryPixmapAlphaTest(pos=(100,6), size=(48,48), png=6), # index 6 is the isMounted icon
-],
-"fonts": [gFont("Regular",20), gFont("Regular",15), gFont("Regular",22)],
-"itemHeight": 60
-}
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(0,6), size=(48,48), png=1), # index 1 is the expandable/expanded/verticalline icon
+					MultiContentEntryText(pos=(60,4), size=(400,26), font=2, flags=RT_HALIGN_LEFT, text=2), # index 2 is the Hostname
+					MultiContentEntryText(pos=(150,5), size=(300,25), font=0, flags=RT_HALIGN_LEFT, text=3), # index 3 is the sharename
+					MultiContentEntryText(pos=(150,26), size=(300,17), font=1, flags=RT_HALIGN_LEFT, text=4), # index 4 is the sharedescription
+					MultiContentEntryPixmapAlphaTest(pos=(55,6), size=(48,48), png=5), # index 5 is the nfs/cifs icon
+					MultiContentEntryPixmapAlphaTest(pos=(100,6), size=(48,48), png=6), # index 6 is the isMounted icon
+				],
+				"fonts": [gFont("Regular",20), gFont("Regular",15), gFont("Regular",22)],
+				"itemHeight": 60}
 			</convert>
 		</widget>
 		<widget source="infotext" render="Label" position="20,325" size="560,50" font="Regular;22"/>
@@ -999,10 +995,10 @@ MultiContentEntryPixmapAlphaTest(pos=(100,6), size=(48,48), png=6), # index 6 is
 		<panel name="DynamicButtonsTemplate"/>
 		<widget source="menu" render="Listbox" position="20,10" size="610,350" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
-{"template": [ MultiContentEntryText(pos=(0,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0),
-MultiContentEntryText(pos=(305,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0)],
-"fonts": [gFont("Regular",20)],
-"itemHeight": 25 }
+				{"template": [ MultiContentEntryText(pos=(0,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryText(pos=(305,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0)],
+				"fonts": [gFont("Regular",20)],
+				"itemHeight": 25}
 			</convert>
 		</widget>
 	</screen>
@@ -1406,13 +1402,11 @@ MultiContentEntryText(pos=(305,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0)]
 		<panel name="DynamicButtonsTemplate"/>
 		<widget source="cutlist" position="10,10" size="720,350" render="Listbox" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
-{"template": [
-MultiContentEntryText(pos=(10,2), size=(170,20), text=1, backcolor=MultiContentTemplateColor(3)),
-MultiContentEntryText(pos=(190,2), size=(80,20), text=2, flags=RT_HALIGN_CENTER, backcolor=MultiContentTemplateColor(3))
-],
-"fonts": [gFont("Regular",20)],
-"itemHeight": 25
-}
+				{"template": [
+					MultiContentEntryText(pos=(10,2), size=(170,20), text=1, backcolor=MultiContentTemplateColor(3)),
+					MultiContentEntryText(pos=(190,2), size=(80,20), text=2, flags=RT_HALIGN_CENTER, backcolor=MultiContentTemplateColor(3)),],
+				"fonts": [gFont("Regular",20)],
+				"itemHeight": 25}
 			</convert>
 		</widget>
 		<widget name="Video" position="20,370" size="696,80"/>
@@ -1434,16 +1428,15 @@ MultiContentEntryText(pos=(190,2), size=(80,20), text=2, flags=RT_HALIGN_CENTER,
 		<widget source="error_label" render="Label" position="10,48" size="540,296" zPosition="3" font="Regular;20"/>
 		<widget source="titles" render="Listbox" scrollbarMode="showOnDemand" position="10,86" size="546,296">
 			<convert type="TemplatedMultiContent">
-{"template": [
-MultiContentEntryText(pos=(0,0), size=(360,20), font=0, flags=RT_HALIGN_LEFT, text=1), # index 1 Title,
-MultiContentEntryText(pos=(0,20), size=(360,17), font=1, flags=RT_HALIGN_LEFT, text=2), # index 2 description,
-MultiContentEntryText(pos=(366,6), size=(152,20), font=1, flags=RT_HALIGN_RIGHT, text=3), # index 3 channel,
-MultiContentEntryText(pos=(366,20), size=(102,17), font=1, flags=RT_HALIGN_RIGHT, text=4), # index 4 begin time,
-MultiContentEntryText(pos=(470,20), size=(48,20), font=1, flags=RT_HALIGN_RIGHT, text=5), # index 5 duration,
-],
-"fonts": [gFont("Regular",20), gFont("Regular",14)],
-"itemHeight": 37
-}
+				{"template": [
+					MultiContentEntryText(pos=(0,0), size=(360,20), font=0, flags=RT_HALIGN_LEFT, text=1), # index 1 Title,
+					MultiContentEntryText(pos=(0,20), size=(360,17), font=1, flags=RT_HALIGN_LEFT, text=2), # index 2 description,
+					MultiContentEntryText(pos=(366,6), size=(152,20), font=1, flags=RT_HALIGN_RIGHT, text=3), # index 3 channel,
+					MultiContentEntryText(pos=(366,20), size=(102,17), font=1, flags=RT_HALIGN_RIGHT, text=4), # index 4 begin time,
+					MultiContentEntryText(pos=(470,20), size=(48,20), font=1, flags=RT_HALIGN_RIGHT, text=5), # index 5 duration,
+				],
+				"fonts": [gFont("Regular",20), gFont("Regular",14)],
+				"itemHeight": 37}
 			</convert>
 		</widget>
 		<widget source="hint" render="Label" position="85,396" size="505,22" font="Regular;20"/>
@@ -1484,22 +1477,20 @@ MultiContentEntryText(pos=(470,20), size=(48,20), font=1, flags=RT_HALIGN_RIGHT,
 		<panel name="DynamicButtonsTemplate"/>
 		<widget source="menu" render="Listbox" position="center,9" size="631,325" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
-{"template": [
-MultiContentEntryText(pos=(70,9), size=(631,30), flags=RT_HALIGN_LEFT, text=1), # index 0 is the MenuText,
-],
-"fonts": [gFont("Regular",22)],
-"itemHeight": 45
-}
+				{"template": [
+					MultiContentEntryText(pos=(70,9), size=(631,30), flags=RT_HALIGN_LEFT, text=1), # index 0 is the MenuText,
+				],
+				"fonts": [gFont("Regular",22)],
+				"itemHeight": 45}
 			</convert>
 		</widget>
 		<widget source="menu" render="Listbox" position="center,345" size="650,160" scrollbarMode="showNever" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
-{"template": [
-MultiContentEntryText(pos=(0,0), size=(650,160), flags=RT_HALIGN_CENTER|RT_WRAP, text=2), # index 2 is the Description,
-],
-"fonts": [gFont("Regular",22)],
-"itemHeight": 160
-}
+				{"template": [
+					MultiContentEntryText(pos=(0,0), size=(650,160), flags=RT_HALIGN_CENTER|RT_WRAP, text=2), # index 2 is the Description,
+				],
+				"fonts": [gFont("Regular",22)],
+				"itemHeight": 160}
 			</convert>
 		</widget>
 	</screen>
@@ -1513,13 +1504,12 @@ MultiContentEntryText(pos=(0,0), size=(650,160), flags=RT_HALIGN_CENTER|RT_WRAP,
 		<panel name="DynamicButtonsTemplate"/>
 		<widget source="config" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
-{"template": [
-MultiContentEntryText(pos=(80,7), size=(650,50), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
-MultiContentEntryPixmapAlphaTest(pos=(10,6), size=(48,48), png=3), # index 4 is the status pixmap
-],
-"fonts": [gFont("Regular",22)],
-"itemHeight": 60
-}
+				{"template": [
+					MultiContentEntryText(pos=(80,7), size=(650,50), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
+					MultiContentEntryPixmapAlphaTest(pos=(10,6), size=(48,48), png=3), # index 4 is the status pixmap
+				],
+				"fonts": [gFont("Regular",22)],
+				"itemHeight": 60}
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
