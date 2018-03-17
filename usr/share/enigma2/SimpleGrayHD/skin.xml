@@ -362,10 +362,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget source="space_label" render="Label" position="20,484" size="1060,22" font="Regular;18" halign="center" foregroundColor="black"/>
 	</screen>
 
-	<screen name="DefaultWizard" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="DefaultWizardTemplate"/>
-	</screen>
-
 	<screen name="Dish" flags="wfNoBorder" position="1100,100" size="65,80" zPosition="-1" backgroundColor="transparent">
 		<widget name="Dishpixmap" pixmap="SimpleGrayHD/skin_default/icons/dish.png" position="0,0" size="65,80" alphatest="off"/>
 		<widget name="turnTime" position="0,80" size="120,20" font="Regular;20" halign="right" shadowColor="black" shadowOffset="-2,-2"/>
@@ -1314,10 +1310,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget source="global.CurrentTime" render="Label" position="0,0" size="132,64" font="Regular;30" halign="center" valign="center">
 			<convert type="ClockToText">Format:%H:%M-%h.%d</convert>
 		</widget>
-	</screen>
-
-	<screen name="StartWizard" position="0,0" size="1280,720" flags="wfNoBorder">
-		<panel name="DefaultWizardTemplate"/>
 	</screen>
 
 	<screen name="StreamingClientsInfo" position="center,center" size="640,410">
