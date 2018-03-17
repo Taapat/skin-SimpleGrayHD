@@ -12,16 +12,16 @@
 	</screen>
 
 	<screen name="DefaultWizardTemplate">
-		<panel name="RemoteControlTemplate"/>
-		<widget name="wizard" pixmap="SimpleGrayHD/window/wizard.png" position="50,50" size="110,174" alphatest="on"/>
-		<eLabel position="50,255" size="15,15" backgroundColor="red"/>
-		<eLabel position="52,257" size="11,11"/>
-		<widget name="languagetext" position="75,250" size="200,25" font="Regular;20"/>
-		<widget name="text" position="300,50" size="700,200" font="Regular;23"/>
-		<widget source="list" render="Listbox" position="450,250" size="550,250" scrollbarMode="showOnDemand">
+		<panel name="RCTemplate"/>
+		<eLabel position="30,535" size="15,15" backgroundColor="red"/>
+		<eLabel position="32,537" size="11,11"/>
+		<widget name="languagetext" position="55,530" size="200,25" font="Regular;20"/>
+		<widget name="text" position="200,50" size="940,200" font="Regular;23"/>
+		<widget source="list" render="Listbox" position="200,250" size="550,250" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
 		</widget>
-		<widget name="config" position="300,250" size="450,250" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="200,250" size="450,250" scrollbarMode="showOnDemand"/>
+		<widget name="wizard" pixmap="SimpleGrayHD/picon_default.png" position="40,650" size="100,60" alphatest="on"/>
 	</screen>
 
 	<screen name="DynamicButtonsTemplate">
@@ -304,7 +304,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		</widget>
 	</screen>
 
-	<screen name="RemoteControlTemplate">
+	<screen name="RCTemplate">
 		<widget name="rc" position="30,15" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" alphatest="on"/>
 		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
