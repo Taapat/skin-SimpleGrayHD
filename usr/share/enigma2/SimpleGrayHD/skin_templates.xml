@@ -13,14 +13,15 @@
 
 	<screen name="DefaultWizardTemplate">
 		<panel name="RemoteControlTemplate"/>
-		<widget name="wizard" pixmap="SimpleGrayHD/window/wizard.png" position="200,100" size="110,174" transparent="1" alphatest="on"/>
-		<ePixmap pixmap="SimpleGrayHD/skin_default/buttons/button_red.png" position="200,323" size="15,16" alphatest="on"/>
-		<widget name="languagetext" position="240,320" size="120,30" font="Regular;20"/>
-		<widget name="text" position="380,50" size="550,270" font="Regular;23" valign="center"/>
-		<widget source="list" render="Listbox" position="380,320" size="550,250" scrollbarMode="showOnDemand">
+		<widget name="wizard" pixmap="SimpleGrayHD/window/wizard.png" position="50,50" size="110,174" alphatest="on"/>
+		<eLabel position="50,255" size="15,15" backgroundColor="red"/>
+		<eLabel position="52,257" size="11,11"/>
+		<widget name="languagetext" position="75,250" size="200,25" font="Regular;20"/>
+		<widget name="text" position="300,50" size="700,200" font="Regular;23"/>
+		<widget source="list" render="Listbox" position="450,250" size="550,250" scrollbarMode="showOnDemand">
 			<convert type="StringList"/>
 		</widget>
-		<widget name="config" position="380,320" size="550,250" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="config" position="300,250" size="450,250" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="DynamicButtonsTemplate">
@@ -304,14 +305,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="RemoteControlTemplate">
-		<panel position="right" size="154,*">
-			<panel position="top" size="*,50"/>
-			<widget name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="top" zPosition="10" size="154,500" alphatest="on"/>
-			<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
-			<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
-			<widget name="arrowup" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
-			<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="-100,-100" zPosition="11" size="37,70" transparent="1" alphatest="on"/>
-		</panel>
+		<widget name="rc" position="30,15" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" alphatest="on"/>
+		<widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
+		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
+		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
+		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
 	</screen>
 </skin>
 

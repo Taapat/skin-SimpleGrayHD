@@ -682,15 +682,15 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 
 	<screen name="LanguageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="back" title="Welcome...">
 		<panel name="RemoteControlTemplate"/>
-		<widget name="wizard" pixmap="SimpleGrayHD/window/wizard.png" position="200,100" size="110,174" transparent="1" alphatest="on"/>
-		<widget name="text" position="380,50" size="550,170" font="Regular;23" valign="center"/>
-		<widget source="languages" render="Listbox" position="380,220" size="550,400" scrollbarMode="showNever">
+		<widget name="wizard" pixmap="SimpleGrayHD/window/wizard.png" position="50,50" size="110,174" alphatest="on"/>
+		<widget name="text" position="300,50" size="700,200" font="Regular;23"/>
+		<widget source="languages" render="Listbox" position="300,250" size="450,400" scrollbarMode="showNever">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos=(250,10), size=(420,30), flags=RT_HALIGN_LEFT, text=1),
-					MultiContentEntryPixmap(pos=(150,5), size=(60,40), png=2),],
+					MultiContentEntryText(pos=(100,10), size=(310,30), flags=RT_HALIGN_LEFT, text=1),
+					MultiContentEntryPixmap(pos=(10,5), size=(60,40), png=2),],
 				"fonts": [gFont("Regular",25)],
-				"itemHeight": 50 }
+				"itemHeight": 50}
 			</convert>
 		</widget>
 	</screen>
@@ -912,6 +912,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 
 	<screen name="NetworkWizard" position="0,0" size="1280,720" flags="wfNoBorder">
 		<panel name="DefaultWizardTemplate"/>
+		<widget source="VKeyIcon" render="Pixmap" pixmap="SimpleGrayHD/skin_default/buttons/key_text.png" position="50,280" size="35,25" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget name="HelpWindow" pixmap="SimpleGrayHD/skin_default/buttons/key_text.png" position="50,280" size="35,25" alphatest="on"/>
 	</screen>
 
 	<screen name="NimSelection" position="center,center" size="500,350">
