@@ -48,10 +48,10 @@
 		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="(e/2)+4,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
 		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="e-(e-32)/4-8,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
 
-		<widget objectTypes="key_red,Label,Button" name="key_red" render="Label" position="12,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_green,Label,Button" name="key_green" render="Label" position="((e-32)/4)+16,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" render="Label" position="(e/2)+4,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_blue,Label,Button" name="key_blue" render="Label" position="e-(e-32)/4-8,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" position="12,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" position="((e-32)/4)+16,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="(e/2)+4,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="e-(e-32)/4-8,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
 	<screen name="InfoBarTemplate">
