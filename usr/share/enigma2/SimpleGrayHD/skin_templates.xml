@@ -25,33 +25,33 @@
 	</screen>
 
 	<screen name="DynamicButtonsTemplate">
-		<widget objectTypes="key_red,StaticText" source="key_red" render="FixedLabel" position="10,e-50" size="(e-32)/4,40" backgroundColor="red">
-			<convert type="ConditionalShowHide"/>
+		<eLabel conditional="key_red" position="10,e-50" size="(e-32)/4,40" zPosition="-5" backgroundColor="red"/>
+		<eLabel conditional="key_green" position="((e-32)/4)+14,e-50" size="(e-32)/4,40" zPosition="-5" backgroundColor="green"/>
+		<eLabel conditional="key_yellow" position="(e/2)+2,e-50" size="(e-32)/4,40" zPosition="-5" backgroundColor="yellow"/>
+		<eLabel conditional="key_blue" position="e-(e-32)/4-10,e-50" size="(e-32)/4,40" zPosition="-5" backgroundColor="blue"/>
+
+		<widget conditional="key_red" name="key_red" position="12,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget conditional="key_green" name="key_green" position="((e-32)/4)+16,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget conditional="key_yellow" name="key_yellow" position="(e/2)+4,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget conditional="key_blue" name="key_blue" position="e-(e-32)/4-8,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+
+		<widget conditional="key_red" source="key_red" render="FixedLabel" position="10,e-50" size="(e-32)/4,40" backgroundColor="red">
+			<convert type="SGConditionalShowHide"/>
 		</widget>
-		<widget objectTypes="key_green,StaticText" source="key_green" render="FixedLabel" position="((e-32)/4)+14,e-50" size="(e-32)/4,40" backgroundColor="green">
-			<convert type="ConditionalShowHide"/>
+		<widget conditional="key_green" source="key_green" render="FixedLabel" position="((e-32)/4)+14,e-50" size="(e-32)/4,40" backgroundColor="green">
+			<convert type="SGConditionalShowHide"/>
 		</widget>
-		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="FixedLabel" position="(e/2)+2,e-50" size="(e-32)/4,40" backgroundColor="yellow">
-			<convert type="ConditionalShowHide"/>
+		<widget conditional="key_yellow" source="key_yellow" render="FixedLabel" position="(e/2)+2,e-50" size="(e-32)/4,40" backgroundColor="yellow">
+			<convert type="SGConditionalShowHide"/>
 		</widget>
-		<widget objectTypes="key_blue,StaticText" source="key_blue" render="FixedLabel" position="e-(e-32)/4-10,e-50" size="(e-32)/4,40" backgroundColor="blue">
-			<convert type="ConditionalShowHide"/>
+		<widget conditional="key_blue" source="key_blue" render="FixedLabel" position="e-(e-32)/4-10,e-50" size="(e-32)/4,40" backgroundColor="blue">
+			<convert type="SGConditionalShowHide"/>
 		</widget>
 
-		<eLabel objectTypes="key_red,Button,Label" position="10,e-50" size="(e-32)/4,40" zPosition="-5" backgroundColor="red"/>
-		<eLabel objectTypes="key_green,Button,Label" position="((e-32)/4)+14,e-50" size="(e-32)/4,40" zPosition="-5" backgroundColor="green"/>
-		<eLabel objectTypes="key_yellow,Button,Label" position="(e/2)+2,e-50" size="(e-32)/4,40" zPosition="-5" backgroundColor="yellow"/>
-		<eLabel objectTypes="key_blue,Button,Label" position="e-(e-32)/4-10,e-50" size="(e-32)/4,40" zPosition="-5" backgroundColor="blue"/>
-
-		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="12,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="((e-32)/4)+16,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="(e/2)+4,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="e-(e-32)/4-8,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-
-		<widget objectTypes="key_red,Label,Button" name="key_red" position="12,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_green,Label,Button" name="key_green" position="((e-32)/4)+16,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="(e/2)+4,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
-		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="e-(e-32)/4-8,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget conditional="key_red" source="key_red" render="Label" position="12,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget conditional="key_green" source="key_green" render="Label" position="((e-32)/4)+16,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget conditional="key_yellow" source="key_yellow" render="Label" position="(e/2)+4,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
+		<widget conditional="key_blue" source="key_blue" render="Label" position="e-(e-32)/4-8,e-48" size="((e-32)/4)-4,36" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
 	<screen name="InfoBarTemplate">
