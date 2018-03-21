@@ -56,12 +56,11 @@
 	<include filename="skin_templates.xml"/>
 
 	<screen name="About" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="AboutScrollLabel" position="20,25" size="700,460" font="Regular;22" split="1" dividechar=":" colposition="310"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="AdapterSetup" position="center,center" size="600,520">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="Adaptertext" render="Label" position="20,15" size="100,25" font="Regular;22"/>
 		<widget source="Adapter" render="Label" position="110,15" size="470,25" font="Regular;22"/>
 		<widget name="config" position="20,45" size="560,150"/>
@@ -82,20 +81,20 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<widget name="HelpWindow" position="center,425" size="1,1"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="AdapterSetupConfiguration" position="center,center" size="600,460">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="IFtext" render="Label" position="20,15" size="100,25" font="Regular;22"/>
 		<widget source="IF" render="Label" position="110,15" size="470,25" font="Regular;22"/>
 		<widget name="menulist" position="20,45" size="560,200" scrollbarMode="showOnDemand"/>
 		<widget name="statuspic" position="20,265" size="15,16" pixmaps="SimpleGrayHD/skin_default/buttons/button_green.png,SimpleGrayHD/skin_default/buttons/button_green_off.png" alphatest="on"/>
 		<widget source="Statustext" render="Label" position="50,260" size="530,25" font="Regular;22"/>
 		<widget source="description" render="Label" position="20,305" size="560,75" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="AltCamManager" position="center,center" size="640,410">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="15,10" size="320,300" enableWrapAround="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 			{
@@ -109,6 +108,7 @@
 		</widget>
 		<eLabel text="Ecm info" position="345,0" size="270,35" font="Regular;26"/>
 		<widget name="status" position="345,40" size="270,280" font="Regular;18"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="AudioSelection" position="center,center" size="450,280">
@@ -154,12 +154,11 @@
 	</screen>
 
 	<screen name="AutoMountEdit" position="center,center" size="600,450">
-		<panel name="DynamicButtonsTemplate"/>
 		<panel name="MountConfigTemplate"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="AutoMountManager" position="center,center" size="600,450">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="config" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -173,10 +172,10 @@
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="AutoMountView" position="center,center" size="600,450">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="legend1" render="Label" position="20,15" size="130,25" font="Regular;20"/>
 		<widget source="legend2" render="Label" position="150,15" size="340,25" font="Regular;20"/>
 		<widget source="legend3" render="Label" position="495,13" size="70,25" font="Regular;20"/>
@@ -196,6 +195,7 @@
 			</convert>
 		</widget>
 		<widget source="introduction" position="20,325" size="560,50" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="BackupScreen" position="center,center" size="800,445">
@@ -203,8 +203,8 @@
 	</screen>
 
 	<screen name="BackupSelection" position="center,center" size="700,490">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="checkList" position="10,10" size="680,400" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="BouquetSelector" position="center,center" size="370,420">
@@ -216,8 +216,8 @@
 	</screen>
 
 	<screen name="CIselectMainMenu" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="CiList" position="center,45" size="631,300" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ChannelContextMenu" position="center,center" size="600,290" backgroundColor="back">
@@ -304,14 +304,14 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="CommitInfo" position="center,center" size="700,560">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="AboutScrollLabel" position="10,10" size="680,470" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ConfigEdit" position="center,center" size="640,410">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="610,150" scrollbarMode="showOnDemand"/>
 		<widget name="HelpWindow" position="400,370" size="1,1" zPosition="5" pixmap="skin_default/vkey_icon.png" transparent="1" alphatest="on"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="Console" position="center,center" size="740,565">
@@ -355,11 +355,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="DVDToolbox" position="90,100" size="1100,560">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="info" render="Label" position="20,60" size="1060,100" font="Regular;22"/>
 		<widget name="details" position="20,200" size="1060,200" font="Regular;20"/>
 		<widget source="space_bar" render="Progress" position="10,480" size="1080,26" borderWidth="1" backgroundColor="grey"/>
 		<widget source="space_label" render="Label" position="20,484" size="1060,22" font="Regular;18" halign="center" foregroundColor="black"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="Dish" flags="wfNoBorder" position="1100,100" size="65,80" zPosition="-1" backgroundColor="transparent">
@@ -374,13 +374,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="EPGSearchSetup" position="320,180" size="640,410">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="center,10" size="580,240" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget source="help" render="Label" position="center,260" size="580,60" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="EPGSelection" position="center,100" size="770,580">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="Event" render="Label" position="10,10" size="750,30" font="Replacement;26">
 			<convert type="EventName">Name</convert>
 		</widget>
@@ -410,6 +409,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget source="global.CurrentTime" render="Label" position="630,468" size="140,40" font="Replacement;30">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="EPGSelectionMulti" position="center,100" size="1080,580">
@@ -438,7 +438,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="EventView" position="center,100" size="770,580">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="channel" position="10,10" size="750,30" font="Replacement;26"/>
 		<widget name="datetime" position="10,50" size="750,25" font="Regular;20"/>
 		<widget name="duration" position="10,80" size="750,25" font="Regular;20"/>
@@ -458,22 +457,23 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget source="global.CurrentTime" render="Label" position="630,458" size="140,40" font="Replacement;30">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="FancontrolConfiguration" position="center,center" size="570,300">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,15" size="550,200" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="FastScanScreen" position="270,95" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="720,356" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="FileBrowser" position="center,center" size="640,410">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="filelist" position="10,10" size="620,300" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="GraphMultiEPG" position="center,100" size="1180,580">
@@ -517,7 +517,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="GraphMultiEPGList" position="center,center" size="780,526">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="timeline_text" position="10,10" size="740,26" foregroundColor="white"/>
 		<widget name="list" position="10,36" size="740,420" scrollbarMode="showOnDemand" backgroundColor="black"/>
 		<widget name="timeline0" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
@@ -527,6 +526,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget name="timeline4" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
 		<widget name="timeline5" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
 		<widget name="timeline_now" position="0,36" zPosition="2" size="1,420" pixmap="SimpleGrayHD/window/timeline-now.png" alphatest="on"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="GraphMultiEpgSetup" position="center,center" size="680,500">
@@ -535,15 +535,15 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="HarddiskSelection" position="center,center" size="600,250">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="hddlist" position="20,10" size="560,150" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="HarddiskSetup" position="center,center" size="600,250">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="model" position="20,10" size="560,28" font="Regular;22"/>
 		<widget name="capacity" position="20,50" size="560,28" font="Regular;22"/>
 		<widget name="bus" position="20,90" size="560,28" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="HarddiskWait" position="center,center" size="600,250">
@@ -551,10 +551,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="HdmiCECSetupScreen" position="center,center" size="640,465">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="620,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget source="current_address" render="Label" position="10,330" size="620,25" font="Regular;22"/>
 		<widget source="fixed_address" render="Label" position="10,360" size="620,25" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="HelpMenu" position="center,center" size="740,565">
@@ -564,27 +564,27 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="HotkeySetup" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="list" position="10,10" size="330,484" scrollbarMode="showOnDemand" itemHeight="30"/>
 		<widget name="choosen" position="350,10" size="380,450" scrollbarMode="showOnDemand" itemHeight="30"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="HotkeySetupSelect" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="list" position="10,10" size="330,484" scrollbarMode="showOnDemand" itemHeight="30"/>
 		<widget name="choosen" position="350,10" size="390,450" scrollbarMode="showOnDemand" itemHeight="30"/>
 		<widget name="h_prev" pixmap="skin_default/buttons/key_prev.png" alphatest="on" position="646,470" size="35,25"/>
 		<widget name="h_next" pixmap="skin_default/buttons/key_next.png" alphatest="on" position="685,470" size="35,25"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="IPKGMenu" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="filelist" position="center,45" size="629,400" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="IPKGSource" position="center,center" size="780,170">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="text" position="40,20" size="700,25" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ImageWizard" position="0,0" size="1280,720" flags="wfNoBorder">
@@ -602,7 +602,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="InputDeviceSelection" position="center,center" size="570,380">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="10,10" size="550,240" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 			<!--  device, description, devicepng, divpng  -->
@@ -616,12 +615,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		</widget>
 		<widget source="introduction" render="Label" position="10,270" size="550,25" font="Regular;20"/>
 
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="InputDeviceSetup" position="center,center" size="520,230">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="500,100" scrollbarMode="showOnDemand"/>
 		<widget source="introduction" render="Label" position="10,120" size="500,25" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="Ipkg" position="center,center" size="620,200">
@@ -629,9 +629,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="IpkgInstaller" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="list" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="JobView" position="center,center" size="523,250">
@@ -692,12 +692,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="LocationBox" position="center,center" size="720,515">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="text" position="10,10" size="700,25" font="Regular;20"/>
 		<widget name="target" position="10,40" size="700,25" font="Regular;20"/>
 		<widget name="filelist" position="10,75" size="700,187" scrollbarMode="showOnDemand"/>
 		<widget name="textbook" position="10,280" size="700,25" font="Regular;20"/>
 		<widget name="booklist" position="10,310" size="700,125" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="MediaPlayer" position="center,100" size="1080,580">
@@ -727,12 +727,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="MediaPlayerSettings" position="center,center" size="740,555">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="720,480" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="MemoryInfo" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="pused" position="80,15" size="150,25" font="Regular;20" halign="right"/>
 		<widget name="slide" position="center,17" size="250,20" foregroundColor="grey" borderWidth="1"/>
 		<widget name="pfree" position="510,15" size="150,25" font="Regular;20"/>
@@ -742,6 +741,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget name="rmemvalue" position="615,45" size="115,360" font="Regular;16" halign="right"/>
 		<widget name="info" position="380,410" size="370,80" font="Regular;16"/>
 		<widget name="params" rowsincolumn="23"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="Menu" position="10,60" size="400,650">
@@ -749,7 +749,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="MenuSort" position="10,60" size="550,650">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="menu" render="Listbox" enableWrapAround="1" position="0,30" size="616,550" scrollbarMode="showNever">
 			<convert type="TemplatedMultiContent">
 				{"template": [MultiContentEntryText(pos=(15,13), size=(400,32), flags=RT_HALIGN_LEFT, text=0)],
@@ -757,6 +756,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 				"itemHeight":55 }
 			</convert>
 		</widget>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="MessageBox" position="center,center" size="600,183">
@@ -772,8 +772,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="MovieBrowserConfiguration" position="center,center" size="640,390">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="620,300" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="MovieContextMenu" position="center,center" size="500,290" flags="wfNoBorder">
@@ -827,13 +827,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="NameserverSetup" position="center,center" size="500,250">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="20,15" size="460,100"/>
 		<widget source="introduction" render="Label" position="20,115" size="460,50" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="NetworkAdapterSelection" position="center,center" size="600,450">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -847,10 +846,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="NetworkAdapterTest" position="center,center" size="740,380">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="Adaptertext" position="20,25" size="200,25" font="Regular;20"/>
 		<widget name="Adapter" position="200,25" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
 		<widget name="AdapterInfo_OK" position="530,22" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
@@ -885,10 +884,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget name="EditSettings_Text" position="582,279" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
 
 		<widget name="InfoText" position="10,17" size="720,370" font="Regular;22" zPosition="3"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="NetworkBrowser" position="center,center" size="600,450">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -904,6 +903,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 			</convert>
 		</widget>
 		<widget source="infotext" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="NetworkWizard" position="0,0" size="1280,720" flags="wfNoBorder">
@@ -928,9 +928,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="NimSetup" position="center,center" size="740,520">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="720,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="10,330" size="720,125" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="NumberZap" position="center,center" size="350,85" flags="wfNoBorder">;
@@ -963,7 +963,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="PacketManager" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="center,25" size="700,450" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -977,11 +976,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 				}
 			</convert>
 		</widget>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ParentalControlSetup" position="center,center" size="640,410">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="620,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="PiPSetup" position="center,center" size="800,200" backgroundColor="transparent" flags="wfNoBorder">
@@ -989,7 +989,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="Pic_Exif" position="center,center" size="650,440">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="menu" render="Listbox" position="20,10" size="610,350" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [ MultiContentEntryText(pos=(0,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0),
@@ -998,6 +997,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 				"itemHeight": 25}
 			</convert>
 		</widget>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="PinInput" position="center,center" size="500,170">
@@ -1022,7 +1022,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="PluginManager" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="center,34" size="700,350" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"templates":
@@ -1044,10 +1043,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 			</convert>
 		</widget>
 		<widget source="status" render="Label" position="center,415" size="700,30" halign="center" valign="center" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="PluginManagerInfo" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="list" render="Listbox" position="center,44" size="648,350" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"templates": [
@@ -1062,10 +1061,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 			</convert>
 		</widget>
 		<widget source="status" render="Label" position="center,415" size="700,30" halign="center" valign="center" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="PositionerSetup" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="list" position="29,27" size="683,183" transparent="1"/>
 		<widget name="snr_db" position="80,215" size="200,24" halign="center" valign="center" font="Regular;22"/>
 		<eLabel text="SNR:" position="27,245" size="80,24" font="Regular;22"/>
@@ -1082,12 +1081,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget name="symbolrate_value" position="190,365" size="150,24" font="Regular;22"/>
 		<eLabel text="FEC:" position="27,395" size="150,24" font="Regular;22"/>
 		<widget name="fec_value" position="190,395" size="150,24" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ProjectSettings" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="720,350" scrollbarMode="showOnDemand" enableWrapAround="1"/>
 		<widget source="info" render="Label" position="10,380" size="720,100" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="RadioInfoBar" flags="wfNoBorder" position="0,530" size="1280,190">
@@ -1108,18 +1108,18 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="RecordPathsSettings" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="center,58" size="701,187" transparent="1"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="RemoteControlType" position="center,center" size="500,200">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="480,100" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="RestoreMenu" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="filelist" position="center,45" size="640,400" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="RestoreScreen" position="center,center" size="600,502">
@@ -1127,7 +1127,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="Satfinder" position="center,center" size="570,550">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="Frontend" render="Label" position="center,10" size="260,25" font="Regular;20" halign="center">
 			<convert type="FrontendInfo">SNRdB</convert>
 		</widget>
@@ -1163,23 +1162,24 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		</widget>
 		<widget name="config" position="10,160" size="550,275" scrollbarMode="showOnDemand"/>
 		<widget name="introduction" position="10,445" size="620,25" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ScanIP" position="center,center" size="600,400">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="20,15" size="560,300" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ScanSetup" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ScanSimple" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="footer" position="10,395" size="720,100" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="SecondInfoBar" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transpBack">
@@ -1249,13 +1249,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="SelectImage" position="center,center" size="600,250">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="list" position="20,10" size="560,150" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ServiceInfo" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="infolist" position="10,10" size="720,491" selectionDisabled="1" itemHeight="31"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ServiceInfoSimple" position="center,center" size="740,511">
@@ -1263,7 +1263,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="ServiceScan" position="center,center" size="620,440">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="10,8" size="64,64" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
@@ -1285,12 +1284,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget name="scan_state" position="10,110" size="600,25" zPosition="2" font="Regular;20"/>
 		<widget name="pass" position="10,140" size="600,25" font="Regular;20"/>
 		<widget name="servicelist" position="10,170" size="600,200" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="Setup" position="center,center" size="680,520">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="660,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="10,330" size="600,125" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="SimpleChannelSelection" position="center,100" size="712,580">
@@ -1299,10 +1299,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="SkinSelector" position="center,center" size="600,375">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="SkinList" position="10,10" size="280,250" scrollbarMode="showOnDemand"/>
 		<widget name="Preview" position="310,10" size="280,210" alphatest="on"/>
 		<widget source="introduction" render="Label" position="10,270" size="580,25" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="Standby" position="0,0" size="1280,720" flags="wfNoBorder"/>
@@ -1314,8 +1314,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="StreamingClientsInfo" position="center,center" size="640,410">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="menu" position="center,10" size="580,290" font="Regular;20" scrollbarMode="showOnDemand" itemHeight="29"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="SubservicesQuickzap" position="center,center" size="560,100" backgroundColor="transparent" flags="wfNoBorder">
@@ -1350,20 +1350,20 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="TimerEditList" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="timerlist" position="10,10" size="720,321" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="10,350" size="720,105" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="TimerEntry" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="720,440" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="TimerLog" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="loglist" position="10,10" size="720,321" scrollbarMode="showOnDemand"/>
 		<widget name="logentry" position="10,350" size="720,105" font="Regular;20"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="TimerSelection" position="center,center" size="1100,560">
@@ -1392,7 +1392,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="TitleCutter" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="cutlist" position="10,10" size="720,350" render="Listbox" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1412,10 +1411,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget source="session.CurrentService" render="Label" position="515,460" size="100,25" font="Regular;20">
 			<convert type="ServicePosition">Remaining</convert>
 		</widget>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="TitleList" position="center,center" size="560,470">
-		<panel name="DynamicButtonsTemplate"/>
 		<eLabel position="10,396" size="75,22" text="MENU" font="Replacement;20" halign="center" foregroundColor="white" valign="center"/>
 		<widget source="title_label" render="Label" position="10,48" size="540,38" font="Regular;20"/>
 		<widget source="error_label" render="Label" position="10,48" size="540,296" zPosition="3" font="Regular;20"/>
@@ -1438,24 +1437,25 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget source="space_label_single" render="Label" position="10,449" size="270,22" zPosition="3" font="Regular;20" halign="center" foregroundColor="black"/>
 		<widget source="space_bar_dual" render="Progress" position="10,446" size="540,24" borderWidth="1"/>
 		<widget source="space_label_dual" render="Label" position="10,449" size="540,22" zPosition="2" font="Regular;20" halign="center" foregroundColor="black"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="TitleProperties" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="thumbnail" position="10,10" size="260,160" alphatest="on"/>
 		<widget source="serviceinfo" render="Label" position="180,10" size="560,160" font="Regular;20"/>
 		<widget name="config" position="10,180" size="720,300" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="TranslationInfo" position="center,center" size="640,410">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="TranslatorName" render="Label" position="center,10" size="580,40" font="Regular;26" foregroundColor="yellow" halign="center"/>
 		<widget source="TranslationInfo" render="Label" position="center,60" size="580,270" font="Regular;22" halign="center"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="Troubleshoot" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="AboutScrollLabel" position="20,25" size="700,470" font="Regular;16"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="UnhandledKey" position="center,center" size="55,55" zPosition="100" flags="wfNoBorder">
@@ -1467,7 +1467,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="UpdatePluginMenu" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="menu" render="Listbox" position="center,9" size="631,325" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1486,15 +1485,15 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 				"itemHeight": 160}
 			</convert>
 		</widget>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="UserDialog" position="center,center" size="600,450">
-		<panel name="DynamicButtonsTemplate"/>
 		<panel name="MountConfigTemplate"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="UserManager" position="center,center" size="600,450">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget source="config" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1506,18 +1505,19 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 			</convert>
 		</widget>
 		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="VideoEnhancementPreview" position="center,center" size="570,210">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="550,80" scrollbarMode="showOnDemand"/>
 		<widget source="introduction" render="Label" position="10,100" size="550,30" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="VideoEnhancementSetup" position="center,center" size="740,565">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="config" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="VideoFinetune" position="0,0" size="1280,720">
@@ -1589,9 +1589,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="picshow" position="center,center" size="740,390">
-		<panel name="DynamicButtonsTemplate"/>
 		<widget name="thn" position="20,10" size="260,300" alphatest="on"/>
 		<widget name="filelist" position="300,10" size="420,300" scrollbarMode="showOnDemand"/>
+		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 </skin>
 
