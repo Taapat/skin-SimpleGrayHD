@@ -833,19 +833,19 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="NetworkAdapterSelection" position="center,center" size="600,450">
-		<widget source="list" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="10,15" size="580,280" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos=(85,6), size=(470,28), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_TOP, text=1), # index 1 is the interfacename
-					MultiContentEntryText(pos=(85,43), size=(470,20), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text=2), # index 2 is the description
-					MultiContentEntryPixmapAlphaTest(pos=(0,8), size=(54,54), png=3), # index 3 is the interface pixmap
-					MultiContentEntryPixmapAlphaTest(pos=(63,46), size=(15,16), png=4), # index 4 is the default pixmap
+					MultiContentEntryText(pos=(90,6), size=(490,28), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_TOP, text=1), # index 1 is the interfacename
+					MultiContentEntryText(pos=(90,43), size=(490,20), font=1, flags=RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, text=2), # index 2 is the description
+					MultiContentEntryPixmapAlphaTest(pos=(8,8), size=(54,54), png=3), # index 3 is the interface pixmap
+					MultiContentEntryPixmapAlphaTest(pos=(67,46), size=(15,16), png=4), # index 4 is the default pixmap
 				],
-				"fonts": [gFont("Regular",22),gFont("Regular",20)],
-				"itemHeight": 60}
+				"fonts": [gFont("Regular",22), gFont("Regular",20)],
+				"itemHeight": 70}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+		<widget source="introduction" render="Label" position="10,325" size="580,50" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
