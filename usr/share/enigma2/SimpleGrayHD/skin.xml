@@ -57,7 +57,7 @@
 
 	<screen name="About" position="center,center" size="740,565">
 		<panel name="DynamicButtonsTemplate"/>
-		<widget name="AboutScrollLabel" position="20,25" size="700,460" font="Regular;22" split="1" dividechar=":" colposition="240"/>
+		<widget name="AboutScrollLabel" position="20,25" size="700,460" font="Regular;22" split="1" dividechar=":" colposition="310"/>
 	</screen>
 
 	<screen name="AdapterSetup" position="center,center" size="600,520">
