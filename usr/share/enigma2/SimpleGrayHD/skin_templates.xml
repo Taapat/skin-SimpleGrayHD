@@ -52,7 +52,7 @@
 			<widget objectTypes="key_red,Label,Button" name="key_red" position="12,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
 			<widget objectTypes="key_green,Label,Button" name="key_green" position="(e-32)/4+16,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
 			<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="c+4,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
-			<widget objectTypes="key_blue,Label,Button" name="key_blue" position="(e-32)*0.75-8,2" size="(e-32)/4+24,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_blue,Label,Button" name="key_blue" position="(e-32)*0.75+24,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
 		</panel>
 	</screen>
 
