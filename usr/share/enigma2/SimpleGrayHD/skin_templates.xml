@@ -247,7 +247,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	<screen name="MountConfigTemplate">
 		<widget name="config" position="20,15" size="560,300" scrollbarMode="showOnDemand"/>		
 		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
-		<widget name="VKeyIcon" pixmap="SimpleGrayHD/skin_default/buttons/key_text.png" alphatest="on" position="555,400" size="35,25"/>
 		<widget name="HelpWindow" position="400,355" size="1,1" zPosition="1"/>
 	</screen>
 
@@ -316,6 +315,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget name="arrowdown2" pixmap="skin_default/arrowdown.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
 		<widget name="arrowup" pixmap="skin_default/arrowup.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
 		<widget name="arrowup2" pixmap="skin_default/arrowup.png" position="0,0" zPosition="1" size="37,70" transparent="1" alphatest="on"/>
+	</screen>
+
+	<screen name="VKeyIconTemplate">
+		<widget source="VKeyIcon" render="FixedLabel" text="TEXT" position="e-60,e+15" size="50,25" halign="center" font="Regular;20" backgroundColor="grey">
+			<convert type="ConditionalShowHide"/>
+		</widget>
 	</screen>
 </skin>
 
