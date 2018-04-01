@@ -951,6 +951,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget name="help2" position="350,66" size="130,22" font="Regular;18" valign="center" halign="center"/>
 	</screen>
 
+	<screen name="OSD3DSetupScreen" position="center,center" size="470,200">
+		<widget name="config" position="10,10" size="450,100"/>
+		<panel name="DynamicButtonsTemplate"/>
+	</screen>
+
 	<screen name="OverscanTestScreen" position="0,0" size="1280,720">
 		<ePixmap pixmap="skin_default/overscan.png" position="0,0" size="1280,720" zPosition="1" alphatest="off"/>
 	</screen>
