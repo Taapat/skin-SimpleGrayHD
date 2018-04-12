@@ -1551,6 +1551,52 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget source="global.CurrentTime" render="SDVolume" position="250,2" size="70,30" font="Replacement;26" halign="center"/>
 	</screen>
 
+	<screen name="YouTubeInfo" position="center,center" size="720,445">
+		<widget name="title" position="10,10" size="700,60" font="Regular;24"/>
+		<widget name="pic" position="10,90" size="320,180" transparent="1" alphatest="on"/>
+		<widget name="description" position="350,90" size="360,300" font="Regular;16"/>
+		<widget name="views" position="10,290" size="150,20" font="Regular;16"/>
+		<widget name="duration" position="200,290" size="150,20" font="Regular;16"/>
+		<widget name="likes" position="10,320" size="150,20" font="Regular;16"/>
+		<widget name="dislikes" position="200,320" size="150,20" font="Regular;16"/>
+		<widget name="published" position="10,350" size="300,20" font="Regular;16"/>
+		<panel name="DynamicButtonsTemplate"/>
+	</screen>
+
+	<screen name="YouTubeMain" position="center,center" size="720,480">
+		<widget name="text" position="10,10" size="700,30" font="Regular;24"/>
+		<widget source="list" render="Listbox" position="10,50" size="700,360" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(0,0), size=(100,72), png=2), # Thumbnail
+					MultiContentEntryText(pos=(110,1), size=(575,52), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
+					MultiContentEntryText(pos=(120, 50), size=(200,22), font=1, flags=RT_HALIGN_LEFT, text=4), # Views
+					MultiContentEntryText(pos=(360,50), size=(200,22), font=1, flags=RT_HALIGN_LEFT, text=5), # Duration
+				],
+				"fonts": [gFont("Regular",20), gFont("Regular",16)],
+				"itemHeight": 72}
+			</convert>
+		</widget>
+		<panel name="DynamicButtonsTemplate"/>
+		<widget name="info" position="635,445" size="35,25" pixmap="SimpleGrayHD/skin_default/buttons/key_info.png" alphatest="on"/>
+		<widget name="menu" position="675,445" size="35,25" pixmap="SimpleGrayHD/skin_default/buttons/key_menu.png" alphatest="on"/>
+		<widget name="thumbnail" position="0,0" size="100,72"/>
+	</screen>
+
+	<screen name="YouTubeSearch" position="center,120" size="620,480">
+		<widget name="config" position="10,10" size="600,30" scrollbarMode="showNever"/>
+		<widget source="list" render="Listbox" position="10,43" size="600,273" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [MultiContentEntryText(pos=(10,1), size=(580,30), font=0, flags=RT_HALIGN_LEFT, text=0)],
+				"fonts": [gFont("Regular",20)],
+				"itemHeight": 30}
+			</convert>
+		</widget>
+		<widget name="HelpWindow" position="320,440" size="1,1"/>
+		<panel name="DynamicButtonsTemplate"/>
+		<ePixmap position="575,445" size="35,25" pixmap="SimpleGrayHD/skin_default/buttons/key_menu.png" alphatest="on"/>
+	</screen>
+
 	<screen name="clockDisplay" position="420,200" size="320,170">
 		<widget name="okbutton" position="10,10" size="300,40"/>
 		<widget name="theClock" position="10,60" size="300,50"/>
