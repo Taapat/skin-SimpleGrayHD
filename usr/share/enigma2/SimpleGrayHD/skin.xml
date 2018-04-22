@@ -83,12 +83,12 @@
 	</screen>
 
 	<screen name="AdapterSetupConfiguration" position="center,center" size="600,460">
-		<widget source="IFtext" render="Label" position="20,15" size="100,25" font="Regular;22"/>
-		<widget source="IF" render="Label" position="110,15" size="470,25" font="Regular;22"/>
-		<widget name="menulist" position="20,45" size="560,200" scrollbarMode="showOnDemand"/>
-		<widget name="statuspic" position="20,265" size="15,16" pixmaps="SimpleGrayHD/skin_default/buttons/button_green.png,SimpleGrayHD/skin_default/buttons/button_green_off.png" alphatest="on"/>
-		<widget source="Statustext" render="Label" position="50,260" size="530,25" font="Regular;22"/>
-		<widget source="description" render="Label" position="20,305" size="560,75" font="Regular;22"/>
+		<widget source="IFtext" render="Label" position="15,10" size="100,25" font="Regular;22"/>
+		<widget source="IF" render="Label" position="115,10" size="470,25" font="Regular;22"/>
+		<widget name="menulist" position="15,45" size="570,200" scrollbarMode="showOnDemand"/>
+		<widget name="statuspic" position="15,265" size="15,16" pixmaps="SimpleGrayHD/skin_default/buttons/button_green.png,SimpleGrayHD/skin_default/buttons/button_green_off.png" alphatest="on"/>
+		<widget source="Statustext" render="Label" position="45,260" size="535,25" font="Regular;22"/>
+		<widget source="description" render="Label" position="15,305" size="570,75" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
