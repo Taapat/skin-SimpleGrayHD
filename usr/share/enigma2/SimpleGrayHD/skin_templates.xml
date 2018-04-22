@@ -318,7 +318,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="VKeyIconTemplate">
-		<widget source="VKeyIcon" render="FixedLabel" text="TEXT" position="e-60,e+15" size="50,25" halign="center" font="Regular;20" backgroundColor="grey">
+		<widget source="VKeyIcon" render="FixedLabel" text="TEXT" position="e-65,e+15" size="50,25" halign="center" font="Regular;20" backgroundColor="grey">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
