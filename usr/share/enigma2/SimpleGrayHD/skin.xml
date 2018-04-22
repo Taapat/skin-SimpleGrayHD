@@ -198,11 +198,11 @@
 	</screen>
 
 	<screen name="BackupScreen" position="center,center" size="800,445">
-		<widget name="config" position="10,10" size="780,425" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="0,10" size="800,425" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="BackupSelection" position="center,center" size="700,490">
-		<widget name="checkList" position="10,10" size="680,400" scrollbarMode="showOnDemand"/>
+		<widget name="checkList" position="15,10" size="670,400" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
