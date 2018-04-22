@@ -437,17 +437,17 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="EventView" position="center,100" size="770,580">
-		<widget name="channel" position="10,10" size="750,30" font="Replacement;26"/>
-		<widget name="datetime" position="10,50" size="750,25" font="Regular;20"/>
-		<widget name="duration" position="10,80" size="750,25" font="Regular;20"/>
-		<widget name="epg_description" position="10,110" size="750,290" font="Regular;20"/>
-		<widget source="session.Event_Now" render="Label" position="10,410" size="750,25" font="Regular;20">
+		<widget name="channel" position="15,10" size="740,30" font="Replacement;26"/>
+		<widget name="datetime" position="15,50" size="740,25" font="Regular;20"/>
+		<widget name="duration" position="15,80" size="740,25" font="Regular;20"/>
+		<widget name="epg_description" position="15,110" size="740,290" font="Regular;20"/>
+		<widget source="session.Event_Now" render="Label" position="15,410" size="740,25" font="Regular;20">
 			<convert type="EventName">Genre</convert>
 		</widget>
-		<widget source="session.Event_Now" render="Label" position="10,440" size="450,25" font="Regular;20">
+		<widget source="session.Event_Now" render="Label" position="15,440" size="450,25" font="Regular;20">
 			<convert type="EventName">Rating</convert>
 		</widget>
-		<widget source="session.Event_Next" render="Label" position="10,470" size="450,25" font="Regular;20">
+		<widget source="session.Event_Next" render="Label" position="15,470" size="445,25" font="Regular;20">
 			<convert type="EventName">NameNext</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="520,470" size="104,25" font="Regular;20">
