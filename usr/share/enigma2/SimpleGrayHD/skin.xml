@@ -379,14 +379,14 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="EPGSelection" position="center,100" size="770,580">
-		<widget source="Event" render="Label" position="10,10" size="750,30" font="Replacement;26">
+		<widget source="Event" render="Label" position="15,10" size="740,30" font="Replacement;26">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget name="list" position="10,50" size="750,327" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget source="Event" render="Label" position="10,400" size="750,70" font="Regular;20">
+		<widget name="list" position="10,50" size="750,327" setColWidths="60,130" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget source="Event" render="Label" position="15,400" size="740,70" font="Regular;20">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="Event" render="Label" position="10,480" size="65,25" font="Regular;20">
+		<widget source="Event" render="Label" position="15,480" size="60,25" font="Regular;20">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">ShortDate</convert>
 		</widget>
