@@ -92,8 +92,8 @@
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="AltCamManager" position="center,center" size="640,410">
-		<widget source="list" render="Listbox" position="15,10" size="320,300" enableWrapAround="1" scrollbarMode="showOnDemand">
+	<screen name="AltCamManager" position="center,center" size="660,410">
+		<widget source="list" render="Listbox" position="10,10" size="355,300" enableWrapAround="1" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 			{
 				"template": [MultiContentEntryText(pos=(65,10), size=(275,40), font=0, flags=RT_HALIGN_LEFT, text=0),
@@ -104,8 +104,8 @@
 			}
 			</convert>
 		</widget>
-		<eLabel text="Ecm info" position="345,0" size="270,35" font="Regular;26"/>
-		<widget name="status" position="345,40" size="270,280" font="Regular;18"/>
+		<eLabel text="Ecm info" position="385,0" size="260,35" font="Regular;26"/>
+		<widget name="status" position="385,40" size="260,280" font="Regular;18"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
