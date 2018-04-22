@@ -1476,20 +1476,20 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<panel name="IpkDownloadTemplate"/>
 	</screen>
 
-	<screen name="UpdatePluginMenu" position="center,center" size="740,565">
-		<widget source="menu" render="Listbox" position="center,9" size="631,325" scrollbarMode="showOnDemand">
+	<screen name="UpdatePluginMenu" position="center,center" size="640,500">
+		<widget source="menu" render="Listbox" position="10,15" size="620,245" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos=(70,9), size=(631,30), flags=RT_HALIGN_LEFT, text=1), # index 0 is the MenuText,
+					MultiContentEntryText(pos=(5,4), size=(610,30), flags=RT_HALIGN_LEFT, text=1), # index 0 is the MenuText,
 				],
 				"fonts": [gFont("Regular",22)],
-				"itemHeight": 45}
+				"itemHeight": 35}
 			</convert>
 		</widget>
-		<widget source="menu" render="Listbox" position="center,345" size="650,160" scrollbarMode="showNever" selectionDisabled="1">
+		<widget source="menu" render="Listbox" position="15,275" size="610,160" scrollbarMode="showNever" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos=(0,0), size=(650,160), flags=RT_HALIGN_CENTER|RT_WRAP, text=2), # index 2 is the Description,
+					MultiContentEntryText(pos=(0,0), size=(610,160), flags=RT_HALIGN_LEFT|RT_WRAP, text=2), # index 2 is the Description,
 				],
 				"fonts": [gFont("Regular",22)],
 				"itemHeight": 160}
