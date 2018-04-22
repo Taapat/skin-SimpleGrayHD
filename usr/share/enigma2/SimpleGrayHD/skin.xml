@@ -744,7 +744,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="Menu" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
+		<widget source="menu" render="Listbox" enableWrapAround="1" position="0,30" size="400,605" scrollbarMode="showNever">
+			<convert type="TemplatedMultiContent">
+				{"template": [MultiContentEntryText(pos=(15,13), size=(400,32), flags=RT_HALIGN_LEFT, text=0)],
+				"fonts": [gFont("Replacement",24)],
+				"itemHeight":55 }
+			</convert>
+		</widget>
 	</screen>
 
 	<screen name="MenuSort" position="10,60" size="550,650">
@@ -1601,42 +1607,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 		<widget name="okbutton" position="10,10" size="300,40"/>
 		<widget name="theClock" position="10,60" size="300,50"/>
 		<widget name="title" position="10,110" size="300,50"/>
-	</screen>
-
-	<screen name="menu_expert" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
-	</screen>
-
-	<screen name="menu_harddisk" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
-	</screen>
-
-	<screen name="menu_information" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
-	</screen>
-
-	<screen name="menu_mainmenu" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
-	</screen>
-
-	<screen name="menu_scan" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
-	</screen>
-
-	<screen name="menu_setup" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
-	</screen>
-
-	<screen name="menu_shutdown" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
-	</screen>
-
-	<screen name="menu_system" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
-	</screen>
-
-	<screen name="menu_video" position="10,60" size="400,650">
-		<panel name="MenuTemplate"/>
 	</screen>
 
 	<screen name="picshow" position="center,center" size="740,390">

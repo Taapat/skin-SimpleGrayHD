@@ -192,15 +192,6 @@
 		</panel>
 	</screen>
 
-	<screen name="MenuTemplate">
-		<widget source="menu" render="Listbox" enableWrapAround="1" position="0,30" size="400,605" scrollbarMode="showNever">
-			<convert type="TemplatedMultiContent">
-				{"template": [MultiContentEntryText(pos=(15,13), size=(400,32), flags=RT_HALIGN_LEFT, text=0)],
-				"fonts": [gFont("Replacement",24)],
-				"itemHeight":55 }
-			</convert>
-		</widget>
-	</screen>
 	<screen name="IpkDownloadTemplate">
 		<widget name="activityslider" position="10,20" size="600,10" foregroundColor="grey" borderWidth="1"/>
 		<widget source="package" render="Label" position="10,50" size="600,40" font="Regular;20"/>
