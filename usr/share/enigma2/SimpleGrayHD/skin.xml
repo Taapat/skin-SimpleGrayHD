@@ -175,25 +175,25 @@
 	</screen>
 
 	<screen name="AutoMountView" position="center,center" size="600,450">
-		<widget source="legend1" render="Label" position="20,15" size="130,25" font="Regular;20"/>
-		<widget source="legend2" render="Label" position="150,15" size="340,25" font="Regular;20"/>
-		<widget source="legend3" render="Label" position="495,13" size="70,25" font="Regular;20"/>
-		<widget source="config" render="Listbox" position="20,40" size="560,300" scrollbarMode="showOnDemand">
+		<widget source="legend1" render="Label" position="15,15" size="130,25" font="Regular;20"/>
+		<widget source="legend2" render="Label" position="145,15" size="340,25" font="Regular;20"/>
+		<widget source="legend3" render="Label" position="505,13" size="70,25" font="Regular;20"/>
+		<widget source="config" render="Listbox" position="10,40" size="580,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-						MultiContentEntryPixmapAlphaTest(pos=(10,6), size=(48,48), png=0), # index 0 is the isMounted pixmap
-						MultiContentEntryText(pos=(130,5), size=(120,28), font=0, flags=RT_HALIGN_LEFT, text=1), # index 1 is the sharename
-						MultiContentEntryText(pos=(250,8), size=(220,20), font=0, flags=RT_HALIGN_LEFT, text=2), # index 2 is the IPdescription
-						MultiContentEntryText(pos=(130,35), size=(340,20), font=1, flags=RT_HALIGN_LEFT, text=3), # index 3 is the DIRdescription
-						MultiContentEntryPixmapAlphaTest(pos=(475,15), size=(48,48), png=4), # index 4 is the activepng pixmap
-						MultiContentEntryPixmapAlphaTest(pos=(505,6), size=(48,48), png=5), # index 4 is the mounttype pixmap
+						MultiContentEntryPixmapAlphaTest(pos=(0,6), size=(48,48), png=0), # index 0 is the isMounted pixmap
+						MultiContentEntryText(pos=(135,5), size=(120,28), font=0, flags=RT_HALIGN_LEFT, text=1), # index 1 is the sharename
+						MultiContentEntryText(pos=(255,8), size=(220,20), font=0, flags=RT_HALIGN_LEFT, text=2), # index 2 is the IPdescription
+						MultiContentEntryText(pos=(135,35), size=(340,20), font=1, flags=RT_HALIGN_LEFT, text=3), # index 3 is the DIRdescription
+						MultiContentEntryPixmapAlphaTest(pos=(495,15), size=(48,48), png=4), # index 4 is the activepng pixmap
+						MultiContentEntryPixmapAlphaTest(pos=(515,6), size=(48,48), png=5), # index 4 is the mounttype pixmap
 					],
 				"fonts": [gFont("Regular",22), gFont("Regular",17)],
 				"itemHeight": 60
 				}
 			</convert>
 		</widget>
-		<widget source="introduction" position="20,325" size="560,50" font="Regular;22"/>
+		<widget source="introduction" position="15,325" size="570,50" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
