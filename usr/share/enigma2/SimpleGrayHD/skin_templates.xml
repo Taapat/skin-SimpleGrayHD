@@ -25,34 +25,34 @@
 	</screen>
 
 	<screen name="DynamicButtonsTemplate">
-		<panel position="bottom" size="*,50">
-			<widget objectTypes="key_red,StaticText" source="key_red" render="FixedLabel" position="10,0" size="(e-32)/4,40" backgroundColor="red">
+		<panel position="bottom" size="*,55">
+			<widget objectTypes="key_red,StaticText" source="key_red" render="FixedLabel" position="15,0" size="(e-36)/4,40" backgroundColor="red">
 				<convert type="ConditionalShowHide"/>
 			</widget>
-			<widget objectTypes="key_green,StaticText" source="key_green" render="FixedLabel" position="(e-32)/4+14,0" size="(e-32)/4,40" backgroundColor="green">
+			<widget objectTypes="key_green,StaticText" source="key_green" render="FixedLabel" position="(e-36)/4+17,0" size="(e-36)/4,40" backgroundColor="green">
 				<convert type="ConditionalShowHide"/>
 			</widget>
-			<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="FixedLabel" position="c+2,0" size="(e-32)/4,40" backgroundColor="yellow">
+			<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="FixedLabel" position="c+1,0" size="(e-36)/4,40" backgroundColor="yellow">
 				<convert type="ConditionalShowHide"/>
 			</widget>
-			<widget objectTypes="key_blue,StaticText" source="key_blue" render="FixedLabel" position="(e-32)*0.75+22,0" size="(e-32)/4,40" backgroundColor="blue">
+			<widget objectTypes="key_blue,StaticText" source="key_blue" render="FixedLabel" position="(e-36)*0.75+21,0" size="(e-36)/4,40" backgroundColor="blue">
 				<convert type="ConditionalShowHide"/>
 			</widget>
 
-			<eLabel objectTypes="key_red,Button,Label" position="10,0" size="(e-32)/4,40" zPosition="-5" backgroundColor="red"/>
-			<eLabel objectTypes="key_green,Button,Label" position="(e-32)/4+14,0" size="(e-32)/4,40" zPosition="-5" backgroundColor="green"/>
-			<eLabel objectTypes="key_yellow,Button,Label" position="c+2,0" size="(e-32)/4,40" zPosition="-5" backgroundColor="yellow"/>
-			<eLabel objectTypes="key_blue,Button,Label" position="(e-32)*0.75+22,0" size="(e-32)/4,40" zPosition="-5" backgroundColor="blue"/>
+			<eLabel objectTypes="key_red,Button,Label" position="15,0" size="(e-36)/4,40" zPosition="-5" backgroundColor="red"/>
+			<eLabel objectTypes="key_green,Button,Label" position="(e-36)/4+17,0" size="(e-36)/4,40" zPosition="-5" backgroundColor="green"/>
+			<eLabel objectTypes="key_yellow,Button,Label" position="c+1,0" size="(e-36)/4,40" zPosition="-5" backgroundColor="yellow"/>
+			<eLabel objectTypes="key_blue,Button,Label" position="(e-36)*0.75+21,0" size="(e-36)/4,40" zPosition="-5" backgroundColor="blue"/>
 
-			<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="12,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
-			<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="(e-32)/4+16,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
-			<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="c+4,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
-			<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="(e-32)*0.75+24,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="17,2" size="(e-36)/4-4,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="(e-36)/4+19,2" size="(e-36)/4-4,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="c+3,2" size="(e-35)/4-4,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="(e-36)*0.75+23,2" size="(e-36)/4-4,36" font="Regular;22" halign="center" valign="center"/>
 
-			<widget objectTypes="key_red,Label,Button" name="key_red" position="12,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
-			<widget objectTypes="key_green,Label,Button" name="key_green" position="(e-32)/4+16,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
-			<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="c+4,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
-			<widget objectTypes="key_blue,Label,Button" name="key_blue" position="(e-32)*0.75+24,2" size="(e-32)/4-4,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_red,Label,Button" name="key_red" position="12,2" size="(e-36)/4-4,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_green,Label,Button" name="key_green" position="(e-36)/4+19,2" size="(e-36)/4-4,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="c+3,2" size="(e-36)/4-4,36" font="Regular;22" halign="center" valign="center"/>
+			<widget objectTypes="key_blue,Label,Button" name="key_blue" position="(e-36)*0.75+23,2" size="(e-36)/4-4,36" font="Regular;22" halign="center" valign="center"/>
 		</panel>
 	</screen>
 
