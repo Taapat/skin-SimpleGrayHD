@@ -313,8 +313,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="Console" position="center,center" size="740,565">
-		<widget name="text" position="center,10" size="700,526" font="Regular;20"/>
+	<screen name="Console" position="center,center" size="740,536">
+		<widget name="text" position="0,10" size="740,536" font="Regular;20" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="CutListEditor" position="center,680" size="700,24" flags="wfNoBorder" backgroundColor="transparent">
