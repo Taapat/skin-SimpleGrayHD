@@ -219,8 +219,8 @@
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="ChannelContextMenu" position="center,center" size="600,290" backgroundColor="back">
-		<widget name="menu" position="20,20" size="560,250" scrollbarMode="showOnDemand"/>
+	<screen name="ChannelContextMenu" position="center,center" size="500,260" backgroundColor="back">
+		<widget name="menu" position="0,10" size="500,250" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="ChannelSelection" position="center,100" size="1080,580">
