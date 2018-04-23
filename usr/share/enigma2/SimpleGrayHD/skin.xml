@@ -308,7 +308,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="ConfigEdit" position="center,center" size="640,410">
-		<widget name="config" position="10,10" size="610,150" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="0,10" size="640,150" scrollbarMode="showOnDemand"/>
 		<widget name="HelpWindow" position="400,370" size="1,1" zPosition="5" pixmap="skin_default/vkey_icon.png" transparent="1" alphatest="on"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
