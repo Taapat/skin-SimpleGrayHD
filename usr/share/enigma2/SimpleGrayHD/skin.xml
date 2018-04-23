@@ -238,17 +238,17 @@
 		<widget source="ServiceEvent" render="SGPiconProv" position="920,75" size="100,60" transparent="1" alphatest="blend">
 			<convert type="SGProvider"/>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="730,140" size="340,25" halign="center" valign="center" font="Regular;20">
+		<widget source="ServiceEvent" render="Label" position="730,140" size="340,25" valign="center" font="Regular;20">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="730,170" size="70,25" halign="right" font="Replacement;20" foregroundColor="grey">
+		<widget source="ServiceEvent" render="Label" position="720,170" size="60,25" halign="right" font="Replacement;20" foregroundColor="grey">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="ServiceEvent" render="Progress" position="810,180" size="180,10" borderWidth="1" foregroundColor="grey">
+		<widget source="ServiceEvent" render="Progress" position="790,180" size="210,10" borderWidth="1" foregroundColor="grey">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1000,170" size="70,25" font="Replacement;20" foregroundColor="grey">
+		<widget source="ServiceEvent" render="Label" position="1010,170" size="60,25" font="Replacement;20" foregroundColor="grey">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
