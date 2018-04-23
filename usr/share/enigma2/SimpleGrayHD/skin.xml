@@ -275,14 +275,14 @@
 	</screen>
 
 	<screen name="ChoiceBox" position="center,center" size="670,90">
-		<widget name="text" position="15,10" size="640,48" font="Regular;20"/>
-		<widget name="list" position="10,50" size="650,25" scrollbarMode="showOnDemand"/>
+		<widget name="text" position="10,10" size="640,40" font="Regular;20"/>
+		<widget name="list" position="0,50" size="670,25" scrollbarMode="showOnDemand"/>
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 textsize = self["text"].getSize()
 textsize = (int(textsize[0] * 1.1), int(textsize[1] * 1.1))
 wsizex = textsize[0] + 30
-wsizey = textsize[1] + 50
+wsizey = textsize[1] + 20
 if 420 > wsizex:
 	wsizex = 420
 listlen = len(self.list) * 25
@@ -291,9 +291,9 @@ if listlen > 250:
 wsizey += listlen
 self.instance.resize(eSize(*(wsizex, wsizey)))
 self["text"].instance.resize(eSize(*textsize))
-self["list"].instance.move(ePoint(10, wsizey-listlen-15))
-self["list"].instance.resize(eSize(*(wsizex-20, listlen)))
-self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
+self["list"].instance.move(ePoint(0, wsizey-listlen))
+self["list"].instance.resize(eSize(*(wsizex, listlen)))
+self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		</applet>
 	</screen>
 
