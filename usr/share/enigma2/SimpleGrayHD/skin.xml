@@ -411,29 +411,37 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="EPGSelectionMulti" position="center,100" size="1080,580">
-		<panel name="LeftBigButtonsTemplate"/>
-		<widget name="now_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="10,10" size="140,40" alphatest="on"/>
-		<widget name="now_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="10,10" size="140,40" alphatest="on"/>
-		<widget name="next_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="154,10" size="140,40" alphatest="on"/>
-		<widget name="next_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="154,10" size="140,40" alphatest="on"/>
-		<widget name="more_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="298,10" size="140,40" alphatest="on"/>
-		<widget name="more_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="298,10" size="140,40" alphatest="on"/>
-		<widget name="now_text" position="12,12" size="136,36" text="NOW" font="Regular;20" halign="center" valign="center"/>
-		<widget name="next_text" position="156,12" size="136,36" text="NEXT" font="Regular;20" halign="center" valign="center"/>
-		<widget name="more_text" position="300,12" size="136,36" text="MORE" font="Regular;20" halign="center" valign="center"/>
+	<screen name="EPGSelectionMulti" position="center,100" size="1090,580">
+		<widget name="now_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="15,10" size="140,40" alphatest="on"/>
+		<widget name="now_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="15,10" size="140,40" alphatest="on"/>
+		<widget name="next_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="159,10" size="140,40" alphatest="on"/>
+		<widget name="next_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="159,10" size="140,40" alphatest="on"/>
+		<widget name="more_button" pixmap="SimpleGrayHD/skin_default/buttons/grey.png" position="303,10" size="140,40" alphatest="on"/>
+		<widget name="more_button_sel" pixmap="SimpleGrayHD/skin_default/buttons/white.png" position="303,10" size="140,40" alphatest="on"/>
+		<widget name="now_text" position="17,12" size="136,36" text="NOW" font="Regular;20" halign="center" valign="center"/>
+		<widget name="next_text" position="161,12" size="136,36" text="NEXT" font="Regular;20" halign="center" valign="center"/>
+		<widget name="more_text" position="305,12" size="136,36" text="MORE" font="Regular;20" halign="center" valign="center"/>
 
-		<widget name="list" position="10,60" size="812,450" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="date" position="840,60" size="230,28" font="Regular;24"/>
-		<widget source="Event" render="Label" position="840,110" size="230,400" font="Regular;18">
+		<widget name="list" position="15,60" size="812,450" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="date" position="845,60" size="230,28" font="Regular;24"/>
+		<widget source="Event" render="Label" position="845,110" size="230,400" font="Regular;18">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="840,542" size="104,25" font="Regular;20" foregroundColor="grey">
+		<widget source="global.CurrentTime" render="Label" position="845,542" size="104,25" font="Regular;20" foregroundColor="grey">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="950,530" size="140,40" font="Replacement;30">
+		<widget source="global.CurrentTime" render="Label" position="955,530" size="140,40" font="Replacement;30">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
+
+		<eLabel position="15,530" size="200,40" zPosition="-5" backgroundColor="red"/>
+		<eLabel position="219,530" size="200,40" zPosition="-5" backgroundColor="green"/>
+		<eLabel position="423,530" size="200,40" zPosition="-5" backgroundColor="yellow"/>
+		<eLabel position="627,530" size="200,40" zPosition="-5" backgroundColor="blue"/>
+		<widget source="key_red" render="Label" position="17,532" size="196,36" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="221,532" size="196,36" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_yellow" render="Label" position="425,532" size="196,36" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_blue" render="Label" position="629,532" size="196,36" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
 	<screen name="EventView" position="center,100" size="770,580">
