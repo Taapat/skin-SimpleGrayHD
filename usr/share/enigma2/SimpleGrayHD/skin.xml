@@ -531,9 +531,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="key_blue" render="Label" position="629,532" size="196,36" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
-	<screen name="GraphMultiEPGList" position="center,center" size="780,526">
-		<widget name="timeline_text" position="10,10" size="740,26" foregroundColor="white"/>
-		<widget name="list" position="10,36" size="740,420" scrollbarMode="showOnDemand" backgroundColor="black"/>
+	<screen name="GraphMultiEPGList" position="center,center" size="770,526">
+		<widget name="timeline_text" position="15,10" size="740,26" foregroundColor="white"/>
+		<widget name="list" position="15,36" size="740,420" scrollbarMode="showOnDemand" backgroundColor="black"/>
 		<widget name="timeline0" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
 		<widget name="timeline1" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
 		<widget name="timeline2" position="0,36" zPosition="1" size="1,420" pixmap="SimpleGrayHD/window/timeline.png"/>
