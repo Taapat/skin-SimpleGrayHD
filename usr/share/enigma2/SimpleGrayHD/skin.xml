@@ -302,8 +302,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="entries" position="center,95" size="631,300" scrollbarMode="showOnDemand"/>
 	</screen>
 
-	<screen name="CommitInfo" position="center,center" size="700,560">
-		<widget name="AboutScrollLabel" position="10,10" size="680,470" font="Regular;20"/>
+	<screen name="CommitInfo" position="center,center" size="530,460">
+		<widget name="AboutScrollLabel" position="15,10" size="500,370" font="Regular;20" halign="left"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
