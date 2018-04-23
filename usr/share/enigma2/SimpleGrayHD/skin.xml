@@ -372,9 +372,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="posGoto" position="52,160" size="70,20" font="Regular;20" shadowColor="black" shadowOffset="-2,-2"/>
 	</screen>
 
-	<screen name="EPGSearchSetup" position="320,180" size="640,410">
-		<widget name="config" position="center,10" size="580,240" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget source="help" render="Label" position="center,260" size="580,60" font="Regular;22"/>
+	<screen name="EPGSearchSetup" position="center,center" size="640,470">
+		<widget name="config" position="0,10" size="640,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget source="help" render="Label" position="15,330" size="610,50" font="Regular;20"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
