@@ -164,20 +164,6 @@
 		<widget render="VideoSize" source="session.CurrentService" position="905,e-130" size="100,25" font="Regular;20"/>
 	</screen>
 
-	<screen name="LeftBigButtonsTemplate">
-		<panel position="bottom" size="*,50">
-			<eLabel position="10,0" size="200,40" zPosition="-5" backgroundColor="red"/>
-			<eLabel position="214,0" size="200,40" zPosition="-5" backgroundColor="green"/>
-			<eLabel position="418,0" size="200,40" zPosition="-5" backgroundColor="yellow"/>
-			<eLabel position="622,0" size="200,40" zPosition="-5" backgroundColor="blue"/>
-
-			<widget name="key_red" render="Label" position="12,2" size="196,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_green" render="Label" position="216,2" size="196,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_yellow" render="Label" position="420,2" size="196,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_blue" render="Label" position="624,2" size="196,36" font="Regular;22" halign="center" valign="center"/>
-		</panel>
-	</screen>
-
 	<screen name="LeftButtonsTemplate">
 		<panel position="bottom" size="*,50">
 			<eLabel position="10,0" size="170,40" zPosition="-5" backgroundColor="red"/>
