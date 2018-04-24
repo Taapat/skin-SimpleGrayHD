@@ -11,6 +11,11 @@
 		<widget name="oktext" position="166,e-48" size="146,36" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
+	<screen name="ConfigIntroductionTemplate">
+		<widget name="config" position="0,10" size="620,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="introduction" position="15,330" size="590,50" font="Regular;22"/>
+	</screen>
+
 	<screen name="DefaultWizardTemplate">
 		<panel name="RCTemplate"/>
 		<eLabel position="30,535" size="15,15" backgroundColor="red"/>

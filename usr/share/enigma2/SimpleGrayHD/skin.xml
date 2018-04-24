@@ -472,9 +472,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="FastScanScreen" position="270,95" size="740,565">
-		<widget name="config" position="10,10" size="720,356" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+	<screen name="FastScanScreen" position="center,center" size="620,460">
+		<panel name="ConfigIntroductionTemplate"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
@@ -1194,9 +1193,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="ScanSetup" position="center,center" size="740,565">
-		<widget name="config" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+	<screen name="ScanSetup" position="center,center" size="620,460">
+		<panel name="ConfigIntroductionTemplate"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
@@ -1541,9 +1539,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="VideoEnhancementSetup" position="center,center" size="740,565">
-		<widget name="config" position="10,10" size="720,354" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="introduction" position="10,395" size="720,100" font="Regular;22"/>
+	<screen name="VideoEnhancementSetup" position="center,center" size="620,460">
+		<panel name="ConfigIntroductionTemplate"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
