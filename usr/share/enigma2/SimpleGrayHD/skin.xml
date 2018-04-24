@@ -477,8 +477,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="FileBrowser" position="center,center" size="640,410">
-		<widget name="filelist" position="10,10" size="620,300" scrollbarMode="showOnDemand"/>
+	<screen name="FileBrowser" position="center,center" size="640,400">
+		<widget name="filelist" position="5,10" size="620,300" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
