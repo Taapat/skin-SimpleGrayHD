@@ -549,7 +549,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="HarddiskSelection" position="center,center" size="600,250">
-		<widget name="hddlist" position="20,10" size="560,150" scrollbarMode="showOnDemand"/>
+		<widget name="hddlist" position="15,10" size="570,150" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
