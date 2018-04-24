@@ -587,8 +587,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="IPKGMenu" position="center,center" size="740,565">
-		<widget name="filelist" position="center,45" size="629,400" scrollbarMode="showOnDemand"/>
+	<screen name="IPKGMenu" position="center,center" size="570,330">
+		<widget name="filelist" position="15,15" size="540,220" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
