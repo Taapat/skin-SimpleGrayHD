@@ -554,9 +554,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="HarddiskSetup" position="center,center" size="600,250">
-		<widget name="model" position="20,10" size="560,28" font="Regular;22"/>
-		<widget name="capacity" position="20,50" size="560,28" font="Regular;22"/>
-		<widget name="bus" position="20,90" size="560,28" font="Regular;22"/>
+		<widget name="model" position="15,10" size="570,28" font="Regular;22"/>
+		<widget name="capacity" position="15,50" size="570,28" font="Regular;22"/>
+		<widget name="bus" position="15,90" size="570,28" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
