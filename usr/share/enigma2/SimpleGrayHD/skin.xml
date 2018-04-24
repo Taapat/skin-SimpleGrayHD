@@ -593,7 +593,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="IPKGSource" position="center,center" size="780,170">
-		<widget name="text" position="40,20" size="700,25" font="Regular;22"/>
+		<widget name="text" position="15,20" size="750,25" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
