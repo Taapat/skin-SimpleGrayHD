@@ -632,9 +632,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="InputDeviceSetup" position="center,center" size="520,230">
-		<widget name="config" position="10,10" size="500,100" scrollbarMode="showOnDemand"/>
-		<widget source="introduction" render="Label" position="10,120" size="500,25" font="Regular;20"/>
+	<screen name="InputDeviceSetup" position="center,center" size="520,240">
+		<panel name="ConfigIntroductionLabelTemplate"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
@@ -846,9 +845,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<ePixmap pixmap="SimpleGrayHD/window/mute.png" position="0,0" size="64,64" alphatest="on"/>
 	</screen>
 
-	<screen name="NameserverSetup" position="center,center" size="500,250">
-		<widget name="config" position="20,15" size="460,100"/>
-		<widget source="introduction" render="Label" position="20,115" size="460,50" font="Regular;22"/>
+	<screen name="NameserverSetup" position="center,center" size="520,240">
+		<panel name="ConfigIntroductionLabelTemplate"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
@@ -1533,9 +1531,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="VideoEnhancementPreview" position="center,center" size="570,210">
-		<widget name="config" position="10,10" size="550,80" scrollbarMode="showOnDemand"/>
-		<widget source="introduction" render="Label" position="10,100" size="550,30" font="Regular;22"/>
+	<screen name="VideoEnhancementPreview" position="center,center" size="520,240">
+		<panel name="ConfigIntroductionLabelTemplate"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
