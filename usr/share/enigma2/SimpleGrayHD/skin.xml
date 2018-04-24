@@ -468,7 +468,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="FancontrolConfiguration" position="center,center" size="570,300">
-		<widget name="config" position="10,15" size="550,200" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="0,10" size="550,200" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
