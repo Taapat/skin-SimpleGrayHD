@@ -560,10 +560,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="HarddiskWait" position="center,center" size="600,250">
-		<widget name="wait" position="10,10" size="580,120" font="Regular;22"/>
-	</screen>
-
 	<screen name="HdmiCECSetupScreen" position="center,center" size="640,465">
 		<widget name="config" position="10,10" size="620,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<widget source="current_address" render="Label" position="10,330" size="620,25" font="Regular;22"/>
