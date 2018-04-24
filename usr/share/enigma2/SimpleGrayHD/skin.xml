@@ -313,7 +313,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="Console" position="center,center" size="740,536">
+	<screen name="Console" position="center,center" size="740,556">
 		<widget name="text" position="15,10" size="710,536" font="Regular;20" scrollbarMode="showOnDemand"/>
 	</screen>
 
