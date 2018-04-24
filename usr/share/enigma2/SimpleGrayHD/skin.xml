@@ -760,7 +760,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="Menu" position="10,60" size="400,650">
-		<widget source="menu" render="Listbox" enableWrapAround="1" position="0,30" size="400,605" scrollbarMode="showNever">
+		<widget source="menu" render="Listbox" position="0,30" size="400,605" scrollbarMode="showNever">
 			<convert type="TemplatedMultiContent">
 				{"template": [MultiContentEntryText(pos=(15,13), size=(400,32), flags=RT_HALIGN_LEFT, text=0)],
 				"fonts": [gFont("Replacement",24)],
@@ -770,7 +770,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="MenuSort" position="10,60" size="550,650">
-		<widget source="menu" render="Listbox" enableWrapAround="1" position="0,30" size="616,550" scrollbarMode="showNever">
+		<widget source="menu" render="Listbox"  position="0,30" size="616,550" scrollbarMode="showNever">
 			<convert type="TemplatedMultiContent">
 				{"template": [MultiContentEntryText(pos=(15,13), size=(400,32), flags=RT_HALIGN_LEFT, text=0)],
 				"fonts": [gFont("Replacement",24)],
