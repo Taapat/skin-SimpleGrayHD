@@ -946,10 +946,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="NumberZap" position="center,center" size="350,85" flags="wfNoBorder">;
-		<widget name="channel" position="10,10" size="100,30" font="Regular;25"/>
-		<widget name="number" position="110,10" size="100,30" font="Regular;25"/>
-		<widget name="servicename" position="10,45" size="330,30" font="Regular;25"/>
+	<screen name="NumberZap" position="center,center" size="370,85" flags="wfNoBorder">;
+		<widget name="channel" position="20,10" size="100,30" font="Regular;25"/>
+		<widget name="number" position="120,10" size="100,30" font="Regular;25"/>
+		<widget name="servicename" position="20,45" size="330,30" font="Regular;25"/>
 	</screen>
 
 	<screen name="NumericalTextInputHelpDialog" position="center,470" size="480,88" zPosition="2" flags="wfNoBorder">
