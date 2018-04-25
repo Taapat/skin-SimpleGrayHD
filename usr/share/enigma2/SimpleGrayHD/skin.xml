@@ -1047,12 +1047,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 				MultiContentEntryText(pos=(70,1), size=(650,24), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
 				MultiContentEntryText(pos=(70,26), size=(650,24), font=1, flags=RT_HALIGN_LEFT, text=2), # index 2 is the description
 				MultiContentEntryPixmapAlphaTest(pos=(5,0), size=(48,48), png=5), # index 5 is the status pixmap
-				MultiContentEntryPixmapAlphaTest(pos=(5,48), size=(700,2), png=6), # index 6 is the div pixmap
+				MultiContentEntryPixmapAlphaTest(pos=(5,48), size=(720,2), png=6), # index 6 is the div pixmap
 				]),
 				"category": (50,[
 				MultiContentEntryText(pos=(5,1), size=(695,22), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
 				MultiContentEntryText(pos=(5,26), size=(695,16), font=1, flags=RT_HALIGN_LEFT, text=1), # index 1 is the description
-				MultiContentEntryPixmapAlphaTest(pos=(5,48), size=(700,2), png=3), # index 3 is the div pixmap
+				MultiContentEntryPixmapAlphaTest(pos=(5,48), size=(720,2), png=3), # index 3 is the div pixmap
 				])
 				},
 				"fonts": [gFont("Regular",22),gFont("Regular",16)],
@@ -1071,6 +1071,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 					MultiContentEntryPixmapAlphaTest(pos=(5,0), size=(48,48), png=2), # index 2 is the status pixmap
 					MultiContentEntryText(pos=(70,1), size=(650,24), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
 					MultiContentEntryText(pos=(70,26), size=(650,24), font=1, flags=RT_HALIGN_LEFT, text=1), # index 1 is the state
+					MultiContentEntryPixmapAlphaTest(pos=(5,48), size=(720,2), png=3), # index 3 is the div pixmap
 					],
 				"fonts": [gFont("Regular", 22), gFont("Regular", 16)],
 				"itemHeight": 50
