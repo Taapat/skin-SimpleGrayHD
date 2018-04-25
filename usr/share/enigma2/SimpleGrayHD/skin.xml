@@ -786,13 +786,14 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="minutes" position="10,10" size="200,25" halign="right" font="Regular;20"/>
 	</screen>
 
-	<screen name="MovieBrowserConfiguration" position="center,center" size="640,390">
-		<widget name="config" position="10,10" size="620,300" scrollbarMode="showOnDemand"/>
+	<screen name="MovieBrowserConfiguration" position="center,center" size="640,460">
+		<widget name="config" position="0,10" size="640,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="15,330" size="610,50" font="Regular;20"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="MovieContextMenu" position="center,center" size="500,290" flags="wfNoBorder">
-		<widget name="menu" position="20,20" size="460,250" scrollbarMode="showOnDemand"/>
+	<screen name="MovieContextMenu" position="center,center" size="500,300" flags="wfNoBorder">
+		<widget name="menu" position="15,25" size="465,250" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="MoviePlayer" flags="wfNoBorder" position="0,610" size="1280,110">
