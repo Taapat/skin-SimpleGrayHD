@@ -223,50 +223,50 @@
 		<widget name="menu" position="0,10" size="500,250" scrollbarMode="showOnDemand"/>
 	</screen>
 
-	<screen name="ChannelSelection" position="center,100" size="1080,580">
+	<screen name="ChannelSelection" position="center,100" size="1085,585">
 		<panel name="LeftButtonsTemplate"/>
-		<widget name="list" position="10,10" size="692,498" scrollbarMode="showOnDemand" serviceItemHeight="31" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;18" foregroundColorServiceNotAvail="grey" colorEventProgressbar="grey" colorServiceDescription="grey" colorEventProgressbarBorder="grey" colorServiceDescriptionSelected="white" colorEventProgressbarSelected="white"/>
-		<widget source="ServiceEvent" render="Label" position="730,10" size="340,30" font="Replacement;26" noWrap="1">
+		<widget name="list" position="15,10" size="692,498" scrollbarMode="showOnDemand" serviceItemHeight="31" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;18" foregroundColorServiceNotAvail="grey" colorEventProgressbar="grey" colorServiceDescription="grey" colorEventProgressbarBorder="grey" colorServiceDescriptionSelected="white" colorEventProgressbarSelected="white"/>
+		<widget source="ServiceEvent" render="Label" position="735,10" size="340,30" font="Replacement;26" noWrap="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="730,45" size="340,20" font="Regular;16" foregroundColor="grey" noWrap="1">
+		<widget source="ServiceEvent" render="Label" position="735,45" size="340,20" font="Regular;16" foregroundColor="grey" noWrap="1">
 			<convert type="TransponderInfo"/>
 		</widget>
-		<widget source="ServiceEvent" render="Picon" position="780,75" size="100,60" transparent="1" alphatest="blend">
+		<widget source="ServiceEvent" render="Picon" position="785,75" size="100,60" transparent="1" alphatest="blend">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="ServiceEvent" render="SGPiconProv" position="920,75" size="100,60" transparent="1" alphatest="blend">
+		<widget source="ServiceEvent" render="SGPiconProv" position="925,75" size="100,60" transparent="1" alphatest="blend">
 			<convert type="SGProvider"/>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="730,140" size="340,25" valign="center" font="Regular;20">
+		<widget source="ServiceEvent" render="Label" position="735,140" size="340,25" valign="center" font="Regular;20">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="720,170" size="60,25" halign="right" font="Replacement;20" foregroundColor="grey">
+		<widget source="ServiceEvent" render="Label" position="725,170" size="60,25" halign="right" font="Replacement;20" foregroundColor="grey">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"/>
 		</widget>
-		<widget source="ServiceEvent" render="Progress" position="790,180" size="210,10" borderWidth="1" foregroundColor="grey">
+		<widget source="ServiceEvent" render="Progress" position="795,180" size="210,10" borderWidth="1" foregroundColor="grey">
 			<convert type="EventTime">Progress</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="1010,170" size="60,25" font="Replacement;20" foregroundColor="grey">
+		<widget source="ServiceEvent" render="Label" position="1015,170" size="60,25" font="Replacement;20" foregroundColor="grey">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="730,205" size="340,229" font="Regular;20">
+		<widget source="ServiceEvent" render="Label" position="735,205" size="340,229" font="Regular;20">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<widget source="ServiceEvent" render="NextEpgInfo" position="730,440" size="340,73" font="Regular;20" foregroundColor="grey" NumberOfItems="2"/>
-		<widget source="global.CurrentTime" render="Label" position="830,542" size="104,25" font="Regular;20" foregroundColor="grey">
+		<widget source="ServiceEvent" render="NextEpgInfo" position="735,440" size="340,73" font="Regular;20" foregroundColor="grey" NumberOfItems="2"/>
+		<widget source="global.CurrentTime" render="Label" position="835,542" size="104,25" font="Regular;20" foregroundColor="grey">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="940,530" size="140,40" font="Replacement;30">
+		<widget source="global.CurrentTime" render="Label" position="945,530" size="140,40" font="Replacement;30">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
 	</screen>
 
-	<screen name="ChannelSelectionRadio" position="10,60" size="1260,470">
+	<screen name="ChannelSelectionRadio" position="10,60" size="1265,470">
 		<panel name="LeftButtonsTemplate"/>
-		<widget name="list" position="10,10" size="690,372" scrollbarMode="showOnDemand" serviceItemHeight="31" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;18" foregroundColorServiceNotAvail="grey" colorEventProgressbar="grey" colorServiceDescription="grey" colorEventProgressbarBorder="grey" colorServiceDescriptionSelected="white" colorEventProgressbarSelected="white"/>
+		<widget name="list" position="15,10" size="690,372" scrollbarMode="showOnDemand" serviceItemHeight="31" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;18" foregroundColorServiceNotAvail="grey" colorEventProgressbar="grey" colorServiceDescription="grey" colorEventProgressbarBorder="grey" colorServiceDescriptionSelected="white" colorEventProgressbarSelected="white"/>
 	</screen>
 
 	<screen name="ChapterZap" position="center,center" size="280,60">
@@ -800,23 +800,23 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="PlayerTemplate"/>
 	</screen>
 
-	<screen name="MovieSelection" position="center,100" size="1080,580">
+	<screen name="MovieSelection" position="center,100" size="1085,580">
 		<panel name="LeftButtonsTemplate"/>
-		<widget name="waitingtext" position="10,10" size="692,500" zPosition="4" font="Regular;24"/>
-		<widget name="chosenletter" position="10,10" size="692,500" zPosition="4" font="Regular;24"/>
-		<widget name="list" position="10,10" size="692,453" scrollbarMode="showOnDemand"/>
-		<widget name="movie_sort" position="10,476" size="35,20" pixmaps="skin_default/icons/az.png,skin_default/icons/newtop.png,skin_default/icons/shuffle.png,skin_default/icons/za.png,skin_default/icons/oldtop.png,skin_default/icons/faz.png,skin_default/icons/fza.png,skin_default/icons/default.png" transparent="1" alphatest="on"/>
-		<widget name="movie_off" position="50,476" size="35,20" pixmaps="skin_default/icons/ask.png,skin_default/icons/movielist.png,skin_default/icons/quit.png,skin_default/icons/pause.png,skin_default/icons/playlist.png,skin_default/icons/playlistquit.png,skin_default/icons/loop.png,skin_default/icons/rep.png" transparent="1" alphatest="on"/>
-		<widget name="freeDiskSpace" position="100,475" size="602,25" font="Regular;20"/>
+		<widget name="waitingtext" position="15,10" size="692,500" zPosition="4" font="Regular;24"/>
+		<widget name="chosenletter" position="15,10" size="692,500" zPosition="4" font="Regular;24"/>
+		<widget name="list" position="15,10" size="692,453" scrollbarMode="showOnDemand"/>
+		<widget name="movie_sort" position="15,476" size="35,20" pixmaps="skin_default/icons/az.png,skin_default/icons/newtop.png,skin_default/icons/shuffle.png,skin_default/icons/za.png,skin_default/icons/oldtop.png,skin_default/icons/faz.png,skin_default/icons/fza.png,skin_default/icons/default.png" transparent="1" alphatest="on"/>
+		<widget name="movie_off" position="55,476" size="35,20" pixmaps="skin_default/icons/ask.png,skin_default/icons/movielist.png,skin_default/icons/quit.png,skin_default/icons/pause.png,skin_default/icons/playlist.png,skin_default/icons/playlistquit.png,skin_default/icons/loop.png,skin_default/icons/rep.png" transparent="1" alphatest="on"/>
+		<widget name="freeDiskSpace" position="105,475" size="602,25" font="Regular;20"/>
 		<widget name="DescriptionBorder" position="0,0" size="0,0"/>
 
 		<widget source="Service" render="Label" position="730,10" size="340,30" font="Replacement;26" noWrap="1">
 			<convert type="MovieInfo">ShortDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="730,45" size="340,360" font="Regular;20">
+		<widget source="Service" render="Label" position="730,50" size="340,360" font="Regular;20">
 			<convert type="MovieInfo">MetaDescription</convert>
 		</widget>
-		<widget source="Service" render="Label" position="835,415" size="100,24" font="Regular;20" foregroundColor="grey">
+		<widget source="Service" render="Label" position="840,415" size="100,24" font="Regular;20" foregroundColor="grey">
 			<convert type="ServiceTime">Duration</convert>
 			<convert type="ClockToText">AsLength</convert>
 		</widget>
@@ -830,10 +830,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget source="Service" render="Label" position="730,475" size="340,25" font="Regular;20" foregroundColor="grey">
 			<convert type="MovieInfo">RecordServiceName</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="830,542" size="104,25" font="Regular;20" foregroundColor="grey">
+		<widget source="global.CurrentTime" render="Label" position="835,542" size="104,25" font="Regular;20" foregroundColor="grey">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="940,530" size="140,40" font="Replacement;30">
+		<widget source="global.CurrentTime" render="Label" position="945,530" size="140,40" font="Replacement;30">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
 	</screen>
@@ -1312,9 +1312,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="VKeyIconTemplate"/>
 	</screen>
 
-	<screen name="SimpleChannelSelection" position="center,100" size="712,580">
+	<screen name="SimpleChannelSelection" position="center,100" size="722,580">
 		<panel name="LeftButtonsTemplate"/>
-		<widget name="list" position="10,10" size="692,498" scrollbarMode="showOnDemand"/>
+		<widget name="list" position="15,10" size="692,498" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="SkinSelector" position="center,center" size="600,375">

@@ -175,16 +175,16 @@
 	</screen>
 
 	<screen name="LeftButtonsTemplate">
-		<panel position="bottom" size="*,50">
-			<eLabel position="10,0" size="170,40" zPosition="-5" backgroundColor="red"/>
-			<eLabel position="184,0" size="170,40" zPosition="-5" backgroundColor="green"/>
-			<eLabel position="358,0" size="170,40" zPosition="-5" backgroundColor="yellow"/>
-			<eLabel position="532,0" size="170,40" zPosition="-5" backgroundColor="blue"/>
+		<panel position="bottom" size="*,55">
+			<eLabel position="15,0" size="170,40" zPosition="-5" backgroundColor="red"/>
+			<eLabel position="189,0" size="170,40" zPosition="-5" backgroundColor="green"/>
+			<eLabel position="363,0" size="170,40" zPosition="-5" backgroundColor="yellow"/>
+			<eLabel position="537,0" size="170,40" zPosition="-5" backgroundColor="blue"/>
 
-			<widget name="key_red" render="Label" position="12,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_green" render="Label" position="186,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_yellow" render="Label" position="360,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_blue" render="Label" position="534,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
+			<widget name="key_red" render="Label" position="17,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
+			<widget name="key_green" render="Label" position="191,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
+			<widget name="key_yellow" render="Label" position="365,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
+			<widget name="key_blue" render="Label" position="539,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
 		</panel>
 	</screen>
 
