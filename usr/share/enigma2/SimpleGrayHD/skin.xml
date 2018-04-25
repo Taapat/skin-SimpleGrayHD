@@ -1026,12 +1026,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="PinInputTemplate"/>
 	</screen>
 
-	<screen name="PluginBrowser" position="center,center" size="640,555">
-		<widget name="list" position="10,10" size="620,453" scrollbarMode="showOnDemand" itemHeight="50"/>
-		<eLabel position="10,500" size="247,40" zPosition="-5" backgroundColor="red"/>
-		<eLabel position="261,500" size="247,40" zPosition="-5" backgroundColor="green"/>
-		<widget name="key_red" render="Label" position="12,502" size="243,36" font="Regular;22" halign="center" valign="center"/>
-		<widget name="key_green" render="Label" position="263,502" size="243,36" font="Regular;22" halign="center" valign="center"/>
+	<screen name="PluginBrowser" position="center,center" size="640,560">
+		<widget name="list" position="5,10" size="625,453" scrollbarMode="showOnDemand" itemHeight="50"/>
+		<eLabel position="15,500" size="247,40" zPosition="-5" backgroundColor="red"/>
+		<eLabel position="266,500" size="247,40" zPosition="-5" backgroundColor="green"/>
+		<widget name="key_red" render="Label" position="17,502" size="243,36" font="Regular;22" halign="center" valign="center"/>
+		<widget name="key_green" render="Label" position="268,502" size="243,36" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
 	<screen name="PluginDownloadBrowser" position="center,center" size="620,380">
