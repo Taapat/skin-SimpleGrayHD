@@ -674,11 +674,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="LanguageSelection" position="center,center" size="450,530">
-		<widget source="languages" render="Listbox" position="20,15" size="410,500" scrollbarMode="showNever">
+		<widget source="languages" render="Listbox" position="10,15" size="440,500" scrollbarMode="showNever">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos=(100,10), size=(310,30), flags=RT_HALIGN_LEFT, text=1),
-					MultiContentEntryPixmap(pos=(10,5), size=(60,40), png=2),],
+					MultiContentEntryText(pos=(80,10), size=(360,30), flags=RT_HALIGN_LEFT, text=1),
+					MultiContentEntryPixmap(pos=(5,5), size=(60,40), png=2),],
 				"fonts": [gFont("Regular",25)],
 				"itemHeight": 50}
 			</convert>
