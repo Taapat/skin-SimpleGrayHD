@@ -1121,8 +1121,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="ProjectSettings" position="center,center" size="740,565">
-		<widget name="config" position="10,10" size="720,350" scrollbarMode="showOnDemand" enableWrapAround="1"/>
-		<widget source="info" render="Label" position="10,380" size="720,100" font="Regular;20"/>
+		<widget name="config" position="0,10" size="740,350" scrollbarMode="showOnDemand" enableWrapAround="1"/>
+		<widget source="info" render="Label" position="15,380" size="710,100" font="Regular;20"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
