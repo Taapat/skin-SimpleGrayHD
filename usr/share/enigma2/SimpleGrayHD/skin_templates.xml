@@ -237,10 +237,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
 	</screen>
 
 	<screen name="PinInputTemplate">
-		<widget name="service" position="10,10" size="480,25" font="Regular;20"/>
-		<widget name="text" position="10,40" size="480,25" font="Regular;20" halign="center"/>
-		<widget name="tries" position="10,70" size="480,25" font="Regular;20" halign="center"/>
-		<widget name="input" position="10,110" size="480,40" font="Regular;50" halign="center"/>
+		<widget name="service" position="15,10" size="470,25" font="Regular;20"/>
+		<widget name="text" position="15,40" size="470,25" font="Regular;20"/>
+		<widget name="tries" position="15,70" size="470,25" font="Regular;20"/>
+		<widget name="input" position="15,110" size="470,40" font="Regular;50"/>
 	</screen>
 
 	<screen name="PlayerTemplate">
