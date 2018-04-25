@@ -700,12 +700,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="wizard" pixmap="SimpleGrayHD/picon_default.png" position="40,650" size="100,60" alphatest="on"/>
 	</screen>
 
-	<screen name="LocationBox" position="center,center" size="720,515">
-		<widget name="text" position="10,10" size="700,25" font="Regular;20"/>
-		<widget name="target" position="10,40" size="700,25" font="Regular;20"/>
-		<widget name="filelist" position="10,75" size="700,187" scrollbarMode="showOnDemand"/>
-		<widget name="textbook" position="10,280" size="700,25" font="Regular;20"/>
-		<widget name="booklist" position="10,310" size="700,125" scrollbarMode="showOnDemand"/>
+	<screen name="LocationBox" position="center,center" size="720,525">
+		<widget name="text" position="15,10" size="690,25" font="Regular;20"/>
+		<widget name="target" position="15,40" size="690,25" font="Regular;20"/>
+		<widget name="filelist" position="5,75" size="710,200" scrollbarMode="showOnDemand" itemHeight="25"/>
+		<widget name="textbook" position="15,290" size="690,25" font="Regular;20"/>
+		<widget name="booklist" position="15,320" size="690,125" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
