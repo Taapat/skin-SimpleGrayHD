@@ -903,21 +903,21 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="NetworkBrowser" position="center,center" size="600,450">
-		<widget source="list" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
+		<widget source="list" render="Listbox" position="10,15" size="580,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryPixmapAlphaTest(pos=(0,6), size=(48,48), png=1), # index 1 is the expandable/expanded/verticalline icon
-					MultiContentEntryText(pos=(60,4), size=(400,26), font=2, flags=RT_HALIGN_LEFT, text=2), # index 2 is the Hostname
-					MultiContentEntryText(pos=(150,5), size=(300,25), font=0, flags=RT_HALIGN_LEFT, text=3), # index 3 is the sharename
-					MultiContentEntryText(pos=(150,26), size=(300,17), font=1, flags=RT_HALIGN_LEFT, text=4), # index 4 is the sharedescription
-					MultiContentEntryPixmapAlphaTest(pos=(55,6), size=(48,48), png=5), # index 5 is the nfs/cifs icon
-					MultiContentEntryPixmapAlphaTest(pos=(100,6), size=(48,48), png=6), # index 6 is the isMounted icon
+					MultiContentEntryPixmapAlphaTest(pos=(5,6), size=(48,48), png=1), # index 1 is the expandable/expanded/verticalline icon
+					MultiContentEntryText(pos=(65,4), size=(400,26), font=2, flags=RT_HALIGN_LEFT, text=2), # index 2 is the Hostname
+					MultiContentEntryText(pos=(155,5), size=(300,25), font=0, flags=RT_HALIGN_LEFT, text=3), # index 3 is the sharename
+					MultiContentEntryText(pos=(155,26), size=(300,17), font=1, flags=RT_HALIGN_LEFT, text=4), # index 4 is the sharedescription
+					MultiContentEntryPixmapAlphaTest(pos=(60,6), size=(48,48), png=5), # index 5 is the nfs/cifs icon
+					MultiContentEntryPixmapAlphaTest(pos=(105,6), size=(48,48), png=6), # index 6 is the isMounted icon
 				],
 				"fonts": [gFont("Regular",20), gFont("Regular",15), gFont("Regular",22)],
 				"itemHeight": 60}
 			</convert>
 		</widget>
-		<widget source="infotext" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+		<widget source="infotext" render="Label" position="15,325" size="570,50" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
