@@ -1082,6 +1082,24 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
+	<screen name="PluginManagerHelp" position="center,center" size="740,500">
+		<widget source="list" render="Listbox" position="10,20" size="720,350" scrollbarMode="showOnDemand">
+			<convert type="TemplatedMultiContent">
+				{"template": [
+					MultiContentEntryPixmapAlphaTest(pos=(5,0), size=(48,48), png=2), # index 2 is the status pixmap
+					MultiContentEntryText(pos=(70,1), size=(650,24), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
+					MultiContentEntryText(pos=(70,26), size=(650,24), font=1, flags=RT_HALIGN_LEFT, text=1), # index 1 is the state
+					MultiContentEntryPixmapAlphaTest(pos=(5,48), size=(720,2), png=3), # index 3 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 22), gFont("Regular", 16)],
+				"itemHeight": 50
+				}
+			</convert>
+		</widget>
+		<widget source="status" render="Label" position="15,390" size="710,25" font="Regular;22"/>
+		<panel name="DynamicButtonsTemplate"/>
+	</screen>
+
 	<screen name="PositionerSetup" position="center,center" size="740,565">
 		<widget name="list" position="29,27" size="683,183" transparent="1"/>
 		<widget name="snr_db" position="80,215" size="200,24" halign="center" valign="center" font="Regular;22"/>
