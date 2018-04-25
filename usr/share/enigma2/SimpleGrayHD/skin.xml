@@ -968,7 +968,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="OSD3DSetupScreen" position="center,center" size="470,200">
-		<widget name="config" position="10,10" size="450,100"/>
+		<widget name="config" position="0,10" size="470,100"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
