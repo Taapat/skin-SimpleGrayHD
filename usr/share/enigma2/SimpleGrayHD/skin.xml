@@ -710,7 +710,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="MediaPlayer" position="center,100" size="1080,580">
-		<widget name="filelist" position="10,10" size="530,370" scrollbarMode="showOnDemand"/>
+		<widget name="filelist" position="5,10" size="535,370" scrollbarMode="showOnDemand"/>
 		<widget name="playlist" position="540,10" size="530,370" selectionDisabled="1" scrollbarMode="showOnDemand"/>
 		<widget name="coverArt" pixmap="skin_default/no_coverArt.png" position="20,400" size="116,116" transparent="1" alphatest="on"/>
 		<widget name="title" position="160,390" size="680,35" font="Regular;22"/>
@@ -735,8 +735,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		</widget>
 	</screen>
 
-	<screen name="MediaPlayerSettings" position="center,center" size="740,555">
-		<widget name="config" position="10,10" size="720,480" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+	<screen name="MediaPlayerSettings" position="center,center" size="620,390">
+		<widget name="config" position="0,10" size="620,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
