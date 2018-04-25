@@ -643,32 +643,32 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="JobView" position="center,center" size="523,250">
-		<widget source="job_name" render="Label" position="10,15" size="503,30" font="Regular;22"/>
-		<widget source="job_task" render="Label" position="10,55" size="503,25" font="Regular;20"/>
-		<widget source="job_progress" render="Label" position="10,85" size="110,25" font="Regular;20">
+	<screen name="JobView" position="center,center" size="533,250">
+		<widget source="job_name" render="Label" position="15,15" size="503,30" font="Regular;22"/>
+		<widget source="job_task" render="Label" position="15,55" size="503,25" font="Regular;20"/>
+		<widget source="job_progress" render="Label" position="15,85" size="110,25" font="Regular;20">
 			<convert type="ProgressToText"/>
 		</widget>
-		<widget source="job_progress" render="Progress" position="120,90" size="403,10" borderWidth="1" borderColor="grey"/>
-		<widget source="job_status" render="Label" position="10,115" size="503,25" font="Regular;20"/>
-		<widget name="config" position="10,145" size="500,25"/>
+		<widget source="job_progress" render="Progress" position="125,90" size="403,10" borderWidth="1" borderColor="grey"/>
+		<widget source="job_status" render="Label" position="15,115" size="503,25" font="Regular;20"/>
+		<widget name="config" position="0,145" size="533,25"/>
 
-		<widget source="cancelable" render="FixedLabel" position="10,200" size="165,40" backgroundColor="red">
+		<widget source="cancelable" render="FixedLabel" position="15,200" size="165,40" backgroundColor="red">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="finished" render="FixedLabel" position="179,200" size="165,40" backgroundColor="green">
+		<widget source="finished" render="FixedLabel" position="184,200" size="165,40" backgroundColor="green">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="backgroundable" render="FixedLabel" position="348,200" size="165,40" backgroundColor="blue">
+		<widget source="backgroundable" render="FixedLabel" position="353,200" size="165,40" backgroundColor="blue">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="cancelable" render="FixedLabel" text="Cancel" position="12,202" size="161,36" font="Regular;22" halign="center" valign="center">
+		<widget source="cancelable" render="FixedLabel" text="Cancel" position="17,202" size="161,36" font="Regular;22" halign="center" valign="center">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="finished" render="FixedLabel" text="OK" position="181,202" size="161,36" font="Regular;22" halign="center" valign="center">
+		<widget source="finished" render="FixedLabel" text="OK" position="186,202" size="161,36" font="Regular;22" halign="center" valign="center">
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="350,202" size="161,36" font="Regular;22" halign="center" valign="center">
+		<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="355,202" size="161,36" font="Regular;22" halign="center" valign="center">
 			<convert type="ConditionalShowHide"/>
 		</widget>
 	</screen>
