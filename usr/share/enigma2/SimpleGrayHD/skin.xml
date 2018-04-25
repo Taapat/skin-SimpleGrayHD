@@ -1007,10 +1007,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="Pic_Exif" position="center,center" size="650,440">
-		<widget source="menu" render="Listbox" position="20,10" size="610,350" scrollbarMode="showOnDemand" selectionDisabled="1">
+		<widget source="menu" render="Listbox" position="10,10" size="630,350" scrollbarMode="showOnDemand" selectionDisabled="1">
 			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos=(0,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0),
-					MultiContentEntryText(pos=(305,0), size=(300,30), flags=RT_HALIGN_LEFT, text=0)],
+				{"template": [ MultiContentEntryText(pos=(5,0), size=(270,30), flags=RT_HALIGN_LEFT, text=0),
+					MultiContentEntryText(pos=(280,0), size=(350,30), flags=RT_HALIGN_LEFT, text=1)],
 				"fonts": [gFont("Regular",20)],
 				"itemHeight": 25}
 			</convert>
