@@ -941,8 +941,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="NimSetup" position="center,center" size="740,520">
-		<widget name="config" position="10,10" size="720,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="description" position="10,330" size="720,125" font="Regular;20"/>
+		<widget name="config" position="0,10" size="770,300" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="15,330" size="710,125" font="Regular;20"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
