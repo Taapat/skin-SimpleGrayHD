@@ -865,40 +865,40 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="NetworkAdapterTest" position="center,center" size="740,380">
-		<widget name="Adaptertext" position="20,25" size="200,25" font="Regular;20"/>
+		<widget name="Adaptertext" position="15,25" size="200,25" font="Regular;20"/>
 		<widget name="Adapter" position="200,25" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
 		<widget name="AdapterInfo_OK" position="530,22" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
 		<widget name="AdapterInfo" position="580,17" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
 		<widget name="AdapterInfo_Text" position="582,19" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
 
-		<widget name="Networktext" position="20,75" size="200,25" font="Regular;20"/>
+		<widget name="Networktext" position="15,75" size="200,25" font="Regular;20"/>
 		<widget name="Network" position="200,75" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
 		<widget name="NetworkInfo_Check" position="530,72" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
 		<widget name="NetworkInfo" position="580,67" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
 		<widget name="NetworkInfo_Text" position="582,69" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
 
-		<widget name="Dhcptext" position="20,125" size="200,25" font="Regular;20"/>
+		<widget name="Dhcptext" position="15,125" size="200,25" font="Regular;20"/>
 		<widget name="Dhcp" position="200,125" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
 		<widget name="DhcpInfo_Check" position="530,122" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
-		<widget name="DhcpInfo" position="580,127" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
-		<widget name="DhcpInfo_Text" position="582,129" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+		<widget name="DhcpInfo" position="580,117" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="DhcpInfo_Text" position="582,119" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
 
-		<widget name="IPtext" position="20,175" size="200,25" font="Regular;20"/>
+		<widget name="IPtext" position="15,175" size="200,25" font="Regular;20"/>
 		<widget name="IP" position="200,175" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
 		<widget name="IPInfo_Check" position="530,172" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
-		<widget name="IPInfo" position="580,177" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
-		<widget name="IPInfo_Text" position="582,179" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+		<widget name="IPInfo" position="580,167" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="IPInfo_Text" position="582,169" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
 
-		<widget name="DNStext" position="20,225" size="200,25" font="Regular;20"/>
+		<widget name="DNStext" position="15,225" size="200,25" font="Regular;20"/>
 		<widget name="DNS" position="200,225" size="315,25" font="Regular;20" foregroundColors="white,red,green" halign="right"/>
 		<widget name="DNSInfo_Check" position="530,222" size="38,31" pixmap="skin_default/icons/lock_on.png" alphatest="on"/>
-		<widget name="DNSInfo" position="580,227" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
-		<widget name="DNSInfo_Text" position="582,229" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+		<widget name="DNSInfo" position="580,217" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="DNSInfo_Text" position="582,219" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
 
-		<widget name="EditSettingsButton" position="580,277" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
-		<widget name="EditSettings_Text" position="582,279" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
+		<widget name="EditSettingsButton" position="580,267" size="140,40" pixmaps="SimpleGrayHD/skin_default/buttons/grey.png,SimpleGrayHD/skin_default/buttons/white.png"/>
+		<widget name="EditSettings_Text" position="582,269" size="136,36" halign="center" valign="center" foregroundColors="back,grey,white" font="Regular;20" zPosition="1"/>
 
-		<widget name="InfoText" position="10,17" size="720,370" font="Regular;22" zPosition="3"/>
+		<widget name="InfoText" position="15,17" size="710,370" font="Regular;22" zPosition="3"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
