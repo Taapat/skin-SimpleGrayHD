@@ -1297,28 +1297,28 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="infolist" position="15,10" size="710,491" selectionDisabled="1" itemHeight="31"/>
 	</screen>
 
-	<screen name="ServiceScan" position="center,center" size="620,440">
-		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="10,8" size="64,64" transparent="1" alphatest="on">
+	<screen name="ServiceScan" position="center,center" size="620,450">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-s.png" position="15,8" size="64,64" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">0,0</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-c.png" position="10,8" size="64,64" transparent="1" alphatest="on">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-c.png" position="15,8" size="64,64" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">1,1</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-t.png" position="10,8" size="64,64" transparent="1" alphatest="on">
+		<widget source="FrontendInfo" render="Pixmap" pixmap="skin_default/icons/scan-t.png" position="15,8" size="64,64" transparent="1" alphatest="on">
 			<convert type="FrontendInfo">TYPE</convert>
 			<convert type="ValueRange">2,2</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget name="network" position="90,10" size="580,25" font="Regular;20"/>
-		<widget name="transponder" position="90,40" size="580,25" font="Regular;20"/>
-		<widget name="scan_progress" position="10,80" size="600,20" foregroundColor="grey" borderWidth="1" borderColor="white"/>
-		<widget name="scan_state" position="10,110" size="600,25" zPosition="2" font="Regular;20"/>
-		<widget name="pass" position="10,140" size="600,25" font="Regular;20"/>
-		<widget name="servicelist" position="10,170" size="600,200" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="network" position="95,10" size="510,25" font="Regular;20"/>
+		<widget name="transponder" position="95,40" size="510,25" font="Regular;20"/>
+		<widget name="scan_progress" position="15,80" size="590,20" foregroundColor="grey" borderWidth="1" borderColor="white"/>
+		<widget name="scan_state" position="15,110" size="590,25" zPosition="2" font="Regular;20"/>
+		<widget name="pass" position="15,140" size="590,25" font="Regular;20"/>
+		<widget name="servicelist" position="15,170" size="590,200" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
