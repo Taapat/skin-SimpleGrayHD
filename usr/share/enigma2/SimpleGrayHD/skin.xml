@@ -1350,8 +1350,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		</widget>
 	</screen>
 
-	<screen name="StreamingClientsInfo" position="center,center" size="640,410">
-		<widget name="menu" position="center,10" size="580,290" font="Regular;20" scrollbarMode="showOnDemand" itemHeight="29"/>
+	<screen name="StreamingClientsInfo" position="center,center" size="640,360">
+		<widget name="menu" position="15,10" size="610,290" font="Regular;20" scrollbarMode="showOnDemand" itemHeight="29"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
