@@ -1289,12 +1289,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="ServiceInfo" position="center,center" size="740,565">
-		<widget name="infolist" position="10,10" size="720,491" selectionDisabled="1" itemHeight="31"/>
+		<widget name="infolist" position="15,10" size="710,491" selectionDisabled="1" itemHeight="31"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="ServiceInfoSimple" position="center,center" size="740,511">
-		<widget name="infolist" position="10,10" size="720,491" selectionDisabled="1" itemHeight="31"/>
+		<widget name="infolist" position="15,10" size="710,491" selectionDisabled="1" itemHeight="31"/>
 	</screen>
 
 	<screen name="ServiceScan" position="center,center" size="620,440">
