@@ -1148,8 +1148,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="RemoteControlType" position="center,center" size="500,200">
-		<widget name="config" position="10,10" size="480,100" scrollbarMode="showOnDemand"/>
+	<screen name="RemoteControlType" position="center,center" size="520,240">
+		<widget name="config" position="0,10" size="520,100" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
