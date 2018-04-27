@@ -1283,8 +1283,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		</widget>
 	</screen>
 
-	<screen name="SelectImage" position="center,center" size="600,250">
-		<widget name="list" position="20,10" size="560,150" scrollbarMode="showOnDemand"/>
+	<screen name="SelectImage" position="center,center" size="560,250">
+		<widget name="list" position="0,10" size="560,150" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
