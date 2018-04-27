@@ -1143,8 +1143,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="RtpText" position="100,650" size="1080,30" font="Regular;24" halign="right" noWrap="1"/>
 	</screen>
 
-	<screen name="RecordPathsSettings" position="center,center" size="740,565">
-		<widget name="config" position="center,58" size="701,187" transparent="1"/>
+	<screen name="RecordPathsSettings" position="center,center" size="740,400">
+		<widget name="config" position="0,10" size="740,200" transparent="1"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
