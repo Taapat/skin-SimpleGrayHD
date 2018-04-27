@@ -1335,10 +1335,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="list" position="15,10" size="692,498" scrollbarMode="showOnDemand"/>
 	</screen>
 
-	<screen name="SkinSelector" position="center,center" size="600,375">
-		<widget name="SkinList" position="10,10" size="280,250" scrollbarMode="showOnDemand"/>
-		<widget name="Preview" position="310,10" size="280,210" alphatest="on"/>
-		<widget source="introduction" render="Label" position="10,270" size="580,25" font="Regular;20"/>
+	<screen name="SkinSelector" position="center,center" size="610,375">
+		<widget name="SkinList" position="15,10" size="280,250" scrollbarMode="showOnDemand"/>
+		<widget name="Preview" position="315,10" size="280,210" alphatest="on"/>
+		<widget source="introduction" render="Label" position="15,270" size="580,25" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
