@@ -1201,8 +1201,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="ScanIP" position="center,center" size="600,400">
-		<widget name="config" position="20,15" size="560,300" scrollbarMode="showOnDemand"/>
+	<screen name="ScanIP" position="center,center" size="520,240">
+		<widget name="config" position="0,10" size="520,100" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
