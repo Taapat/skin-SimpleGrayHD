@@ -1196,8 +1196,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 			<convert type="FrontendInfo">LOCK</convert>
 			<convert type="ConditionalShowHide">Invert</convert>
 		</widget>
-		<widget name="config" position="10,160" size="550,275" scrollbarMode="showOnDemand"/>
-		<widget name="introduction" position="10,445" size="620,25" font="Regular;20"/>
+		<widget name="config" position="0,160" size="570,275" scrollbarMode="showOnDemand"/>
+		<widget name="introduction" position="15,445" size="540,25" font="Regular;20"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
