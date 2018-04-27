@@ -1153,13 +1153,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="RestoreMenu" position="center,center" size="740,565">
-		<widget name="filelist" position="center,45" size="640,400" scrollbarMode="showOnDemand"/>
+	<screen name="RestoreMenu" position="center,center" size="740,490">
+		<widget name="filelist" position="15,10" size="710,400" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="RestoreScreen" position="center,center" size="600,502">
-		<widget name="config" position="10,10" size="580,425" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="0,10" size="600,425" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="Satfinder" position="center,center" size="570,550">
