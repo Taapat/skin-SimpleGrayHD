@@ -1368,15 +1368,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 
 	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>
 
-	<screen name="TimerEdit" position="center,center" size="1100,560">
-		<widget name="description" position="10,10" size="1080,40" font="Regular;25"/>
-		<widget name="lbegin" position="605,102" size="103,30" font="Regular;25" foregroundColor="red"/>
-		<widget name="lend" position="605,158" size="103,30" font="Regular;25" foregroundColor="green"/>
-		<widget name="begin" position="708,105" size="72,35" font="Regular;25"/>
-		<widget name="end" position="708,150" size="72,35" font="Regular;25"/>
-		<widget name="apply" position="210,240" size="250,35"/>
-	</screen>
-
 	<screen name="TextBox" position="center,center" size="750,500">
 		<widget name="text" position="center,center" size="680,480" font="Regular;20"/>
 	</screen>
