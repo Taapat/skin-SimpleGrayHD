@@ -1573,7 +1573,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget source="global.CurrentTime" render="SDVolume" position="250,0" size="70,30" font="Replacement;26" halign="center"/>
 	</screen>
 
-	<screen name="YouTubeDownloadList" position="center,center" size="860,500">
+	<screen name="YouTubeDownloadList" position="center,center" size="860,490">
 		<widget source="list" render="Listbox" position="0,10" size="860,405" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1601,7 +1601,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="YouTubeMain" position="center,center" size="720,480">
+	<screen name="YouTubeMain" position="center,center" size="720,490">
 		<widget name="text" position="15,10" size="690,30" font="Regular;24"/>
 		<widget source="list" render="Listbox" position="15,50" size="690,360" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
@@ -1621,7 +1621,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="thumbnail" position="0,0" size="100,72"/>
 	</screen>
 
-	<screen name="YouTubeSearch" position="center,120" size="620,480">
+	<screen name="YouTubeSearch" position="center,120" size="620,490">
 		<widget name="config" position="0,10" size="620,30" scrollbarMode="showNever"/>
 		<widget source="list" render="Listbox" position="0,43" size="620,273" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
