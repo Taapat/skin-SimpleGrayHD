@@ -1368,8 +1368,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 
 	<screen name="SubtitleDisplay" position="0,0" size="1280,720" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent"/>
 
-	<screen name="TextBox" position="center,center" size="750,500">
-		<widget name="text" position="center,center" size="680,480" font="Regular;20"/>
+	<screen name="TextBox" position="center,center" size="600,465">
+		<widget name="text" position="15,10" size="570,440" font="Regular;20"/>
 	</screen>
 
 	<screen name="TimeDateInput" position="center,center" size="324,190">
