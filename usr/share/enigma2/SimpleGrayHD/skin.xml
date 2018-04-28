@@ -1475,9 +1475,9 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="TranslationInfo" position="center,center" size="640,410">
-		<widget source="TranslatorName" render="Label" position="center,10" size="580,40" font="Regular;26" foregroundColor="yellow" halign="center"/>
-		<widget source="TranslationInfo" render="Label" position="center,60" size="580,270" font="Regular;22" halign="center"/>
+	<screen name="TranslationInfo" position="center,center" size="600,340">
+		<widget source="TranslatorName" render="Label" position="15,10" size="570,40" font="Regular;26"/>
+		<widget source="TranslationInfo" render="Label" position="15,60" size="570,200" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
