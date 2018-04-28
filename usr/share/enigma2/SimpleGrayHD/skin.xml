@@ -1482,7 +1482,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="Troubleshoot" position="center,center" size="740,565">
-		<widget name="AboutScrollLabel" position="20,25" size="700,470" font="Regular;16"/>
+		<widget name="AboutScrollLabel" position="15,25" size="710,470" font="Regular;16"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
