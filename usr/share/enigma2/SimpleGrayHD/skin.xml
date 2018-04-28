@@ -1620,7 +1620,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="picshow" position="center,center" size="740,390">
-		<widget name="thn" position="20,10" size="260,300" alphatest="on"/>
+		<widget name="thn" position="15,10" size="260,300" alphatest="on"/>
 		<widget name="filelist" position="300,10" size="420,300" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
