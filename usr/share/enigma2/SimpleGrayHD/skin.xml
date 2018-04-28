@@ -1523,17 +1523,17 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="UserManager" position="center,center" size="600,450">
-		<widget source="config" render="Listbox" position="20,15" size="560,300" scrollbarMode="showOnDemand">
+		<widget source="config" render="Listbox" position="10,15" size="580,300" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
 					MultiContentEntryText(pos=(80,7), size=(650,50), font=0, flags=RT_HALIGN_LEFT, text=0), # index 0 is the name
-					MultiContentEntryPixmapAlphaTest(pos=(10,6), size=(48,48), png=3), # index 4 is the status pixmap
+					MultiContentEntryPixmapAlphaTest(pos=(5,6), size=(48,48), png=3), # index 4 is the status pixmap
 				],
 				"fonts": [gFont("Regular",22)],
 				"itemHeight": 60}
 			</convert>
 		</widget>
-		<widget source="introduction" render="Label" position="20,325" size="560,50" font="Regular;22"/>
+		<widget source="introduction" render="Label" position="15,325" size="570,50" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
