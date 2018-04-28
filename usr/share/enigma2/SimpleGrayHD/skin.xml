@@ -282,7 +282,7 @@ from enigma import eSize, ePoint
 textsize = self["text"].getSize()
 textsize = (int(textsize[0] * 1.1), int(textsize[1] * 1.1))
 wsizex = textsize[0] + 30
-wsizey = textsize[1] + 20
+wsizey = textsize[1] + 25
 if 420 > wsizex:
 	wsizex = 420
 listlen = len(self.list) * 25
@@ -291,8 +291,8 @@ if listlen > 250:
 wsizey += listlen
 self.instance.resize(eSize(*(wsizex, wsizey)))
 self["text"].instance.resize(eSize(*textsize))
-self["list"].instance.move(ePoint(3, wsizey-listlen))
-self["list"].instance.resize(eSize(*(wsizex, listlen)))
+self["list"].instance.move(ePoint(3, wsizey-listlen-5))
+self["list"].instance.resize(eSize(*(wsizex-6, listlen)))
 self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		</applet>
 	</screen>
