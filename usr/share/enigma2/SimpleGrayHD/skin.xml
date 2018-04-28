@@ -1619,12 +1619,6 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<ePixmap position="575,445" size="35,25" pixmap="SimpleGrayHD/skin_default/buttons/key_menu.png" alphatest="on"/>
 	</screen>
 
-	<screen name="clockDisplay" position="420,200" size="320,170">
-		<widget name="okbutton" position="10,10" size="300,40"/>
-		<widget name="theClock" position="10,60" size="300,50"/>
-		<widget name="title" position="10,110" size="300,50"/>
-	</screen>
-
 	<screen name="picshow" position="center,center" size="740,390">
 		<widget name="thn" position="20,10" size="260,300" alphatest="on"/>
 		<widget name="filelist" position="300,10" size="420,300" scrollbarMode="showOnDemand"/>
