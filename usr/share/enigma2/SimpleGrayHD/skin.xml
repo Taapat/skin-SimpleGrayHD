@@ -1389,13 +1389,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="TimerLog" position="center,center" size="740,565">
-		<widget name="loglist" position="10,10" size="720,321" scrollbarMode="showOnDemand"/>
-		<widget name="logentry" position="10,350" size="720,105" font="Regular;20"/>
+		<widget name="loglist" position="15,10" size="710,321" scrollbarMode="showOnDemand"/>
+		<widget name="logentry" position="15,350" size="710,105" font="Regular;20"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="TimerSelection" position="center,center" size="1100,560">
-		<widget name="timerlist" position="10,20" size="1080,350" scrollbarMode="showOnDemand"/>
+		<widget name="timerlist" position="15,20" size="1070,350" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="TimeshiftLive" position="15,15" size="300,40" zPosition="2" backgroundColor="transparent" flags="wfNoBorder">
