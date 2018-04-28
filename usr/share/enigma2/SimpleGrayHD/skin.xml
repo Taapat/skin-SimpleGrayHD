@@ -1374,7 +1374,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 
 	<screen name="TimeDateInput" position="center,center" size="324,190">
 		<panel name="CancelOKTemplate"/>
-		<widget name="config" position="10,15" size="304,100" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="0,15" size="324,100" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<screen name="TimerEditList" position="center,center" size="740,565">
