@@ -1378,13 +1378,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="TimerEditList" position="center,center" size="740,565">
-		<widget name="timerlist" position="10,10" size="720,321" enableWrapAround="1" scrollbarMode="showOnDemand"/>
-		<widget name="description" position="10,350" size="720,105" font="Regular;22"/>
+		<widget name="timerlist" position="15,10" size="710,321" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="15,350" size="710,105" font="Regular;22"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="TimerEntry" position="center,center" size="740,565">
-		<widget name="config" position="10,10" size="720,440" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="config" position="0,10" size="740,440" enableWrapAround="1" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
