@@ -195,21 +195,21 @@
 		<widget name="slider" position="15,160" size="590,30" foregroundColor="grey" borderWidth="1"/>
 	</screen>
 
-	<screen name="MessageBoxTemplate">
-		<widget name="text" position="68,0" size="527,125" font="Regular;22"/>
-		<widget name="ErrorPixmap" pixmap="SimpleGrayHD/skin_default/icons/input_error.png" position="5,0" size="53,53" alphatest="on"/>
-		<widget name="QuestionPixmap" pixmap="SimpleGrayHD/skin_default/icons/input_question.png" position="5,0" size="53,53" alphatest="on"/>
-		<widget name="InfoPixmap" pixmap="SimpleGrayHD/skin_default/icons/input_info.png" position="5,0" size="53,53" alphatest="on"/>
-		<widget name="WarningPixmap" pixmap="SimpleGrayHD/skin_default/icons/input_warning.png" position="5,0" size="53,53" alphatest="on"/>
-		<widget name="list" position="5,153" size="0,0"/>
+	<screen name="MessageBox_Template">
+		<widget name="text" position="71,0" size="514,50" font="Regular;22"/>
+		<widget name="ErrorPixmap" pixmap="SimpleGrayHD/skin_default/icons/input_error.png" position="10,0" size="53,53" alphatest="on"/>
+		<widget name="QuestionPixmap" pixmap="SimpleGrayHD/skin_default/icons/input_question.png" position="10,0" size="53,53" alphatest="on"/>
+		<widget name="InfoPixmap" pixmap="SimpleGrayHD/skin_default/icons/input_info.png" position="10,0" size="53,53" alphatest="on"/>
+		<widget name="WarningPixmap" pixmap="SimpleGrayHD/skin_default/icons/input_warning.png" position="10,0" size="53,53" alphatest="on"/>
+		<widget name="list" position="15,60" size="0,0"/>
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 textsize = self["text"].getSize()
-textsize = (int(textsize[0] * 1.1), int(textsize[1] * 1.1))
-wsizex = textsize[0] + 73
-wsizey = textsize[1] + 5
-if 53 > wsizey:
-	wsizey = 53
+textsize = (int(textsize[0] * 1.03), int(textsize[1] * 1.03))
+wsizex = textsize[0] + 86
+wsizey = textsize[1] + 15
+if 65 > wsizey:
+	wsizey = 65
 if self.type == self.TYPE_YESNO:
 	listlen = len(self.list) * 25
 	if listlen > 125:
@@ -217,16 +217,17 @@ if self.type == self.TYPE_YESNO:
 	wsizey += listlen + 10
 elif 200 > wsizex:
 	wsizex = 200
-self.instance.resize(eSize(*(wsizex, wsizey)))
 if self.type == self.TYPE_MESSAGE:
-	self["text"].instance.move(ePoint(31,0))
+	self["text"].instance.move(ePoint(15,0))
+	wsizex -= 56
 elif 50 > textsize[1]:
-	self["text"].instance.move(ePoint(68,14))
+	self["text"].instance.move(ePoint(71,14))
 self["text"].instance.resize(eSize(*textsize))
 if self.type == self.TYPE_YESNO:
-	self["list"].instance.move(ePoint(5, wsizey-listlen-10))
-	self["list"].instance.resize(eSize(*(wsizex-10, listlen)))
-self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
+	self["list"].instance.move(ePoint(15, wsizey-listlen-10))
+	self["list"].instance.resize(eSize(*(wsizex-30, listlen)))
+self.instance.move(ePoint((1280-wsizex)/2, (690-wsizey)/2))
+self.instance.resize(eSize(*(wsizex, wsizey)))
 		</applet>
 	</screen>
 

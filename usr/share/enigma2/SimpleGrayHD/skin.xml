@@ -774,12 +774,12 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="MessageBox" position="center,center" size="600,183">
-		<panel name="MessageBoxTemplate"/>
+	<screen name="MessageBox" position="center,center" size="600,65">
+		<panel name="MessageBox_Template"/>
 	</screen>
 
-	<screen name="MessageBoxSimple" position="center,center" size="600,183">
-		<panel name="MessageBoxTemplate"/>
+	<screen name="MessageBoxSimple" position="center,center" size="600,65">
+		<panel name="MessageBox_Template"/>
 	</screen>
 
 	<screen name="MinuteInput" position="center,center" size="220,45" title="Seek">
