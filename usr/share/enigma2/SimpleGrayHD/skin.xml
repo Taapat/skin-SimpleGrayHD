@@ -1019,11 +1019,11 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="PinInput" position="center,center" size="500,170">
-		<panel name="PinInputTemplate"/>
+		<panel name="PinInput_Template"/>
 	</screen>
 
 	<screen name="PinInputPopup" position="center,center" size="500,170">
-		<panel name="PinInputTemplate"/>
+		<panel name="PinInput_Template"/>
 	</screen>
 
 	<screen name="PluginBrowser" position="center,center" size="640,560">

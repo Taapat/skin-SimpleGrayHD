@@ -237,7 +237,7 @@ self.instance.resize(eSize(*(wsizex, wsizey)))
 		<widget name="HelpWindow" position="400,355" size="1,1" zPosition="1"/>
 	</screen>
 
-	<screen name="PinInputTemplate">
+	<screen name="PinInput_Template">
 		<widget name="service" position="15,10" size="470,25" font="Regular;20"/>
 		<widget name="text" position="15,40" size="470,25" font="Regular;20"/>
 		<widget name="tries" position="15,70" size="470,25" font="Regular;20"/>
