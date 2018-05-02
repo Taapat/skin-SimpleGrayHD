@@ -215,8 +215,8 @@ if self.type == self.TYPE_YESNO:
 	if listlen > 125:
 		listlen = 125
 	wsizey += listlen + 10
-elif 200 > wsizex:
-	wsizex = 200
+elif 230 > wsizex:
+	wsizex = 230
 if self.type == self.TYPE_MESSAGE:
 	self["text"].instance.move(ePoint(15,0))
 	wsizex -= 56
