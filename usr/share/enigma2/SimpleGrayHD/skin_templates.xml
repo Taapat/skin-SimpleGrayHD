@@ -181,10 +181,10 @@
 			<eLabel position="363,0" size="170,40" zPosition="-5" backgroundColor="yellow"/>
 			<eLabel position="537,0" size="170,40" zPosition="-5" backgroundColor="blue"/>
 
-			<widget name="key_red" render="Label" position="17,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_green" render="Label" position="191,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_yellow" render="Label" position="365,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
-			<widget name="key_blue" render="Label" position="539,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
+			<widget name="key_red" position="17,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
+			<widget name="key_green" position="191,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
+			<widget name="key_yellow" position="365,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
+			<widget name="key_blue" position="539,2" size="166,36" font="Regular;22" halign="center" valign="center"/>
 		</panel>
 	</screen>
 
