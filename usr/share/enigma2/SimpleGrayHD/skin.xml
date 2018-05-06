@@ -280,12 +280,17 @@
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 textsize = self["text"].getSize()
-textsize = (int(textsize[0] * 1.1), int(textsize[1] * 1.1))
+textsize = (int(textsize[0] * 1.03), int(textsize[1] * 1.03))
 wsizex = textsize[0] + 30
 wsizey = textsize[1] + 25
-if 420 > wsizex:
-	wsizex = 420
-listlen = len(self.list) * 25
+if 350 > wsizex:
+	wsizex = 350
+listlen = len(self.list)
+for x in range(listlen):
+	lensizex = int(len(self.list[x][0][0]) * 6.18) + 155
+	if lensizex > wsizex:
+		wsizex = lensizex
+listlen = listlen * 25
 if listlen > 250:
 	listlen = 250
 wsizey += listlen
