@@ -109,7 +109,7 @@
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
-	<screen name="AudioSelection" position="center,center" size="450,280">
+	<screen name="AudioSelection" position="center,center" size="550,280">
 		<widget source="key_red" render="FixedLabel" position="15,15" size="15,15" backgroundColor="red">
 			<convert type="ConditionalShowHide"/>
 		</widget>
@@ -126,22 +126,22 @@
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<eLabel position="17,92" size="11,11"/>
-		<widget name="config" position="40,10" size="400,110" scrollbarMode="showOnDemand"/>
-		<widget source="streams" render="Listbox" position="12,140" size="430,125" scrollbarMode="showOnDemand">
+		<widget name="config" position="40,10" size="500,110" scrollbarMode="showOnDemand"/>
+		<widget source="streams" render="Listbox" position="12,140" size="530,125" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"templates":
 					{"default": (25, [
 						MultiContentEntryText(pos=(30,0), size=(20,25), font=0, flags=RT_HALIGN_RIGHT, text=1), # key,
 						MultiContentEntryText(pos=(55,0), size=(40,25), font=0, flags=RT_HALIGN_LEFT, text=2), # number,
-						MultiContentEntryText(pos=(100,0), size=(100,25), font=0, flags=RT_HALIGN_LEFT, text=3), # description,
-						MultiContentEntryText(pos=(205,0), size=(220,25), font=0, flags=RT_HALIGN_LEFT, text=4), # language,
+						MultiContentEntryText(pos=(100,0), size=(200,25), font=0, flags=RT_HALIGN_LEFT, text=3), # description,
+						MultiContentEntryText(pos=(305,0), size=(220,25), font=0, flags=RT_HALIGN_LEFT, text=4), # language,
 						MultiContentEntryText(pos=(5,0), size=(20,25), font=0, flags=RT_HALIGN_LEFT, text=5), # selection,
 					], True),
 					"notselected": (25, [
 						MultiContentEntryText(pos=(30,0), size=(20,25), font=0, flags=RT_HALIGN_RIGHT, text=1), # key,
 						MultiContentEntryText(pos=(55,0), size=(40,25), font=0, flags=RT_HALIGN_LEFT, text=2), # number,
-						MultiContentEntryText(pos=(100,0), size=(100,25), font=0, flags=RT_HALIGN_LEFT, text=3), # description,
-						MultiContentEntryText(pos=(205,0), size=(220,25), font=0, flags=RT_HALIGN_LEFT, text=4), # language,
+						MultiContentEntryText(pos=(100,0), size=(200,25), font=0, flags=RT_HALIGN_LEFT, text=3), # description,
+						MultiContentEntryText(pos=(305,0), size=(220,25), font=0, flags=RT_HALIGN_LEFT, text=4), # language,
 						MultiContentEntryText(pos=(5,0), size=(20,25), font=0, flags=RT_HALIGN_LEFT, text=5), # selection,
 					], False)
 				},
