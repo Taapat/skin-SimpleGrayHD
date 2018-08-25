@@ -1560,8 +1560,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="videomode" position="0,0" size="400,50" backgroundColor="transparent" transparent="1" font="Regular;22" borderColor="black" borderWidth="2" valign="center"/>
 	</screen>
 
-	<screen name="VirtualKeyBoard" position="center,center" size="570,415">
-		<widget name="header" position="15,10" size="540,20" font="Regular;20" noWrap="1"/>
+	<screen name="VirtualKeyBoard" title="Virtual keyboard" position="center,center" size="570,415">
+		<widget name="prompt" position="15,10" size="540,20" font="Regular;20" noWrap="1"/>
 		<widget name="text" position="15,55" size="540,30" font="Regular;30" noWrap="1"/>
 		<widget name="list" position="15,105" size="540,225" selectionDisabled="1" transparent="1"/>
 		<eLabel position="15,355" size="177,40" zPosition="-5" backgroundColor="red"/>
