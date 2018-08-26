@@ -283,8 +283,8 @@ textsize = self["text"].getSize()
 textsize = (int(textsize[0] * 1.03), int(textsize[1] * 1.03))
 wsizex = textsize[0] + 30
 wsizey = textsize[1] + 25
-if 350 > wsizex:
-	wsizex = 350
+if 400 > wsizex:
+	wsizex = 400
 listlen = len(self.list)
 for x in range(listlen):
 	lensizex = int(len(self.list[x][0][0]) * 6.18) + 155
