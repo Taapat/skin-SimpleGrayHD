@@ -1572,10 +1572,10 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget source="key_yellow" render="Label" position="379,357" size="173,36" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
-	<screen name="Volume" position="center,15" size="320,34" zPosition="10" flags="wfNoBorder">
+	<screen name="Volume" position="center,15" size="305,34" zPosition="10" flags="wfNoBorder">
 		<ePixmap pixmap="SimpleGrayHD/window/volume.png" position="5,5" size="35,24" alphatest="on"/>
 		<widget name="Volume" position="45,12" size="200,10" borderWidth="1" borderColor="grey"/>
-		<widget source="global.CurrentTime" render="SDVolume" position="250,0" size="70,30" font="Replacement;26" halign="center"/>
+		<widget name="VolumeText" position="250,0" size="50,30" font="Replacement;26" halign="center"/>
 	</screen>
 
 	<screen name="YouTubeDownloadList" position="center,center" size="860,490">
