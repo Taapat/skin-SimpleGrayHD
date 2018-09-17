@@ -1560,16 +1560,18 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="videomode" position="0,0" size="400,50" backgroundColor="transparent" transparent="1" font="Regular;22" borderColor="black" borderWidth="2" valign="center"/>
 	</screen>
 
-	<screen name="VirtualKeyBoard" position="center,center" size="570,415">
-		<widget name="prompt" position="15,10" size="540,20" font="Regular;20" noWrap="1"/>
-		<widget name="text" position="15,55" size="540,30" font="Regular;30" noWrap="1"/>
-		<widget name="list" position="15,105" size="540,225" selectionDisabled="1" transparent="1"/>
-		<eLabel position="15,355" size="177,40" zPosition="-5" backgroundColor="red"/>
-		<eLabel position="196,355" size="177,40" zPosition="-5" backgroundColor="green"/>
-		<eLabel position="377,355" size="177,40" zPosition="-5" backgroundColor="yellow"/>
-		<widget source="key_red" render="Label" position="17,357" size="173,36" font="Regular;22" halign="center" valign="center"/>
-		<widget source="key_green" render="Label" position="198,357" size="173,36" font="Regular;22" halign="center" valign="center"/>
-		<widget source="key_yellow" render="Label" position="379,357" size="173,36" font="Regular;22" halign="center" valign="center"/>
+	<screen name="VirtualKeyBoard" position="center,center" size="660,415">
+		<widget name="prompt" position="15,10" size="630,20" font="Regular;20" noWrap="1"/>
+		<widget name="text" position="15,55" size="630,30" font="Regular;30" noWrap="1"/>
+		<widget name="list" position="15,105" size="630,225" selectionDisabled="1" transparent="1"/>
+		<eLabel position="15,355" size="156,40" zPosition="-5" backgroundColor="red"/>
+		<eLabel position="173,355" size="156,40" zPosition="-5" backgroundColor="green"/>
+		<eLabel position="331,355" size="156,40" zPosition="-5" backgroundColor="yellow"/>
+		<eLabel position="489,355" size="156,40" zPosition="-5" backgroundColor="blue"/>
+		<widget source="key_red" render="Label" position="17,357" size="152,36" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_green" render="Label" position="175,357" size="152,36" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_yellow" render="Label" position="333,357" size="152,36" font="Regular;22" halign="center" valign="center"/>
+		<widget source="key_blue" render="Label" position="491,357" size="152,36" font="Regular;22" halign="center" valign="center"/>
 	</screen>
 
 	<screen name="Volume" position="center,15" size="305,34" zPosition="10" flags="wfNoBorder">
