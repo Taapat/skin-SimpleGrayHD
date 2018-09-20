@@ -1561,8 +1561,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="VirtualKeyBoard" position="center,center" size="660,415">
-		<widget name="prompt" position="15,10" size="630,20" font="Regular;20" noWrap="1"/>
-		<widget name="text" position="15,55" size="630,30" font="Regular;30" noWrap="1"/>
+		<widget name="prompt" position="15,10" size="630,25" font="Regular;20" noWrap="1"/>
+		<widget name="text" position="15,55" size="630,35" font="Regular;30" noWrap="1"/>
 		<widget name="list" position="15,105" size="630,225" selectionDisabled="1" transparent="1"/>
 		<eLabel position="15,355" size="156,40" zPosition="-5" backgroundColor="red"/>
 		<eLabel position="173,355" size="156,40" zPosition="-5" backgroundColor="green"/>
