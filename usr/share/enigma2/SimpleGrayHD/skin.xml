@@ -226,10 +226,10 @@
 	<screen name="ChannelSelection" position="center,100" size="1085,585">
 		<panel name="LeftButtonsTemplate"/>
 		<widget name="list" position="15,10" size="692,498" scrollbarMode="showOnDemand" serviceItemHeight="31" serviceNumberFont="Regular;20" serviceNameFont="Regular;20" serviceInfoFont="Regular;18" foregroundColorServiceNotAvail="grey" colorEventProgressbar="grey" colorServiceDescription="grey" colorEventProgressbarBorder="grey" colorServiceDescriptionSelected="white" colorEventProgressbarSelected="white"/>
-		<widget source="ServiceEvent" render="Label" position="735,10" size="340,30" font="Replacement;26" noWrap="1">
+		<widget source="ServiceEvent" render="Label" position="735,10" size="340,35" font="Replacement;26" noWrap="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
-		<widget source="ServiceEvent" render="Label" position="735,45" size="340,20" font="Regular;16" foregroundColor="grey" noWrap="1">
+		<widget source="ServiceEvent" render="Label" position="735,50" size="340,20" font="Regular;16" foregroundColor="grey" noWrap="1">
 			<convert type="TransponderInfo"/>
 		</widget>
 		<widget source="ServiceEvent" render="Picon" position="785,75" size="100,60" transparent="1" alphatest="blend">
