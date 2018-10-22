@@ -1091,7 +1091,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="list" position="29,27" size="683,183" transparent="1"/>
 		<widget name="snr_db" position="80,215" size="200,24" halign="center" valign="center" font="Regular;22"/>
 		<eLabel text="SNR:" position="27,245" size="80,24" font="Regular;22"/>
-		<widget name="snr_bar" position="120,center" size="200,20" borderWidth="1" transparent="1"/>
+		<widget name="snr_bar" position="120,245" size="200,20" borderWidth="1" transparent="1"/>
 		<widget name="snr_percentage" position="center,245" size="80,24" font="Regular;22"/>
 		<eLabel text="BER:" position="27,275" size="80,24" font="Regular;22"/>
 		<widget name="ber_bar" position="120,275" size="200,20" borderWidth="1" transparent="1"/>
