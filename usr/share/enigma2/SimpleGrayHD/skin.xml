@@ -277,6 +277,7 @@
 	<screen name="ChoiceBox" position="center,center" size="670,90">
 		<widget name="text" position="15,10" size="640,40" font="Regular;20"/>
 		<widget name="list" position="0,50" size="670,25" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="15,0" size="0,0" font="Regular;20"/>
 		<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 textsize = self["text"].getSize()
@@ -286,18 +287,28 @@ wsizey = textsize[1] + 25
 if 400 > wsizex:
 	wsizex = 400
 listlen = len(self.list)
+descr = ""
 for x in range(listlen):
 	lensizex = int(len(self.list[x][0][0]) * 6.18) + 155
 	if lensizex > wsizex:
 		wsizex = lensizex
+	if len(self.list[x][0]) > 2 and len(self.list[x][0][2]) > len(descr):
+		descr = self.list[x][0][2]
 listlen = listlen * 25
 if listlen > 250:
 	listlen = 250
 wsizey += listlen
-self.instance.resize(eSize(*(wsizex, wsizey)))
 self["text"].instance.resize(eSize(*textsize))
 self["list"].instance.move(ePoint(3, wsizey-listlen-5))
 self["list"].instance.resize(eSize(*(wsizex-6, listlen)))
+if descr:
+	self["description"].instance.resize(eSize(*(wsizex-30, 70)))
+	self["description"].setText(descr)
+	textsize = int(self["description"].getSize()[1])
+	self["description"].instance.resize(eSize(*(wsizex-30, textsize)))
+	self["description"].instance.move(ePoint(15, wsizey+5))
+	wsizey += textsize + 10
+self.instance.resize(eSize(*(wsizex, wsizey)))
 self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		</applet>
 	</screen>
