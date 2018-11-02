@@ -292,7 +292,7 @@ for x in range(listlen):
 	lensizex = int(len(self.list[x][0][0]) * 6.18) + 155
 	if lensizex > wsizex:
 		wsizex = lensizex
-	if len(self.list[x][0]) > 2 and len(self.list[x][0][2]) > len(descr):
+	if len(self.list[x][0]) > 2 and isinstance(self.list[x][0][2], str) and len(self.list[x][0][2]) > len(descr):
 		descr = self.list[x][0][2]
 listlen = listlen * 25
 if listlen > 250:
