@@ -289,7 +289,7 @@ if 400 > wsizex:
 listlen = len(self.list)
 descr = ""
 for x in range(listlen):
-	lensizex = int(len(self.list[x][0][0]) * 6.18) + 155
+	lensizex = int(len(self.list[x][0][0]) * 6.18) + 175
 	if "\t" in self.list[x][0][0]:
 		lensizex += 70
 	if lensizex > wsizex:
