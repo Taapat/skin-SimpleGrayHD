@@ -1576,17 +1576,17 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 		<widget name="VolumeText" position="250,0" size="50,30" font="Replacement;26" halign="center"/>
 	</screen>
 
-	<screen name="YouTubeDownloadList" position="center,center" size="860,490">
-		<widget source="list" render="Listbox" position="0,10" size="860,405" scrollbarMode="showOnDemand">
+	<screen name="YouTubeDownloadList" position="center,center" size="580,260">
+		<widget source="list" render="Listbox" position="0,10" size="580,180" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
-					MultiContentEntryText(pos=(15,1), size=(330,33), font=0, flags=RT_HALIGN_LEFT, text=1), # Title
-					MultiContentEntryText(pos=(345,1), size=(225,33), font=0, flags=RT_HALIGN_RIGHT, text=2), # State
-					MultiContentEntryProgress(pos=(580,6), size=(150,33), percent=3), # Progress
-					MultiContentEntryText(pos=(740,1), size=(120,33), font=0, flags=RT_HALIGN_LEFT, text=4), # Percentage
+					MultiContentEntryText(pos=(15,2), size=(285,26), font=0, flags=RT_HALIGN_LEFT, text=1), # Title
+					MultiContentEntryText(pos=(300,2), size=(80,26), font=0, flags=RT_HALIGN_RIGHT, text=2), # State
+					MultiContentEntryProgress(pos=(390,6), size=(100,18), percent=-3), # Progress
+					MultiContentEntryText(pos=(500,2), size=(80,26), font=0, flags=RT_HALIGN_LEFT, text=4), # Percentage
 				],
-				"fonts": [gFont("Regular",30)],
-				"itemHeight": 45}
+				"fonts": [gFont("Regular",20)],
+				"itemHeight": 30}
 			</convert>
 		</widget>
 		<panel name="DynamicButtonsTemplate"/>
