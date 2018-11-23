@@ -143,10 +143,10 @@
 			<convert type="FrontendInfo">AGC</convert>
 		</widget>
 		<eLabel text="BER:" position="1060,e-43" size="50,20" font="Regular;18" foregroundColor="grey" halign="right"/>
-		<widget source="session.FrontendStatus" render="Label" position="1115,e-43" size="75,20" font="Regular;18">
+		<widget source="session.FrontendStatus" render="Label" position="1115,e-43" size="50,20" font="Regular;18">
 			<convert type="FrontendInfo">BER</convert>
 		</widget>
-		<widget source="session.FrontendInfo" render="Label" position="1200,e-43" size="90,20" font="Regular;18">
+		<widget source="session.FrontendInfo" render="Label" position="1165,e-43" size="115,20" font="Regular;18">
 			<convert type="FrontendInfo">STRING</convert>
 		</widget>
 	</screen>
