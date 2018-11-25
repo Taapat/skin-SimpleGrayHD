@@ -55,8 +55,8 @@
 
 	<include filename="skin_templates.xml"/>
 
-	<screen name="About" position="center,center" size="740,565">
-		<widget name="AboutScrollLabel" position="15,20" size="710,460" font="Regular;22" split="1" dividechar=":" colposition="310"/>
+	<screen name="About" position="center,center" size="800,565">
+		<widget name="AboutScrollLabel" position="15,20" size="770,460" font="Regular;20" split="1" dividechar=":" colposition="280"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
