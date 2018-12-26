@@ -201,7 +201,7 @@
 		<widget name="config" position="0,10" size="800,425" scrollbarMode="showOnDemand"/>
 	</screen>
 
-	<screen name="BackupSelection" position="center,center" size="700,490">
+	<screen name="BackupSelection" position="center,center" size="640,490">
 		<widget name="checkList" position="15,10" size="670,400" scrollbarMode="showOnDemand"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
@@ -322,6 +322,13 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 
 	<screen name="CommitInfo" position="center,center" size="530,460">
 		<widget name="AboutScrollLabel" position="15,10" size="500,370" font="Regular;20" halign="left"/>
+		<panel name="DynamicButtonsTemplate"/>
+	</screen>
+
+	<screen name="Config" position="center,center" size="580,350">
+		<widget name="config" position="0,10" size="580,200" enableWrapAround="1" scrollbarMode="showOnDemand"/>
+		<widget name="statusbar" position="15,210" size="650,25" font="Regular;20"/>
+		<widget name="status" position="15,235" size="650,50" font="Regular;20"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
