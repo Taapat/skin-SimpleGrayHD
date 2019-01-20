@@ -29,6 +29,7 @@
 
 	<parameters>
 		<parameter name="AboutHddSplit" value="1"/>
+		<parameter name="VirtualKeyBoardShiftColors" value="0x00ffffff,0x00ffffff,0x00ffffff,0x00ffffff"/>
 	</parameters>
 
 	<windowstyle type="skinned" id="0">
