@@ -602,13 +602,15 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 
 	<screen name="HotkeySetup" position="center,center" size="740,565">
 		<widget name="list" position="5,10" size="335,484" scrollbarMode="showOnDemand" itemHeight="30"/>
-		<widget name="choosen" position="350,10" size="380,450" scrollbarMode="showOnDemand" itemHeight="30"/>
+		<widget name="choosen" position="350,10" size="380,350" scrollbarMode="showOnDemand" itemHeight="30"/>
+		<widget name="description" position="350,410" size="360,100" font="Regular;20"/>
 		<panel name="DynamicButtonsTemplate"/>
 	</screen>
 
 	<screen name="HotkeySetupSelect" position="center,center" size="740,565">
 		<widget name="list" position="5,10" size="335,484" scrollbarMode="showOnDemand" itemHeight="30"/>
-		<widget name="choosen" position="350,10" size="390,450" scrollbarMode="showOnDemand" itemHeight="30"/>
+		<widget name="choosen" position="350,10" size="390,350" scrollbarMode="showOnDemand" itemHeight="30"/>
+		<widget name="description" position="350,410" size="360,100" font="Regular;20"/>
 		<widget name="h_prev" pixmap="skin_default/buttons/key_prev.png" alphatest="on" position="646,470" size="35,25"/>
 		<widget name="h_next" pixmap="skin_default/buttons/key_next.png" alphatest="on" position="685,470" size="35,25"/>
 		<panel name="DynamicButtonsTemplate"/>
