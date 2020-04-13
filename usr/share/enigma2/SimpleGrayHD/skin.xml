@@ -1603,7 +1603,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="YouTubeInfo" position="center,center" size="720,445">
-		<widget name="title" position="15,10" size="700,60" font="Regular;24"/>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YouTube/YouTube_HD.png" position="10,5" size="100,40" transparent="1" alphatest="on"/>
+		<widget name="title" position="125,10" size="590,60" font="Regular;24"/>
 		<widget name="pic" position="15,90" size="320,180" transparent="1" alphatest="on"/>
 		<widget name="description" position="350,90" size="360,300" font="Regular;16"/>
 		<widget name="views" position="15,290" size="150,20" font="Regular;16"/>
@@ -1615,7 +1616,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="YouTubeMain" position="center,center" size="720,490">
-		<widget name="text" position="15,10" size="690,30" font="Regular;24"/>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YouTube/YouTube_HD.png" position="15,0" size="100,40" alphatest="on"/>
 		<widget source="list" render="Listbox" position="15,50" size="690,360" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [
@@ -1635,7 +1636,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (740-wsizey)/2))
 	</screen>
 
 	<screen name="YouTubeSearch" position="center,120" size="620,490">
-		<widget name="config" position="0,10" size="620,30" scrollbarMode="showNever"/>
+		<ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YouTube/YouTube_HD.png" position="0,2" size="100,40" transparent="1" alphatest="on" />
+		<widget name="config" position="110,10" size="510,30" scrollbarMode="showNever"/>
 		<widget source="list" render="Listbox" position="0,43" size="620,273" scrollbarMode="showOnDemand">
 			<convert type="TemplatedMultiContent">
 				{"template": [MultiContentEntryText(pos=(15,1), size=(590,30), font=0, flags=RT_HALIGN_LEFT, text=0)],
