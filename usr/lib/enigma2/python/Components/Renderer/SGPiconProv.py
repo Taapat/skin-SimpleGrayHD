@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 from enigma import ePixmap
 
@@ -10,7 +11,7 @@ searchPaths = []
 if pathExists('/tmp/piconProv/'):
 	piconInTmp = True
 	lastPiconPath = '/tmp/piconProv/'
-	print "[PiconProv] use path:", lastPiconPath
+	print("[PiconProv] use path:", lastPiconPath)
 else:
 	piconInTmp = False
 	lastPiconPath = None
@@ -30,18 +31,18 @@ def onMountpointAdded(mountpoint):
 		if os.path.isdir(piconPath) and piconPath not in searchPaths:
 			for fn in os.listdir(piconPath):
 				if fn[-4:] == '.png':
-					print "[PiconProv] adding path:", piconPath
+					print("[PiconProv] adding path:", piconPath)
 					searchPaths.append(piconPath)
 					break
 	except Exception, ex:
-		print "[PiconProv] Failed to investigate %s:" % mountpoint, ex
+		print("[PiconProv] Failed to investigate %s:" % mountpoint, ex)
 
 def onMountpointRemoved(mountpoint):
 	global searchPaths
 	path = os.path.join(mountpoint, 'piconProv') + '/'
 	try:
 		searchPaths.remove(path)
-		print "[PiconProv] removed path:", path
+		print("[PiconProv] removed path:", path)
 	except:
 		pass
 
